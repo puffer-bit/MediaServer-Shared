@@ -1,4 +1,5 @@
-﻿using Shared.Enums;
+﻿using System;
+using Shared.Enums;
 
 namespace Shared.Models
 {

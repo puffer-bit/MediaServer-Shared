@@ -38,7 +38,7 @@ namespace Shared.Models
             Data = data;
         }
         
-        public static string GenerateTimestampId()
+        private static string GenerateTimestampId()
         {
             return $"{DateTime.UtcNow.Ticks}_{Guid.NewGuid().ToString().Substring(0, 8)}";
         }

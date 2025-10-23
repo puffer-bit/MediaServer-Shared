@@ -1,4 +1,6 @@
-﻿namespace Shared.Models.Requests
+﻿using Shared.Models.DTO;
+
+namespace Shared.Models.Requests
 {
     public class UserAuthRequestModel
     {

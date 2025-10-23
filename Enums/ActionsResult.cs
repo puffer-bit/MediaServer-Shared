@@ -43,7 +43,43 @@ namespace Shared.Enums
         TimedOut = 4
     }
     
+    public enum KickFromSessionResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        RoomNotExists = 1,
+        HostCannotBeKicked = 2,
+        InsufficientPermissions = 3,
+        TimedOut = 4
+    }
+    
     public enum LeaveSessionResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        RoomNotExists = 1,
+        TimedOut = 4
+    }
+    
+    public enum BanFromSessionResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        RoomNotExists = 1,
+        HostCannotBeBanned = 2,
+        InsufficientPermissions = 3,
+        TimedOut = 4
+    }
+    
+    public enum ApproveUserSessionResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        RoomNotExists = 1,
+        TimedOut = 4
+    }
+    
+    public enum RejectUserSessionResult
     {
         InternalError = -1,
         NoError = 0,
@@ -56,6 +92,14 @@ namespace Shared.Enums
         InternalError = -1,
         NoError = 0,
         RoomNotExists = 1,
+        TimedOut = 4
+    }
+    
+    public enum UsersRequestResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        PartialCompletion = 1,
         TimedOut = 4
     }
     

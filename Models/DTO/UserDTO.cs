@@ -1,15 +1,24 @@
-﻿
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 using Shared.Enums;
 
-namespace Shared.Models
+namespace Shared.Models.DTO
 {
     public class UserDTO
     {
         public string? Id { get; set; }
-        public required string Name { get; set; }
-        public string? NickName { get; set; }
+        public string? UserIdentity { get; set; }
+        public string? Username { get; set; }
+        public string? Ip { get; set; }
+        public string? CoordinatorInstanceId { get; set; }
+        public string? RegionName { get; set; }
+        public string? RegionCode { get; set; }
+        public string? DisplayName { get; set; }
+        public string? Prefix { get; set; }
+        public string? AvatarUrl { get; set; }
         public UserState State { get; set; }
+        public DateTime FirstConnectionTime { get; set; }
+        public DateTime LastConnectionTime { get; set; }
+        public TimeSpan ConnectionTime => DateTime.UtcNow - LastConnectionTime;
 
         public UserDTO()
         {
@@ -20,21 +29,21 @@ namespace Shared.Models
         public UserDTO (string id, string name, string nickName)
         {
             Id = id;
-            Name = name;
-            NickName = nickName;
+            Username = name;
+            DisplayName = nickName;
         }
 
         [SetsRequiredMembers]
         public UserDTO(string name, string nickName)
         {
-            Name = name;
-            NickName = nickName;
+            Username = name;
+            DisplayName = nickName;
         }
         
         [SetsRequiredMembers]
         public UserDTO(string name)
         {
-            Name = name;
+            Username = name;
         }
     }
 }

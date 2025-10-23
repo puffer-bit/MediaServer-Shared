@@ -4,7 +4,7 @@ using Shared.Enums;
 
 namespace Shared.Models.Requests.SessionInfo
 {
-    public class UserSessionsInfoRequestModel
+    public class SessionsInfoRequestModel
     {
         public string? RoomId { get; set; }
         public SessionType? SessionType { get; set; }
@@ -13,7 +13,7 @@ namespace Shared.Models.Requests.SessionInfo
         public required bool IsAllSessionsRequested { get; set; }
 
         [SetsRequiredMembers]
-        public UserSessionsInfoRequestModel(bool isAllSessionsRequested)
+        public SessionsInfoRequestModel(bool isAllSessionsRequested)
         {
             IsAllSessionsRequested = isAllSessionsRequested;
         }

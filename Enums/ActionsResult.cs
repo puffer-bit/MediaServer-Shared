@@ -50,7 +50,8 @@ namespace Shared.Enums
         RoomNotExists = 1,
         HostCannotBeKicked = 2,
         InsufficientPermissions = 3,
-        TimedOut = 4
+        TimedOut = 4,
+        ParticipantNotExists
     }
     
     public enum LeaveSessionResult
@@ -76,7 +77,9 @@ namespace Shared.Enums
         InternalError = -1,
         NoError = 0,
         RoomNotExists = 1,
-        TimedOut = 4
+        TimedOut = 4,
+        ParticipantNotExists,
+        AlreadyRejected
     }
     
     public enum RejectUserSessionResult
@@ -84,7 +87,9 @@ namespace Shared.Enums
         InternalError = -1,
         NoError = 0,
         RoomNotExists = 1,
-        TimedOut = 4
+        TimedOut = 4,
+        ParticipantNotExists,
+        AlreadyApproved
     }
     
     public enum SessionRequestResult

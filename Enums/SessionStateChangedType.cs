@@ -14,5 +14,7 @@ public enum SessionStateChangedType
     HostConnected = 10,
     HostDisconnected = 11,
     HostNegotiated = 12,
-    UserRejected
+    UserRejected,
+    HostKicked,
+    SessionClosed
 }

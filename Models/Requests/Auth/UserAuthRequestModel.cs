@@ -6,7 +6,7 @@ namespace Shared.Models.Requests
     {
         public AuthStatus Status;
         public string? CoordinatorInstanceId;
-        public string? AuthMessage;
+        public CoordinatorSessionDTO? CoordinatorSessionData;
         public UserDTO? UserDto;
 
         public enum AuthStatus

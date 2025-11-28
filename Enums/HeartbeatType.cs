@@ -8,5 +8,7 @@ public enum HeartbeatType
     Kicked = 4,
     Banned = 5,
     DisconnectedDueTimeOut = 6,
-    DisconnectedDueError = 7
+    DisconnectedDueError = 7,
+    ServerRestarting = 8,
+    ServerClosing = 9
 }

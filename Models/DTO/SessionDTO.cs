@@ -9,6 +9,7 @@ namespace Shared.Models
         public required string Name { get; set; }
         public required string? HostId { get; set; }
         public required int Capacity { get; set; }
+        public required string CoordinatorInstanceId { get; set; }
         public required SessionType SessionType { get; set; }
         public bool IsEntered { get; set; }
     }

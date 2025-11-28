@@ -1,9 +1,12 @@
-﻿namespace Shared.Models.Requests
+﻿using Shared.Models.DTO;
+
+namespace Shared.Models.Requests
 {
     public class UserAuthRequestModel
     {
         public AuthStatus Status;
-        public string? AuthMessage;
+        public string? CoordinatorInstanceId;
+        public CoordinatorSessionDTO? CoordinatorSessionData;
         public UserDTO? UserDto;
 
         public enum AuthStatus
@@ -19,15 +22,16 @@
 
         }
 
-        public UserAuthRequestModel(AuthStatus AuthStatus)
+        public UserAuthRequestModel(AuthStatus authStatus)
         {
-            this.Status = AuthStatus;
+            this.Status = authStatus;
         }
 
-        public UserAuthRequestModel(AuthStatus AuthStatus, UserDTO userDTO)
+        public UserAuthRequestModel(AuthStatus authStatus, UserDTO userDTO, string coordinatorInstanceId)
         {
-            this.Status = AuthStatus;
+            this.Status = authStatus;
             this.UserDto = userDTO;
+            this.CoordinatorInstanceId = coordinatorInstanceId;
         }
         
     }

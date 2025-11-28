@@ -8,7 +8,11 @@ namespace Shared.Enums
         Join = 3,
         Leave = 4,
         HostStateChanged = 6,
-        Reconfigure = 8
+        Reconfigure = 8,
+        Kick,
+        Ban,
+        Approve,
+        Reject
     }
 }
 

@@ -8,10 +8,10 @@ namespace Shared.Enums
 {
     public enum ScreenCastResult
     {
+        InternalError = -1,
         NoError = 0,
         InitFailed = 1,
         SourceError = 2,
-        NotInitialized = 3,
-        InternalError = 4
+        NotInitialized = 3
     }
 }

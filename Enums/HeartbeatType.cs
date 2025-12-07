@@ -10,5 +10,5 @@ public enum HeartbeatType
     DisconnectedDueTimeOut = 6,
     DisconnectedDueError = 7,
     ServerRestarting = 8,
-    ServerClosing = 9
+    ServerClosing = 9,
 }

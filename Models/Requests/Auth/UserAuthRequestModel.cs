@@ -1,6 +1,6 @@
 ﻿using Shared.Models.DTO;
 
-namespace Shared.Models.Requests
+namespace Shared.Models.Requests.Auth
 {
     public class UserAuthRequestModel
     {

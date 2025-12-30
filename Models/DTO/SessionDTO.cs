@@ -1,7 +1,7 @@
 ﻿
 using Shared.Enums;
 
-namespace Shared.Models
+namespace Shared.Models.DTO
 {
     public class SessionDTO
     {

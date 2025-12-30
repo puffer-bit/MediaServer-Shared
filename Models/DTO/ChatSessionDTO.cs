@@ -1,4 +1,4 @@
-namespace Shared.Models;
+namespace Shared.Models.DTO;
 
 public class ChatSessionDTO : SessionDTO
 {

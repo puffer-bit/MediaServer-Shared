@@ -4,14 +4,11 @@ using Shared.Models.DTO;
 
 namespace Shared.Models.Requests.SessionActionsRequests
 {
-    [method: SetsRequiredMembers]
-    public class UndefinedSessionRequestModel : IUserSessionRequestModel
+    public class ErrorSessionRequestModel
     {
-        public string? PeerId { get; set; }
-        public required SessionDTO Session { get; set; }
         public SessionRequestType Type => SessionRequestType.Undefined;
 
-        public UndefinedSessionRequestModel()
+        public ErrorSessionRequestModel()
         {
             
         }

@@ -5,9 +5,9 @@ using Shared.Models.DTO;
 namespace Shared.Models.Requests.SessionActionsRequests
 {
     [method: SetsRequiredMembers]
-    public class CreateSessionRequestModel : IUserSessionRequestModel
+    public class CreateSessionRequestModel
     {
-        public string? PeerId { get; set; }
+        public required string SessionId { get; set; }
         public required SessionDTO Session { get; set; }
         public SessionRequestType Type => SessionRequestType.Create;
         public CreateSessionResult? Result { get; set; }
@@ -21,12 +21,14 @@ namespace Shared.Models.Requests.SessionActionsRequests
         public CreateSessionRequestModel(SessionDTO session)
         {
             Session = session;
+            SessionId = session.Id;
         }
         
         [SetsRequiredMembers]
         public CreateSessionRequestModel(SessionDTO session, CreateSessionResult result)
         {
             Session = session;
+            SessionId = session.Id;
             Result = result;
         }
     }

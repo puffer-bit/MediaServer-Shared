@@ -5,10 +5,10 @@ using Shared.Models.DTO;
 namespace Shared.Models.Requests.SessionActionsRequests
 {
     [method: SetsRequiredMembers]
-    public class JoinSessionRequestModel : IUserSessionRequestModel
+    public class JoinSessionRequestModel
     {
-        public string? PeerId { get; set; }
-        public required SessionDTO Session { get; set; }
+        public required string SessionId { get; set; }
+        public required SessionType SessionType { get; set; }
         public SessionRequestType Type => SessionRequestType.Join;
         public JoinSessionResult? Result { get; set; }
         
@@ -18,16 +18,16 @@ namespace Shared.Models.Requests.SessionActionsRequests
         }
         
         [SetsRequiredMembers]
-        public JoinSessionRequestModel(SessionDTO session)
+        public JoinSessionRequestModel(string sessionId)
         {
-            Session = session;
+            SessionId = sessionId;
         }
         
         [SetsRequiredMembers]
-        public JoinSessionRequestModel(SessionDTO session, JoinSessionResult result)
+        public JoinSessionRequestModel(string sessionId, JoinSessionResult result)
         {
             Result = result;
-            Session = session;
+            SessionId = sessionId;
         }
     }
 }

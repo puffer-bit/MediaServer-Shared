@@ -5,28 +5,32 @@ using Shared.Models.DTO;
 
 namespace Shared.Models.Requests.SessionActionsRequests;
 
-public class RejectUserRequestModel : IUserSessionRequestModel
+public class RejectUserRequestModel
 {
-    public string? PeerId { get; set; }
-    public required SessionDTO Session { get; set; }
+    public required string SessionId { get; set; }
+    public required string UserTargetId { get; set; }
+    public required SessionType SessionType { get; set; }
     public SessionRequestType Type => SessionRequestType.Reject;
+    public string? Reason { get; set; }
     public RejectUserSessionResult? Result { get; set; }
 
-    public RejectUserRequestModel()
+    public RejectUserRequestModel(string userTargetId)
     {
-            
+        UserTargetId = userTargetId;
     }
                 
     [SetsRequiredMembers]
-    public RejectUserRequestModel(SessionDTO session)
+    public RejectUserRequestModel(string sessionId, string userTargetId)
     {
-        Session = session;
+        SessionId = sessionId;
+        UserTargetId = userTargetId;
     }
         
     [SetsRequiredMembers]
-    public RejectUserRequestModel(SessionDTO session, RejectUserSessionResult result)
+    public RejectUserRequestModel(string sessionId, RejectUserSessionResult result, string userTargetId)
     {
-        Session = session;
+        SessionId = sessionId;
         Result = result;
+        UserTargetId = userTargetId;
     }
 }

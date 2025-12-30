@@ -4,28 +4,32 @@ using Shared.Models.DTO;
 
 namespace Shared.Models.Requests.SessionActionsRequests;
 
-public class BanFromSessionRequestModel : IUserSessionRequestModel
+public class BanFromSessionRequestModel
 {
-    public string? PeerId { get; set; }
-    public required SessionDTO Session { get; set; }
+    public required string SessionId { get; set; }
+    public required string UserTargetId { get; set; }
+    public required SessionType SessionType { get; set; }
     public SessionRequestType Type => SessionRequestType.Ban;
+    public string? Reason { get; set; }
     public BanFromSessionResult? Result { get; set; }
 
-    public BanFromSessionRequestModel()
+    public BanFromSessionRequestModel(string userTargetId)
     {
-            
+        UserTargetId = userTargetId;
     }
                 
     [SetsRequiredMembers]
-    public BanFromSessionRequestModel(SessionDTO session)
+    public BanFromSessionRequestModel(string sessionId, string userTargetId)
     {
-        Session = session;
+        SessionId = sessionId;
+        UserTargetId = userTargetId;
     }
         
     [SetsRequiredMembers]
-    public BanFromSessionRequestModel(SessionDTO session, BanFromSessionResult result)
+    public BanFromSessionRequestModel(string sessionId, BanFromSessionResult result, string userTargetId)
     {
-        Session = session;
+        SessionId = sessionId;
         Result = result;
+        UserTargetId = userTargetId;
     }
 }

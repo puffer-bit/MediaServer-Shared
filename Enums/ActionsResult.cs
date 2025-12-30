@@ -43,7 +43,7 @@ namespace Shared.Enums
         TimedOut = 4
     }
     
-    public enum KickFromSessionResult
+    public enum LeaveFromSessionResult
     {
         InternalError = -1,
         NoError = 0,
@@ -114,7 +114,9 @@ namespace Shared.Enums
         NoError = 0,
         NotExceptedError = 1,
         ForbiddenMessage = 2,
-        JsonParseError = 3
+        ForbiddenRequest = 3,
+        JsonParseError = 4,
+        NoUserId = 5
     }
     
     public enum ValidateMessageResult

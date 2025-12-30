@@ -7,24 +7,16 @@ namespace Shared.Models.Requests.SessionInfo
 {
     public class SessionsInfoRequestModel
     {
-        public string? RoomId { get; set; }
-        public SessionType? SessionType { get; set; }
+        public string? SessionId { get; set; }
         public SessionRequestResult? Result { get; set; }
         public Dictionary<string, SessionDTO> SessionsList { get; set; } = new();
-        public required bool IsAllSessionsRequested { get; set; }
-
-        [SetsRequiredMembers]
-        public SessionsInfoRequestModel(bool isAllSessionsRequested)
-        {
-            IsAllSessionsRequested = isAllSessionsRequested;
-        }
         
-        public void AddSession(string roomId, SessionDTO session)
+        public void AddSession(string sessionId, SessionDTO session)
         {
-            SessionsList.Add(roomId, session);
+            SessionsList.Add(sessionId, session);
         }
 
-        public void AddSessions(IDictionary<string, SessionDTO> sessions)
+        public void AddSessions(IReadOnlyDictionary<string, SessionDTO> sessions)
         {
             foreach (var session in sessions)
             {

@@ -5,29 +5,33 @@ using Shared.Models.DTO;
 namespace Shared.Models.Requests.SessionActionsRequests
 {
     [method: SetsRequiredMembers]
-    public class KickFromSessionRequestModel : IUserSessionRequestModel
+    public class KickFromSessionRequestModel
     {
-        public string? PeerId { get; set; }
-        public required SessionDTO Session { get; set; }
+        public required string SessionId { get; set; }
+        public required string UserTargetId { get; set; }
+        public required SessionType SessionType { get; set; }
         public SessionRequestType Type => SessionRequestType.Kick;
+        public string? Reason { get; set; }
         public LeaveSessionResult? Result { get; set; }
 
-        public KickFromSessionRequestModel()
+        public KickFromSessionRequestModel(string userTargetId)
         {
-            
+            UserTargetId = userTargetId;
         }
                 
         [SetsRequiredMembers]
-        public KickFromSessionRequestModel(SessionDTO session)
+        public KickFromSessionRequestModel(string sessionId, string userTargetId)
         {
-            Session = session;
+            SessionId = sessionId;
+            UserTargetId = userTargetId;
         }
         
         [SetsRequiredMembers]
-        public KickFromSessionRequestModel(SessionDTO session, LeaveSessionResult result)
+        public KickFromSessionRequestModel(string sessionId, LeaveSessionResult result, string userTargetId)
         {
-            Session = session;
+            SessionId = sessionId;
             Result = result;
+            UserTargetId = userTargetId;
         }
     }
 }

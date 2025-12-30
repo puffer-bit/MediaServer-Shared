@@ -8,7 +8,7 @@ namespace Shared.Models.DTO
         public string UserId { get; set; }
         public bool IsStreamHost { get; set; }
         public bool IsAudioRequested { get; set; }
-        public VideoSessionPeerState PeerState { get; set; }
+        public VideoSessionPeerState State { get; set; }
         public bool IsNegotiated { get; set; }
         public bool IsConnected { get; set; }
         public bool IsApproved { get; set; }

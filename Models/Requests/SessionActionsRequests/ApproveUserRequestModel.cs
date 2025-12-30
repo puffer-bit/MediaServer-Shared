@@ -4,28 +4,31 @@ using Shared.Models.DTO;
 
 namespace Shared.Models.Requests.SessionActionsRequests;
 
-public class ApproveUserRequestModel : IUserSessionRequestModel
+public class ApproveUserRequestModel
 {
-    public string? PeerId { get; set; }
-    public required SessionDTO Session { get; set; }
+    public required string SessionId { get; set; }
+    public required string UserTargetId { get; set; }
+    public required SessionType SessionType { get; set; }
     public SessionRequestType Type => SessionRequestType.Approve;
     public ApproveUserSessionResult? Result { get; set; }
 
-    public ApproveUserRequestModel()
+    public ApproveUserRequestModel(string userTargetId)
     {
-            
+        UserTargetId = userTargetId;
     }
                 
     [SetsRequiredMembers]
-    public ApproveUserRequestModel(SessionDTO session)
+    public ApproveUserRequestModel(string sessionId, string userTargetId)
     {
-        Session = session;
+        SessionId = sessionId;
+        UserTargetId = userTargetId;
     }
         
     [SetsRequiredMembers]
-    public ApproveUserRequestModel(SessionDTO session, ApproveUserSessionResult result)
+    public ApproveUserRequestModel(string sessionId, ApproveUserSessionResult result, string userTargetId)
     {
-        Session = session;
+        SessionId = sessionId;
         Result = result;
+        UserTargetId = userTargetId;
     }
 }

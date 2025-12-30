@@ -5,10 +5,10 @@ using Shared.Models.DTO;
 namespace Shared.Models.Requests.SessionActionsRequests
 {
     [method: SetsRequiredMembers]
-    public class DeleteSessionRequestModel : IUserSessionRequestModel
+    public class DeleteSessionRequestModel
     {
-        public string? PeerId { get; set; }
-        public required SessionDTO Session { get; set; }
+        public required string SessionId { get; set; }
+        public required SessionType SessionType { get; set; }
         public SessionRequestType Type => SessionRequestType.Delete;
         public DeleteSessionResult? Result { get; set; }
 
@@ -18,15 +18,15 @@ namespace Shared.Models.Requests.SessionActionsRequests
         }
         
         [SetsRequiredMembers]
-        public DeleteSessionRequestModel(SessionDTO session)
+        public DeleteSessionRequestModel(string sessionId)
         {
-            Session = session;
+            SessionId = sessionId;
         }
         
         [SetsRequiredMembers]
-        public DeleteSessionRequestModel(SessionDTO session, DeleteSessionResult result)
+        public DeleteSessionRequestModel(string sessionId, DeleteSessionResult result)
         {
-            Session = session;
+            SessionId = sessionId;
             Result = result;
         }
     }

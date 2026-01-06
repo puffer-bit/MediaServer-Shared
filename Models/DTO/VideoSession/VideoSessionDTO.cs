@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Shared.Models.DTO.VideoSession;
 
 public class VideoSessionDTO : SessionDTO

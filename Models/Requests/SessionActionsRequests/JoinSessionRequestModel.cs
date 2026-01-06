@@ -1,33 +1,16 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using Shared.Enums;
-using Shared.Models.DTO;
+﻿using Shared.Enums;
+using Shared.Models.Responses.SessionActions;
 
 namespace Shared.Models.Requests.SessionActionsRequests
 {
-    [method: SetsRequiredMembers]
-    public class JoinSessionRequestModel
+    public record JoinSessionRequest(
+        string SessionId,
+        SessionType SessionType
+    )
     {
-        public required string SessionId { get; set; }
-        public required SessionType SessionType { get; set; }
         public SessionRequestType Type => SessionRequestType.Join;
-        public JoinSessionResult? Result { get; set; }
-        
-        public JoinSessionRequestModel()
-        {
-            
-        }
-        
-        [SetsRequiredMembers]
-        public JoinSessionRequestModel(string sessionId)
-        {
-            SessionId = sessionId;
-        }
-        
-        [SetsRequiredMembers]
-        public JoinSessionRequestModel(string sessionId, JoinSessionResult result)
-        {
-            Result = result;
-            SessionId = sessionId;
-        }
+
+        public JoinSessionResponse ToResponse(JoinSessionResult result)
+            => new(SessionId, SessionType, result);
     }
 }

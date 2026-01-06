@@ -4,7 +4,7 @@ namespace Shared.Enums
     {
         Undefined = 0,
         WebRTCInit = 2,
-        RoomRequest = 6,
+        SessionRequest = 6,
         UserAuth = 7,
         UserInfoRequest = 8,
         SessionsListRequest = 9,

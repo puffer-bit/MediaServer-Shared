@@ -5,5 +5,8 @@ public enum UserState
     Unknown = 0,
     Banned = 1,
     Suspended = 2,
-    Normal = 3
+    Offline = 3,
+    Away = 4,
+    DoNotDisturb = 5,
+    Online = 6
 }

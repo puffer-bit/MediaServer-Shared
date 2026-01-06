@@ -1,36 +1,18 @@
 using System.ComponentModel.DataAnnotations;
-using System.Diagnostics.CodeAnalysis;
 using Shared.Enums;
-using Shared.Models.DTO;
+using Shared.Models.Responses.SessionActions;
 
 namespace Shared.Models.Requests.SessionActionsRequests;
 
-public class RejectUserRequestModel
+public record RejectUserRequest(
+    string SessionId,
+    string UserTargetId,
+    SessionType SessionType
+)
 {
-    public required string SessionId { get; set; }
-    public required string UserTargetId { get; set; }
-    public required SessionType SessionType { get; set; }
     public SessionRequestType Type => SessionRequestType.Reject;
-    public string? Reason { get; set; }
-    public RejectUserSessionResult? Result { get; set; }
+    public string? Reason { get; init; }
 
-    public RejectUserRequestModel(string userTargetId)
-    {
-        UserTargetId = userTargetId;
-    }
-                
-    [SetsRequiredMembers]
-    public RejectUserRequestModel(string sessionId, string userTargetId)
-    {
-        SessionId = sessionId;
-        UserTargetId = userTargetId;
-    }
-        
-    [SetsRequiredMembers]
-    public RejectUserRequestModel(string sessionId, RejectUserSessionResult result, string userTargetId)
-    {
-        SessionId = sessionId;
-        Result = result;
-        UserTargetId = userTargetId;
-    }
+    public RejectUserResponse ToResponse(RejectUserSessionResult result)
+        => new(SessionId, UserTargetId, SessionType, result);
 }

@@ -1,6 +1,6 @@
 namespace Shared.Enums
 {
-    public enum WebRTCNegotiationType
+    public enum WebRtcNegotiationType
     {
         Offer = 0,
         Answer = 1,

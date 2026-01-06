@@ -1,33 +1,16 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using Shared.Enums;
-using Shared.Models.DTO;
+﻿using Shared.Enums;
+using Shared.Models.Responses.SessionActions;
 
 namespace Shared.Models.Requests.SessionActionsRequests
 {
-    [method: SetsRequiredMembers]
-    public class LeaveSessionRequestModel
+    public record LeaveSessionRequest(
+        string SessionId,
+        SessionType SessionType
+    )
     {
-        public required string SessionId { get; set; }
-        public required SessionType SessionType { get; set; }
         public SessionRequestType Type => SessionRequestType.Leave;
-        public LeaveSessionResult? Result { get; set; }
 
-        public LeaveSessionRequestModel()
-        {
-            
-        }
-                
-        [SetsRequiredMembers]
-        public LeaveSessionRequestModel(string sessionId)
-        {
-            SessionId = sessionId;
-        }
-        
-        [SetsRequiredMembers]
-        public LeaveSessionRequestModel(string sessionId, LeaveSessionResult result)
-        {
-            SessionId = sessionId;
-            Result = result;
-        }
+        public LeaveSessionResponse ToResponse(LeaveSessionResult result)
+            => new(SessionId, SessionType, result);
     }
 }

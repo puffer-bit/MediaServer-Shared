@@ -3,15 +3,15 @@ using Shared.Models.Responses.SessionActions;
 
 namespace Shared.Models.Requests.SessionActionsRequests;
 
-public record BanFromSessionRequest(
+public record ApproveUserRequest(
     string SessionId,
     string UserTargetId,
     SessionType SessionType
 )
 {
-    public SessionRequestType Type => SessionRequestType.Ban;
-    public string? Reason { get; init; }
+    public SessionRequestType Type => SessionRequestType.Approve;
 
-    public BanFromSessionResponse ToResponse(BanFromSessionResult result)
+    public ApproveUserResponse ToResponse(ApproveUserSessionResult result)
         => new(SessionId, UserTargetId, SessionType, result);
 }
+

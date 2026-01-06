@@ -104,7 +104,7 @@ namespace Shared.Enums
     {
         InternalError = -1,
         NoError = 0,
-        PartialCompletion = 1,
+        UserNotFounded = 1,
         TimedOut = 4
     }
     

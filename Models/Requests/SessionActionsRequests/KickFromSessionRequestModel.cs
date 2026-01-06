@@ -1,37 +1,18 @@
-using System.Diagnostics.CodeAnalysis;
 using Shared.Enums;
-using Shared.Models.DTO;
+using Shared.Models.Responses.SessionActions;
 
 namespace Shared.Models.Requests.SessionActionsRequests
 {
-    [method: SetsRequiredMembers]
-    public class KickFromSessionRequestModel
+    public record KickFromSessionRequest(
+        string SessionId,
+        string UserTargetId,
+        SessionType SessionType
+    )
     {
-        public required string SessionId { get; set; }
-        public required string UserTargetId { get; set; }
-        public required SessionType SessionType { get; set; }
         public SessionRequestType Type => SessionRequestType.Kick;
-        public string? Reason { get; set; }
-        public LeaveSessionResult? Result { get; set; }
+        public string? Reason { get; init; }
 
-        public KickFromSessionRequestModel(string userTargetId)
-        {
-            UserTargetId = userTargetId;
-        }
-                
-        [SetsRequiredMembers]
-        public KickFromSessionRequestModel(string sessionId, string userTargetId)
-        {
-            SessionId = sessionId;
-            UserTargetId = userTargetId;
-        }
-        
-        [SetsRequiredMembers]
-        public KickFromSessionRequestModel(string sessionId, LeaveSessionResult result, string userTargetId)
-        {
-            SessionId = sessionId;
-            Result = result;
-            UserTargetId = userTargetId;
-        }
+        public KickFromSessionResponse ToResponse(LeaveSessionResult result)
+            => new(SessionId, UserTargetId, SessionType, result);
     }
 }

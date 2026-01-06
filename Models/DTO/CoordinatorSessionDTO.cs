@@ -1,3 +1,5 @@
+using System;
+
 namespace Shared.Models.DTO;
 
 public class CoordinatorSessionDTO

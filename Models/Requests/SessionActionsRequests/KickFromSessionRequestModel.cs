@@ -6,11 +6,11 @@ namespace Shared.Models.Requests.SessionActionsRequests
     public record KickFromSessionRequest(
         string SessionId,
         string UserTargetId,
-        SessionType SessionType
+        SessionType SessionType,
+        string? Reason
     )
     {
         public SessionRequestType Type => SessionRequestType.Kick;
-        public string? Reason { get; init; }
 
         public KickFromSessionResponse ToResponse(LeaveSessionResult result)
             => new(SessionId, UserTargetId, SessionType, result);

@@ -7,17 +7,15 @@ public enum SessionsStateChangedType
     SessionReconfigured = 9
 }
 
-public enum SessionStateChangedType
+public enum VideoSessionStateChangedType
 {
     UserConnected = 1,
     UserDisconnected = 2,
     UserKicked = 3,
-    UserNegotiated = 4,
     UserBanned = 5,
     UserApproved = 6,
     HostConnected = 10,
     HostDisconnected = 11,
-    HostNegotiated = 12,
     UserRejected = 13,
     HostKicked = 14,
     UserJoined,

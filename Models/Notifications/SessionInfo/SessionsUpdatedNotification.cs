@@ -1,7 +1,7 @@
 using Shared.Enums;
 using Shared.Models.DTO;
 
-namespace Shared.Models.Requests.SessionInfo;
+namespace Shared.Models.Notifications.SessionInfo;
 
 public abstract record SessionsUpdatedNotification(SessionsStateChangedType Type);
 

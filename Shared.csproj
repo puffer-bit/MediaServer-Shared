@@ -11,4 +11,16 @@
     <Folder Include="Enums\User\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Models\DTO\VideoSessionDTO.cs">
+      <DependentUpon>SessionDTO.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\DTO\ChatSessionDTO.cs">
+      <DependentUpon>SessionDTO.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\DTO\VoiceSessionDTO.cs">
+      <DependentUpon>SessionDTO.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
 </Project>

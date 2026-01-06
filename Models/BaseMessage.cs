@@ -5,7 +5,7 @@ namespace Shared.Models
 {
     public class BaseMessage
     {
-        public string MessageId { get; init; }
+        public string Id { get; init; }
         public string? UserId { get; set; }
         public MessageType Type { get; set; }
         public object Data { get; set; }
@@ -17,7 +17,7 @@ namespace Shared.Models
 
         public BaseMessage(BaseMessage message)
         {
-            MessageId = message.MessageId;
+            Id = message.Id;
             UserId = message.UserId;
             Type = message.Type;
             Data = message.Data;
@@ -25,14 +25,14 @@ namespace Shared.Models
         
         public BaseMessage(MessageType type, object data)
         {
-            MessageId = GenerateTimestampId();
+            Id = GenerateTimestampId();
             Type = type;
             Data = data;
         }
 
         public BaseMessage(string userId, MessageType type, object data) 
         {
-            MessageId = GenerateTimestampId();
+            Id = GenerateTimestampId();
             UserId = userId;
             Type = type;
             Data = data;

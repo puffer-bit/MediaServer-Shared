@@ -7,11 +7,11 @@ namespace Shared.Models.Requests.SessionActionsRequests;
 public record RejectUserRequest(
     string SessionId,
     string UserTargetId,
-    SessionType SessionType
+    SessionType SessionType,
+    string? Reason
 )
 {
     public SessionRequestType Type => SessionRequestType.Reject;
-    public string? Reason { get; init; }
 
     public RejectUserResponse ToResponse(RejectUserSessionResult result)
         => new(SessionId, UserTargetId, SessionType, result);

@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Enums\User\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="Models\DTO\VideoSessionDTO.cs">
       <DependentUpon>SessionDTO.cs</DependentUpon>
     </Compile>

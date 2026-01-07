@@ -1,45 +1,45 @@
 using Shared.Enums;
 using Shared.Models.DTO;
 
-namespace Shared.Models.Requests.SessionInfo;
+namespace Shared.Models.Notifications.SessionInfo;
 
-public abstract record SessionUpdatedNotification(SessionStateChangedType Type);
+public abstract record SessionUpdatedNotification(VideoSessionStateChangedType Type);
 
 public record ParticipantJoinedNotification(string SessionId, UserDTO User)
-    : SessionUpdatedNotification(SessionStateChangedType.UserJoined);
+    : SessionUpdatedNotification(VideoSessionStateChangedType.UserJoined);
 
 public record ParticipantConnectedNotification(string SessionId, UserDTO User)
-    : SessionUpdatedNotification(SessionStateChangedType.UserConnected);
+    : SessionUpdatedNotification(VideoSessionStateChangedType.UserConnected);
     
 public record ParticipantLeavedNotification(string SessionId, UserDTO User)
-    : SessionUpdatedNotification(SessionStateChangedType.UserLeaved);
+    : SessionUpdatedNotification(VideoSessionStateChangedType.UserLeaved);
 
 public record ParticipantDisconnectedNotification(string SessionId, UserDTO User)
-    : SessionUpdatedNotification(SessionStateChangedType.UserDisconnected);
+    : SessionUpdatedNotification(VideoSessionStateChangedType.UserDisconnected);
 
 public record ParticipantKickedNotification(string SessionId, string Reason, UserDTO User)
-    : SessionUpdatedNotification(SessionStateChangedType.UserKicked);
+    : SessionUpdatedNotification(VideoSessionStateChangedType.UserKicked);
 
 public record ParticipantBannedNotification(string SessionId, string Reason, UserDTO User)
-    : SessionUpdatedNotification(SessionStateChangedType.UserBanned);
+    : SessionUpdatedNotification(VideoSessionStateChangedType.UserBanned);
 
 public record ParticipantApprovedNotification(string SessionId, UserDTO User)
-    : SessionUpdatedNotification(SessionStateChangedType.UserApproved);
+    : SessionUpdatedNotification(VideoSessionStateChangedType.UserApproved);
 
 public record ParticipantRejectedNotification(string SessionId, string Reason, UserDTO User)
-    : SessionUpdatedNotification(SessionStateChangedType.UserRejected);
+    : SessionUpdatedNotification(VideoSessionStateChangedType.UserRejected);
 
 public record HostJoinedNotification(string SessionId, UserDTO User)
-    : SessionUpdatedNotification(SessionStateChangedType.HostJoined);
+    : SessionUpdatedNotification(VideoSessionStateChangedType.HostJoined);
 
 public record HostConnectedNotification(string SessionId, UserDTO User)
-    : SessionUpdatedNotification(SessionStateChangedType.HostConnected);
+    : SessionUpdatedNotification(VideoSessionStateChangedType.HostConnected);
     
 public record HostLeavedNotification(string SessionId, UserDTO User)
-    : SessionUpdatedNotification(SessionStateChangedType.HostJoined);
+    : SessionUpdatedNotification(VideoSessionStateChangedType.HostJoined);
 
 public record HostDisconnectedNotification(string SessionId, UserDTO User)
-    : SessionUpdatedNotification(SessionStateChangedType.HostDisconnected);
+    : SessionUpdatedNotification(VideoSessionStateChangedType.HostDisconnected);
 
 public record HostKickedNotification(string SessionId, string Reason, UserDTO User)
-    : SessionUpdatedNotification(SessionStateChangedType.HostKicked);
+    : SessionUpdatedNotification(VideoSessionStateChangedType.HostKicked);

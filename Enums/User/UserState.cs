@@ -1,4 +1,4 @@
-namespace Shared.Enums;
+namespace Shared.Enums.User;
 
 public enum UserState
 {

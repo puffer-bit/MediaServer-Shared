@@ -17,6 +17,9 @@
     <Compile Update="Models\DTO\VoiceSessionDTO.cs">
       <DependentUpon>SessionDTO.cs</DependentUpon>
     </Compile>
+    <Compile Update="Models\Requests\SessionActionsRequests\CreateSessionModel.cs">
+      <DependentUpon>CreateSessionRequest.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 </Project>

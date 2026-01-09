@@ -4,11 +4,11 @@ using Shared.Models.DTO;
 
 namespace Shared.Models.Requests.SessionActionsRequests
 {
-    public class ErrorSessionRequestModel
+    public class ErrorSessionRequest
     {
         public SessionRequestType Type => SessionRequestType.Undefined;
 
-        public ErrorSessionRequestModel()
+        public ErrorSessionRequest()
         {
             
         }

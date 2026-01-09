@@ -40,7 +40,7 @@ namespace Shared.Enums
         NoError = 0,
         RoomNotExists = 1,
         RoomFull = 2,
-        TimedOut = 4
+        TimedOut = 4,
     }
     
     public enum LeaveFromSessionResult

@@ -18,8 +18,8 @@ namespace Shared.Models.DTO
         public string? Prefix { get; set; }
         public string? AvatarUrl { get; set; }
         public UserState State { get; set; }
+        public UserStatus Status { get; set; }
         public DateTime FirstConnectionTime { get; set; }
         public DateTime LastConnectionTime { get; set; }
-        public TimeSpan ConnectionTime => DateTime.UtcNow - LastConnectionTime;
     }
 }

@@ -33,5 +33,4 @@ public class CoordinatorSessionDTO
     public int MaxUsers { get; set; }
     
     public bool IsMOTDEnabled { get; set; }
-    public UserDTO? User { get; set; }
 }

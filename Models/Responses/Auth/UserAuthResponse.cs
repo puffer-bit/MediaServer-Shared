@@ -5,4 +5,5 @@ namespace Shared.Models.Responses.Auth;
 
 public record UserAuthResponse(
     UserDTO? UserDTO,
+    CoordinatorSessionDTO? CoordinatorSessionDTO,
     AuthResult AuthResult);

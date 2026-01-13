@@ -9,8 +9,9 @@ namespace Shared.Models.Requests.SessionActionsRequests
     )
     {
         public SessionRequestType Type => SessionRequestType.Create;
-
+        public string RequestId { get; } = Guid.NewGuid().ToString();
+        
         public CreateSessionResponse ToResponse(CreateSessionResult result, SessionDTO? sessionDTO)
-            => new(sessionDTO, result);
+            => new(RequestId, sessionDTO, result);
     }
 }

@@ -1,3 +1,4 @@
+using Shared.Enums;
 using Shared.Enums.Auth;
 using Shared.Models.DTO;
 

@@ -12,7 +12,8 @@ namespace Shared.Enums
         Kick,
         Ban,
         Approve,
-        Reject
+        Reject,
+        Auth
     }
 }
 

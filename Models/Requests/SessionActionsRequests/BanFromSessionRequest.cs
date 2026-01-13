@@ -10,8 +10,9 @@ public record BanFromSessionRequest(
     string? Reason
 )
 {
+    public string RequestId { get; } = Guid.NewGuid().ToString();
     public SessionRequestType Type => SessionRequestType.Ban;
 
     public BanFromSessionResponse ToResponse(BanFromSessionResult result)
-        => new(SessionId, UserTargetId, SessionType, result);
+        => new(RequestId, SessionId, UserTargetId, SessionType, result);
 }

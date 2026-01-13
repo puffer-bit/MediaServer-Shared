@@ -1,11 +1,13 @@
 using Shared.Enums;
+using Shared.Models.Responses.Sessions;
 
 namespace Shared.Models.Responses.SessionActions;
 
 public record LeaveSessionResponse(
+    string RequestId,
     string SessionId,
     SessionType SessionType,
-    LeaveSessionResult Result )
+    LeaveSessionResult Result ) : ISessionResponse
 {
-    public static SessionRequestType Type => SessionRequestType.Leave;
+    public SessionRequestType Type => SessionRequestType.Leave;
 }

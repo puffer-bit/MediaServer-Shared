@@ -7,7 +7,6 @@ namespace Shared.Enums
         SessionRequest = 6,
         UserAuth = 7,
         UserInfoRequest = 8,
-        SessionsListRequest = 9,
         SessionInfoRequest = 10,
         Heartbeat = 11,
         SessionsStateChanged = 12,

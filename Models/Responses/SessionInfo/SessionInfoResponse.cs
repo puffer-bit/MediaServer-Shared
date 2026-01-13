@@ -5,5 +5,6 @@ using Shared.Models.DTO;
 namespace Shared.Models.Responses.SessionInfo;
 
 public record SessionInfoResponse(
+    string RequestId,
     IDictionary<string, SessionDTO> SessionsList,
-    SessionRequestResult Result);
+    SessionRequestResult Result) : IResponse;

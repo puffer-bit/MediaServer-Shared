@@ -8,9 +8,10 @@ namespace Shared.Models.Requests.SessionActionsRequests
         SessionType SessionType
     )
     {
+        public string RequestId { get; } = Guid.NewGuid().ToString();
         public SessionRequestType Type => SessionRequestType.Join;
 
         public JoinSessionResponse ToResponse(JoinSessionResult result)
-            => new(SessionId, SessionType, result);
+            => new(RequestId, SessionId, SessionType, result);
     }
 }

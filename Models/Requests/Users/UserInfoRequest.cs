@@ -7,6 +7,8 @@ namespace Shared.Models.Requests.Users;
 
 public record UserInfoRequest(IList<string> UserIds)
 {
+    public string RequestId { get; } = Guid.NewGuid().ToString();
+
     public UserInfoResponse ToResponse(IDictionary<string, UserDTO> userList, UsersRequestResult result)
-        => new(userList, result);
+        => new(RequestId, userList, result);
 }

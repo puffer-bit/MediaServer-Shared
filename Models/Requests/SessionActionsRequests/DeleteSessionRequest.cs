@@ -8,9 +8,10 @@ namespace Shared.Models.Requests.SessionActionsRequests
         SessionType SessionType
     )
     {
+        public string RequestId { get; } = Guid.NewGuid().ToString();
         public SessionRequestType Type => SessionRequestType.Delete;
 
         public DeleteSessionResponse ToResponse(DeleteSessionResult result)
-            => new(result);
+            => new(RequestId, result);
     }
 }

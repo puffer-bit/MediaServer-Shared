@@ -9,10 +9,11 @@ namespace Shared.Models.Requests.SessionActionsRequests
         SessionType SessionType,
         string? Reason
     )
-    {
+    {        
+        public string RequestId { get; } = Guid.NewGuid().ToString();
         public SessionRequestType Type => SessionRequestType.Kick;
 
         public KickFromSessionResponse ToResponse(LeaveSessionResult result)
-            => new(SessionId, UserTargetId, SessionType, result);
+            => new(RequestId, SessionId, UserTargetId, SessionType, result);
     }
 }

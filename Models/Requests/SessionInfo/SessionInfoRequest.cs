@@ -7,7 +7,9 @@ namespace Shared.Models.Requests.SessionInfo
 {
     public record SessionInfoRequest(string? SessionId)
     {
+        public string RequestId { get; } = Guid.NewGuid().ToString();
+        
         public SessionInfoResponse ToResponse(IDictionary<string, SessionDTO> sessionList, SessionRequestResult result) 
-            => new (sessionList, result);
+            => new (RequestId, sessionList, result);
     }
 }

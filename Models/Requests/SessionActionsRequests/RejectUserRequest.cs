@@ -11,8 +11,9 @@ public record RejectUserRequest(
     string? Reason
 )
 {
+    public string RequestId { get; } = Guid.NewGuid().ToString();
     public SessionRequestType Type => SessionRequestType.Reject;
 
     public RejectUserResponse ToResponse(RejectUserSessionResult result)
-        => new(SessionId, UserTargetId, SessionType, result);
+        => new(RequestId, SessionId, UserTargetId, SessionType, result);
 }

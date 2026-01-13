@@ -1,21 +1,14 @@
-﻿using Shared.Models.DTO;
+﻿using Shared.Enums.Auth;
+using Shared.Models.DTO;
+using Shared.Models.Responses.Auth;
 
 namespace Shared.Models.Requests.Auth
 {
-    public class UserAuthRequest
+    public record UserAuthRequest(string? Password, string? UserIdentity)
     {
-        public string? Password;
-        public string? UserIdentity;
-
-        public UserAuthRequest(string? password)
-        {
-            Password = password;
-        }
+        public string RequestId { get; } = Guid.NewGuid().ToString();
         
-        public UserAuthRequest(string? userIdentity, string? password)
-        {
-            UserIdentity = userIdentity;
-            Password = password;
-        }
+        public UserAuthResponse ToResponse(AuthResult authResult, UserDTO? userDTO = null, CoordinatorSessionDTO? coordinatorSessionDTO = null )
+            => new(RequestId, userDTO, coordinatorSessionDTO, authResult);
     }
 }

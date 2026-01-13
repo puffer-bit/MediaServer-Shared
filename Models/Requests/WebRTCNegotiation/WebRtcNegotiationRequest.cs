@@ -8,7 +8,7 @@ namespace Shared.Models.Requests.WebRTCNegotiation
     public record WebRtcNegotiationRequest(
         WebRtcNegotiationType Type, string SessionId, object Data)
     {
-        public string RequestId { get; } = Guid.NewGuid().ToString();
+        public string RequestId { get; init; } = Guid.NewGuid().ToString();
 
         public WebRtcNegotiationResponse ToResponse(WebRtcNegotiationType type, WebRTCNegotiationResult result,
             object data)

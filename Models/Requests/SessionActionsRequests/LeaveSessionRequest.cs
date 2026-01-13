@@ -8,7 +8,7 @@ namespace Shared.Models.Requests.SessionActionsRequests
         SessionType SessionType
     )
     {
-        public string RequestId { get; } = Guid.NewGuid().ToString();
+        public string RequestId { get; init; } = Guid.NewGuid().ToString();
         public SessionRequestType Type => SessionRequestType.Leave;
 
         public LeaveSessionResponse ToResponse(LeaveSessionResult result)

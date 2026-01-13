@@ -9,7 +9,7 @@ public record ApproveUserRequest(
     SessionType SessionType
 )
 {
-    public string RequestId { get; } = Guid.NewGuid().ToString();
+    public string RequestId { get; init; } = Guid.NewGuid().ToString();
     public SessionRequestType Type => SessionRequestType.Approve;
     
     public ApproveUserResponse ToResponse(ApproveUserSessionResult result)

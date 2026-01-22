@@ -9,5 +9,7 @@ public enum AuthType
 public enum AuthResult
 {
     Success,
-    WrongLogin
+    AuthFailed,
+    TwoFactorAuthFailed,
+    Banned
 }

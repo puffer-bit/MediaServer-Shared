@@ -4,12 +4,11 @@ using Shared.Models.DTO;
 
 namespace Shared.Models.Responses.Auth;
 
-public record UserAuthResponse(
+public record UserTwoFactorAuthResponse(
     string RequestId,
     UserDTO? UserDTO,
     CoordinatorSessionDTO? CoordinatorSessionDTO,
-    AuthResult AuthResult,
-    string? ServerMessage) : IAuthResponse
+    AuthResult AuthResult) : IAuthResponse
 {
-    public AuthType Type => AuthType.PasswordAuth;
+    public AuthType Type => AuthType.TwoFactorAuth;
 }

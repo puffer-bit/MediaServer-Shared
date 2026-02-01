@@ -44,8 +44,9 @@ public record VideoSessionHostDisconnectedNotification(string SessionId, PeerDTO
 public record VideoSessionHostKickedNotification(string SessionId, PeerDTO Peer, string? Reason)
     : VideoSessionUpdatedNotification(VideoSessionStateChangedType.HostKicked);
 
-public record VideoSessionAnswerReadyNotification(string SessionId, PeerDTO Peer, object Data)
+public record VideoSessionAnswerReadyNotification(string SessionId, string UserId, object Data)
     : VideoSessionUpdatedNotification(VideoSessionStateChangedType.HostKicked);
 
-public record VideoSessionIceReadyNotification(string SessionId, PeerDTO Peer, object Data)
+public record VideoSessionIceReadyNotification(string SessionId, string UserId, object Data)
     : VideoSessionUpdatedNotification(VideoSessionStateChangedType.HostKicked);
+

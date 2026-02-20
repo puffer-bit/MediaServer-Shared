@@ -10,5 +10,6 @@ namespace Shared.Enums
         SessionInfoRequest = 10,
         Heartbeat = 11,
         SessionsStateChanged = 12,
+        TextChatRequest = 13
     }
 }

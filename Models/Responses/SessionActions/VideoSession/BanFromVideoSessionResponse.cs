@@ -1,14 +1,13 @@
 using Shared.Enums;
-using Shared.Models.Responses.Sessions;
 
 namespace Shared.Models.Responses.SessionActions;
 
-public record BanFromSessionResponse(
+public record BanFromVideoSessionResponse(
     string RequestId,
     string SessionId,
     string UserTargetId,
     SessionType SessionType,
-    BanFromSessionResult Result ) : ISessionResponse
+    BanFromSessionResult Result ) : IVideoSessionResponse
 {
     public SessionRequestType Type => SessionRequestType.Ban;
 }

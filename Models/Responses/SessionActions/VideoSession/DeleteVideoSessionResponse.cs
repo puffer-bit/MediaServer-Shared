@@ -1,11 +1,10 @@
 using Shared.Enums;
-using Shared.Models.Responses.Sessions;
 
 namespace Shared.Models.Responses.SessionActions;
 
-public record DeleteSessionResponse(
+public record DeleteVideoSessionResponse(
     string RequestId,
-    DeleteSessionResult Result ) : ISessionResponse
+    DeleteSessionResult Result ) : IVideoSessionResponse
 {
     public SessionRequestType Type => SessionRequestType.Delete;
 }

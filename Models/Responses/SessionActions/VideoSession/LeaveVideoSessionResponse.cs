@@ -1,13 +1,12 @@
 using Shared.Enums;
-using Shared.Models.Responses.Sessions;
 
 namespace Shared.Models.Responses.SessionActions;
 
-public record LeaveSessionResponse(
+public record LeaveVideoSessionResponse(
     string RequestId,
     string SessionId,
     SessionType SessionType,
-    LeaveSessionResult Result ) : ISessionResponse
+    LeaveSessionResult Result ) : IVideoSessionResponse
 {
     public SessionRequestType Type => SessionRequestType.Leave;
 }

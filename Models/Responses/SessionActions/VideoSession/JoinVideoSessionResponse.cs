@@ -1,13 +1,12 @@
 using Shared.Enums;
-using Shared.Models.Responses.Sessions;
 
 namespace Shared.Models.Responses.SessionActions;
 
-public record JoinSessionResponse(
+public record JoinVideoSessionResponse(
     string RequestId,
     string SessionId,
     SessionType SessionType,
-    JoinSessionResult Result ) : ISessionResponse
+    JoinSessionResult Result ) : IVideoSessionResponse
 {
     public SessionRequestType Type => SessionRequestType.Join;
 }

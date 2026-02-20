@@ -1,13 +1,12 @@
 using Shared.Enums;
 using Shared.Models.DTO;
-using Shared.Models.Responses.Sessions;
 
 namespace Shared.Models.Responses.SessionActions;
 
-public record CreateSessionResponse(
+public record CreateVideoSessionResponse(
     string RequestId,
     SessionDTO? Session,
-    CreateSessionResult Result ) : ISessionResponse
+    CreateSessionResult Result ) : IVideoSessionResponse
 {
     public SessionRequestType Type => SessionRequestType.Create;
 }

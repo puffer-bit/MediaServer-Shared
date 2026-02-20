@@ -1,5 +1,4 @@
 using Shared.Enums;
-using Shared.Models.Responses.Sessions;
 
 namespace Shared.Models.Responses.SessionActions;
 
@@ -8,7 +7,7 @@ public record ApproveUserResponse(
     string SessionId,
     string UserTargetId,
     SessionType SessionType,
-    ApproveUserSessionResult Result) : ISessionResponse
+    ApproveUserSessionResult Result) : IVideoSessionResponse
 {
     public SessionRequestType Type => SessionRequestType.Approve;
 }

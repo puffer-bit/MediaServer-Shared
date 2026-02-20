@@ -1,7 +1,7 @@
 ﻿using Shared.Enums;
 using Shared.Models.Responses.SessionActions;
 
-namespace Shared.Models.Requests.SessionActionsRequests
+namespace Shared.Models.Requests.SessionActions
 {
     public record DeleteSessionRequest(
         string SessionId,
@@ -11,7 +11,7 @@ namespace Shared.Models.Requests.SessionActionsRequests
         public string RequestId { get; init; } = Guid.NewGuid().ToString();
         public SessionRequestType Type => SessionRequestType.Delete;
 
-        public DeleteSessionResponse ToResponse(DeleteSessionResult result)
+        public DeleteVideoSessionResponse ToResponse(DeleteSessionResult result)
             => new(RequestId, result);
     }
 }

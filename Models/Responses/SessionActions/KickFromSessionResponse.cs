@@ -1,5 +1,4 @@
 using Shared.Enums;
-using Shared.Models.Responses.Sessions;
 
 namespace Shared.Models.Responses.SessionActions;
 

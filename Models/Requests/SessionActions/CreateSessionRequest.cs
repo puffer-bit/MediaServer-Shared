@@ -2,7 +2,7 @@
 using Shared.Models.DTO;
 using Shared.Models.Responses.SessionActions;
 
-namespace Shared.Models.Requests.SessionActionsRequests
+namespace Shared.Models.Requests.SessionActions
 {
     public record CreateSessionRequest(
         CreateSessionModel CreateSessionModel

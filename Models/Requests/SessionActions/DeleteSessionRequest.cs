@@ -1,7 +1,7 @@
 ﻿using Shared.Enums;
 using Shared.Models.Responses.SessionActions;
 
-namespace Shared.Models.Requests.SessionActionsRequests
+namespace Shared.Models.Requests.SessionActions
 {
     public record DeleteSessionRequest(
         string SessionId,

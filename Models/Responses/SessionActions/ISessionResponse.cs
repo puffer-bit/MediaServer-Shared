@@ -1,6 +1,6 @@
 using Shared.Enums;
 
-namespace Shared.Models.Responses.Sessions;
+namespace Shared.Models.Responses.SessionActions;
 
 public interface ISessionResponse : IResponse
 {

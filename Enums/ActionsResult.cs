@@ -137,5 +137,38 @@ namespace Shared.Enums
         NoError = 0,
         NotExceptedError = 1
     }
+
+    public enum FetchMessagesResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        NotExceptedError = 1,
+        ChatDontExist = 3,
+    }
+    
+    public enum AddMessageResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        SameMessageAlreadyExist = 1,
+        ChatDontExist = 3,
+    }
+
+    public enum EditMessageResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        MessageDontExist = 2,
+        ChatDontExist = 3,
+    }
+    
+    public enum DeleteMessageResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        NotExceptedError = 1,
+        MessageDontExist = 2,
+        ChatDontExist = 3,
+    }
 }
 

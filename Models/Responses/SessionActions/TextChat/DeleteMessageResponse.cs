@@ -5,7 +5,7 @@ namespace Shared.Models.Responses.SessionActions.TextChat;
 
 public record DeleteMessageResponse(
     string RequestId,
-    DeleteMessageResult Result) : ISessionResponse
+    DeleteMessageResult Result) : IChatSessionResponse
 {
-    public SessionRequestType Type => SessionRequestType.Approve;
+    public TextChatRequestType Type => TextChatRequestType.DeleteMessage;
 }

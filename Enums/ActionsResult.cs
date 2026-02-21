@@ -170,5 +170,14 @@ namespace Shared.Enums
         MessageDontExist = 2,
         ChatDontExist = 3,
     }
+    
+    public enum TextChatHistoryResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        NotExceptedError = 1,
+        MessageDontExist = 2,
+        ChatDontExist = 3,
+    }
 }
 

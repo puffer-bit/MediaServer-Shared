@@ -1,8 +1,8 @@
 ﻿using Shared.Enums;
 using Shared.Models.DTO;
-using Shared.Models.Responses.SessionActions;
+using Shared.Models.Responses.SessionActions.VideoSession;
 
-namespace Shared.Models.Requests.SessionActions
+namespace Shared.Models.Requests.SessionActions.VideoSession
 {
     public record CreateSessionRequest(
         CreateSessionModel CreateSessionModel

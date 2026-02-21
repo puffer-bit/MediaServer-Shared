@@ -1,11 +1,12 @@
 using Shared.Enums;
+using Shared.Enums.TextChat;
 using Shared.Models.DTO.TextChat;
 
 namespace Shared.Models.Responses.SessionActions.TextChat;
 
 public record SendMessageResponse(
     string RequestId,
-    AddMessageResult Result) : ISessionResponse
+    AddMessageResult Result) : IChatSessionResponse
 {
-    public SessionRequestType Type => SessionRequestType.Approve;
+    public TextChatRequestType Type => TextChatRequestType.SendMessage;
 }

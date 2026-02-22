@@ -144,6 +144,7 @@ namespace Shared.Enums
         NoError = 0,
         NotExceptedError = 1,
         ChatDontExist = 3,
+        InavlidResponse
     }
     
     public enum AddMessageResult
@@ -152,6 +153,7 @@ namespace Shared.Enums
         NoError = 0,
         SameMessageAlreadyExist = 1,
         ChatDontExist = 3,
+        TimedOut
     }
 
     public enum EditMessageResult
@@ -178,6 +180,8 @@ namespace Shared.Enums
         NotExceptedError = 1,
         MessageDontExist = 2,
         ChatDontExist = 3,
+        InavlidResponse,
+        TimedOut
     }
 }
 

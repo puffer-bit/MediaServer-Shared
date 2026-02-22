@@ -17,6 +17,9 @@
     <Compile Update="Models\Requests\SessionActionsRequests\CreateSessionModel.cs">
       <DependentUpon>CreateSessionRequest.cs</DependentUpon>
     </Compile>
+    <Compile Update="Models\Requests\SessionActions\VideoSession\CreateSessionModel.cs">
+      <DependentUpon>CreateSessionRequest.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 </Project>

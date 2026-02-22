@@ -7,7 +7,7 @@ namespace Shared.Models.Requests.SessionActions.TextChat;
 
 public record SendTextMessageRequest(
     string ChatId,
-    ChatMessageDTO Message
+    NewChatMessageModel Message
 )
 {
     public string RequestId { get; init; } = Guid.NewGuid().ToString();

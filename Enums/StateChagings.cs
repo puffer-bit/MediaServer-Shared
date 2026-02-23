@@ -22,3 +22,11 @@ public enum VideoSessionStateChangedType
     UserLeaved,
     HostJoined
 }
+
+public enum TextChatStateChangedType
+{
+    UserTyping = 1,
+    MessageAdded = 2,
+    MessageEdited,
+    MessageDeleted
+}

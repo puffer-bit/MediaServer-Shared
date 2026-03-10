@@ -1,5 +1,15 @@
 namespace Shared.Enums;
 
+public enum CoordinatorStateChangedType
+{
+    UsersListUpdated = 1,
+    CoordinatorReconfigured = 8,
+    UserConnected = 9,
+    UserDisconnected = 10,
+    UserKicked = 11,
+    UserBanned
+}
+
 public enum SessionsStateChangedType
 {
     SessionCreated = 7,

@@ -31,7 +31,8 @@ namespace Shared.Enums
         NoError = 0,
         RoomContainsUsers = 1,
         RoomNotExists = 2,
-        TimedOut
+        TimedOut,
+        InvalidResponse
     }
         
     public enum JoinSessionResult
@@ -144,6 +145,8 @@ namespace Shared.Enums
         NoError = 0,
         NotExceptedError = 1,
         ChatDontExist = 3,
+        InavlidResponse,
+        TimedOut
     }
     
     public enum AddMessageResult
@@ -152,6 +155,8 @@ namespace Shared.Enums
         NoError = 0,
         SameMessageAlreadyExist = 1,
         ChatDontExist = 3,
+        TimedOut,
+        InvalidResponse
     }
 
     public enum EditMessageResult
@@ -178,6 +183,8 @@ namespace Shared.Enums
         NotExceptedError = 1,
         MessageDontExist = 2,
         ChatDontExist = 3,
+        InavlidResponse,
+        TimedOut
     }
 }
 

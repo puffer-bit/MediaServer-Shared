@@ -12,7 +12,7 @@ public class NewChatMessageModel
     public DateTime? DisposeTime { get; set; }
 
     public ChatTextContentDTO? TextContent { get; set; }
-    public ChatRepostContentDTO? RepostContent { get; init; }
+    public ChatReplyContentDTO? ReplyContent { get; init; }
 
     public List<ChatImageContentDTO> Images { get; init; } = new();
     public List<ChatVideoContentDTO> Video { get; init; } = new();

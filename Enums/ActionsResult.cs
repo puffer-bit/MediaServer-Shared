@@ -174,6 +174,8 @@ namespace Shared.Enums
         NotExceptedError = 1,
         MessageDontExist = 2,
         ChatDontExist = 3,
+        TimedOut,
+        InvalidResponse
     }
     
     public enum TextChatHistoryResult

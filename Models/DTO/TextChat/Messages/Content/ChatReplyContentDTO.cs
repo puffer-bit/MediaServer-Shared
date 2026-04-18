@@ -1,6 +1,6 @@
 namespace Shared.Models.DTO.TextChat.Messages.Content;
 
-public class ChatRepostContentDTO
+public class ChatReplyContentDTO
 {
     public string MessageId { get; init; }
     

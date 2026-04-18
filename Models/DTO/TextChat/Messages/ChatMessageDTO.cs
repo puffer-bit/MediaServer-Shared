@@ -14,7 +14,7 @@ public class ChatMessageDTO
     public DateTime? EditTime { get; set; }
 
     public required ChatTextContentDTO TextContent { get; set; }
-    public required ChatRepostContentDTO RepostContent { get; init; }
+    public required ChatReplyContentDTO ReplyContent { get; init; }
     
     public required List<ChatImageContentDTO> Images { get; init; }
     public required List<ChatVideoContentDTO> Video { get; init; }

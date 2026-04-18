@@ -6,7 +6,7 @@ using Shared.Models.Responses.WebRTCNegotiation;
 namespace Shared.Models.Requests.WebRTCNegotiation
 {
     public record WebRtcNegotiationRequest(
-        WebRtcNegotiationType Type, string SessionId, object Data)
+        WebRtcNegotiationType Type, string SessionId, object Data, bool IsGstWebRTC = false)
     {
         public string RequestId { get; init; } = Guid.NewGuid().ToString();
 

@@ -7,4 +7,5 @@ public record WebRtcNegotiationResponse(
     WebRtcNegotiationType Type,
     string SessionId,
     object? Data,
-    WebRTCNegotiationResult Result) : IResponse;
+    WebRTCNegotiationResult Result,
+    bool IsGstWebRTC) : IResponse;

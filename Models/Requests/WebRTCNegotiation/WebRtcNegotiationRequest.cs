@@ -12,6 +12,6 @@ namespace Shared.Models.Requests.WebRTCNegotiation
 
         public WebRtcNegotiationResponse ToResponse(WebRtcNegotiationType type, WebRTCNegotiationResult result,
             object data)
-            => new(RequestId, type, SessionId, data, result);
+            => new(RequestId, type, SessionId, data, result, IsGstWebRTC);
     }
 }

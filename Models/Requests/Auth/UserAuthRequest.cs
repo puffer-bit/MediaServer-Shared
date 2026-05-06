@@ -8,8 +8,8 @@ namespace Shared.Models.Requests.Auth
     {
         public string RequestId { get; init; } = Guid.NewGuid().ToString();
         
-        public UserAuthResponse ToResponse(AuthResult authResult, UserDTO? userDTO = null,
-            CoordinatorSessionDTO? coordinatorSessionDTO = null , string? serverMessage = null)
-            => new(RequestId, userDTO, coordinatorSessionDTO, authResult, serverMessage);
+        public UserAuthResponse ToResponse(AuthResult authResult, string userIdentity, UserDTO? userDTO = null,
+            CoordinatorSessionDTO? coordinatorSessionDTO = null, string? serverMessage = null)
+            => new(RequestId, userDTO, userIdentity, coordinatorSessionDTO, authResult, serverMessage);
     }
 }

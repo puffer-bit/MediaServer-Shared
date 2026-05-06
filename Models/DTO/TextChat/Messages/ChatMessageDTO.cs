@@ -7,7 +7,7 @@ public class ChatMessageDTO
 {
     public required string Id { get; init; }
     public required string ChatId { get; init; }
-    public required string SenderUserId { get; init; }
+    public required CompactUserDTO SenderUser { get; init; }
     public required DateTime SentTime { get; init; }
     public DateTime? DelayedSentTime { get; set; }
     public DateTime? DisposeTime { get; set; }

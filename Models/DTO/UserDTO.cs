@@ -9,7 +9,6 @@ namespace Shared.Models.DTO
     {
         public string Id { get; set; }
         public string CoordinatorInstanceId { get; set; }
-        public string UserIdentity { get; set; }
         public string Username { get; set; }
         public string? Ip { get; set; }
         public string? RegionName { get; set; }

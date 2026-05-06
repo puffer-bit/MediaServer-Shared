@@ -145,7 +145,18 @@ namespace Shared.Enums
         NoError = 0,
         NotExceptedError = 1,
         ChatDontExist = 3,
-        InavlidResponse,
+        InvalidResponse,
+        TimedOut
+    }
+    
+    public enum FetchMessageResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        NotExceptedError = 1,
+        ChatDontExist = 3,
+        InvalidResponse,
+        MessageDoesntExist,
         TimedOut
     }
     

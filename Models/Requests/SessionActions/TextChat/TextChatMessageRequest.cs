@@ -13,6 +13,6 @@ public record TextChatMessageRequest(
     public string RequestId { get; init; } = Guid.NewGuid().ToString();
     public TextChatRequestType Type => TextChatRequestType.MessageRequest;
     
-    public TextChatMessageResponse ToResponse(FetchMessageResult result, ChatMessageDTO? messages)
-        => new(RequestId, messages, result);
+    public TextChatMessageResponse ToResponse(FetchMessageResult result, ChatMessageDTO? message)
+        => new(RequestId, message, result);
 }

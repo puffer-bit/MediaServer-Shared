@@ -2,7 +2,7 @@ namespace Shared.Models.DTO.TextChat.Messages.Content;
 
 public class ChatImageContentDTO
 {
-    public required string Id { get; init; }
+    public required int Id { get; init; }
     public required string FileName { get; init; }
     public string? Thumbnail { get; set; }
     public string? Description { get; init; }

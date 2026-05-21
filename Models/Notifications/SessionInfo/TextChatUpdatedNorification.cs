@@ -12,7 +12,7 @@ public record TextChaMessageAddedNotification(string ChatId, ChatMessageDTO Mess
 public record TextChaMessageEditedNotification(string ChatId, ChatMessageDTO Message)
     : TextChatUpdatedNotification(TextChatStateChangedType.MessageEdited);
 
-public record TextChaMessageDeletedNotification(string ChatId, string MessageId)
+public record TextChaMessageDeletedNotification(string ChatId, int MessageId)
     : TextChatUpdatedNotification(TextChatStateChangedType.MessageDeleted);
 
 public record TextChatUserTypingNotification(string ChatId, UserDTO User)

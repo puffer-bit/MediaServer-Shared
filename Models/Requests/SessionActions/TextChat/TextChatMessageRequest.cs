@@ -7,7 +7,7 @@ namespace Shared.Models.Requests.SessionActions.TextChat;
 
 public record TextChatMessageRequest(
     string ChatId,
-    string MessageId
+    int MessageId
 )
 {
     public string RequestId { get; init; } = Guid.NewGuid().ToString();

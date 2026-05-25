@@ -1,6 +1,4 @@
-using Shared.Enums;
-
-namespace Shared.Models.Requests.SessionActions.VideoSession;
+namespace Shared.Models.Requests.SessionActions;
 
 public record CreateSessionModel(
     string Name,

@@ -10,6 +10,11 @@ namespace Shared.Models
         public MessageType Type { get; set; }
         public object Data { get; set; }
 
+        public BaseMessage()
+        {
+            
+        }
+        
         public BaseMessage(BaseMessage message)
         {
             Id = message.Id;

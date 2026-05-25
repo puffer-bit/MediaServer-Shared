@@ -1,6 +1,6 @@
 using Shared.Enums;
 
-namespace Shared.Models.Requests.SessionActions.VideoSession;
+namespace Shared.Models.Requests.SessionActions;
 
 public interface ICreateSessionData
 {

@@ -4,7 +4,7 @@ namespace Shared.Models.DTO
 {
     public class PeerDTO
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
         public UserDTO User { get; set; }
         public bool IsStreamHost { get; set; }
         public bool IsAudioRequested { get; set; }

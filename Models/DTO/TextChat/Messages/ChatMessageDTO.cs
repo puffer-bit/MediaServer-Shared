@@ -6,7 +6,7 @@ namespace Shared.Models.DTO.TextChat.Messages;
 public class ChatMessageDTO
 {
     public required int Id { get; init; }
-    public required string ChatId { get; init; }
+    public required int ChatId { get; init; }
     public required CompactUserDTO SenderUser { get; init; }
     public required DateTime SentTime { get; init; }
     public DateTime? DelayedSentTime { get; set; }

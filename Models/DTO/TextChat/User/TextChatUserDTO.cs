@@ -4,11 +4,11 @@ namespace Shared.Models.DTO.TextChat.User;
 
 public class TextChatUserDTO
 {
-    public required string UserId { get; init; }
+    public required int UserId { get; init; }
     public bool IsAdmin { get; private set; }
 
     [SetsRequiredMembers]
-    public TextChatUserDTO(string userId)
+    public TextChatUserDTO(int userId)
     {
         UserId = userId;
     }

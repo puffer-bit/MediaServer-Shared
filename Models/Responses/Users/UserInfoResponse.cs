@@ -6,5 +6,5 @@ namespace Shared.Models.Responses.Users;
 
 public record UserInfoResponse(
     string RequestId,
-    IDictionary<string, UserDTO> UserList, 
+    IDictionary<int, UserDTO> UserList, 
     UsersRequestResult Result) : IResponse;

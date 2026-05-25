@@ -4,8 +4,8 @@ using Shared.Models.Responses.SessionActions.VideoSession;
 namespace Shared.Models.Requests.SessionActions.VideoSession
 {
     public record KickFromSessionRequest(
-        string SessionId,
-        string UserTargetId,
+        int SessionId,
+        int UserTargetId,
         SessionType SessionType,
         string? Reason
     )

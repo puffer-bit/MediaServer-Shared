@@ -4,8 +4,8 @@ namespace Shared.Models.Responses.SessionActions.VideoSession;
 
 public record KickFromSessionResponse(
     string RequestId,
-    string SessionId,
-    string UserTargetId,
+    int SessionId,
+    int UserTargetId,
     SessionType SessionType,
     LeaveSessionResult Result ) : IVideoSessionResponse
 {

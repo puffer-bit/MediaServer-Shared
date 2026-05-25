@@ -4,7 +4,7 @@ namespace Shared.Models.Responses.SessionActions.VideoSession;
 
 public record LeaveSessionResponse(
     string RequestId,
-    string SessionId,
+    int SessionId,
     SessionType SessionType,
     LeaveSessionResult Result ) : IVideoSessionResponse
 {

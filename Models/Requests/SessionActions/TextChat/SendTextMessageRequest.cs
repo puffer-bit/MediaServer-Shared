@@ -6,7 +6,7 @@ using Shared.Models.Responses.SessionActions.TextChat;
 namespace Shared.Models.Requests.SessionActions.TextChat;
 
 public record SendTextMessageRequest(
-    string ChatId,
+    int ChatId,
     NewChatMessageModel Message
 )
 {

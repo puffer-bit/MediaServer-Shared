@@ -8,10 +8,10 @@ public class HeartbeatModel
 {
     public required DateTime TimeStamp { get; set; }
     public required HeartbeatType Type { get; set; }
-    public int? Latency { get; set; }
+    public int Latency { get; set; }
     
     [SetsRequiredMembers]
-    public HeartbeatModel(HeartbeatType type ,int? latency = null)
+    public HeartbeatModel(HeartbeatType type ,int latency = -1)
     {
         TimeStamp = DateTime.UtcNow;
         Type = type;

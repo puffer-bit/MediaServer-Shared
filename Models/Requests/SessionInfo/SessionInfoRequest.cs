@@ -5,11 +5,11 @@ using Shared.Models.Responses.SessionInfo;
 
 namespace Shared.Models.Requests.SessionInfo
 {
-    public record SessionInfoRequest(string? SessionId)
+    public record SessionInfoRequest(int? SessionId)
     {
         public string RequestId { get; init; } = Guid.NewGuid().ToString();
         
-        public SessionInfoResponse ToResponse(IDictionary<string, SessionDTO> sessionList, SessionRequestResult result) 
+        public SessionInfoResponse ToResponse(IDictionary<int, SessionDTO> sessionList, SessionRequestResult result) 
             => new (RequestId, sessionList, result);
     }
 }

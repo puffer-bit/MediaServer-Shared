@@ -5,7 +5,7 @@ namespace Shared.Models.DTO
 {
     public class SessionDTO
     {
-        public required string Id { get; set; }
+        public required int Id { get; set; }
         public required string CoordinatorInstanceId { get; set; }
         public required string Name { get; set; }
         public required int Capacity { get; set; }

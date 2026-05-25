@@ -4,8 +4,8 @@ namespace Shared.Models.Responses.SessionActions.VideoSession;
 
 public record ApproveUserResponse(
     string RequestId,
-    string SessionId,
-    string UserTargetId,
+    int SessionId,
+    int UserTargetId,
     SessionType SessionType,
     ApproveUserSessionResult Result) : IVideoSessionResponse
 {

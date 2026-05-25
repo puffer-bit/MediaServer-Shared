@@ -4,12 +4,12 @@ namespace Shared.Models.DTO.TextChat;
 
 public class TextChatDTO : SessionDTO
 {
-    public required string CreatorUserId { get; set; }
-    public string? AdminUserId { get; set; }
+    public required int CreatorUserId { get; set; }
+    public int AdminUserId { get; set; }
     public string? Description { get; set; }
     public string? IconPath { get; set; }
 
-    public required Dictionary<string, TextChatUserDTO> Users { get; set; }
+    public required Dictionary<int, TextChatUserDTO> Users { get; set; }
 
     public bool IsReadOnly { get; set; }
     public bool IsArchived { get; set; }

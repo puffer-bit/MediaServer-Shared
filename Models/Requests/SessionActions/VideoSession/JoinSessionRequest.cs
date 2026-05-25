@@ -4,7 +4,7 @@ using Shared.Models.Responses.SessionActions.VideoSession;
 namespace Shared.Models.Requests.SessionActions.VideoSession
 {
     public record JoinSessionRequest(
-        string SessionId,
+        int SessionId,
         SessionType SessionType
     )
     {

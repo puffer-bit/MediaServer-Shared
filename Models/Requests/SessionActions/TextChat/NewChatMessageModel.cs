@@ -5,8 +5,8 @@ namespace Shared.Models.Requests.SessionActions.TextChat;
 
 public class NewChatMessageModel
 {
-    public required string ChatId { get; init; }
-    public required string SenderUserId { get; init; }
+    public required int ChatId { get; init; }
+    public required int SenderUserId { get; init; }
     public required DateTime SentTime { get; init; }
     public DateTime? DelayedSentTime { get; set; }
     public DateTime? DisposeTime { get; set; }

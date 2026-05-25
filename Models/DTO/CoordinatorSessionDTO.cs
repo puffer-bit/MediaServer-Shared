@@ -6,7 +6,7 @@ public class CoordinatorSessionDTO
 {
     public string Id { get; set; }
     public string Name { get; set; }
-    public string IpAddress { get; set; }
+    public string Address { get; set; }
     public int Port { get; set; }
     
     public bool IsStunServerAvailable { get; set; }

@@ -5,48 +5,48 @@ namespace Shared.Models.Notifications.SessionInfo;
 
 public abstract record VideoSessionUpdatedNotification(VideoSessionStateChangedType Type);
 
-public record VideoSessionParticipantJoinedNotification(string SessionId, PeerDTO Peer)
+public record VideoSessionParticipantJoinedNotification(int SessionId, PeerDTO Peer)
     : VideoSessionUpdatedNotification(VideoSessionStateChangedType.UserJoined);
 
-public record VideoSessionParticipantConnectedNotification(string SessionId, PeerDTO Peer)
+public record VideoSessionParticipantConnectedNotification(int SessionId, PeerDTO Peer)
     : VideoSessionUpdatedNotification(VideoSessionStateChangedType.UserConnected);
     
-public record VideoSessionParticipantLeavedNotification(string SessionId, PeerDTO Peer)
+public record VideoSessionParticipantLeavedNotification(int SessionId, PeerDTO Peer)
     : VideoSessionUpdatedNotification(VideoSessionStateChangedType.UserLeaved);
 
-public record VideoSessionParticipantDisconnectedNotification(string SessionId, PeerDTO Peer)
+public record VideoSessionParticipantDisconnectedNotification(int SessionId, PeerDTO Peer)
     : VideoSessionUpdatedNotification(VideoSessionStateChangedType.UserDisconnected);
 
-public record VideoSessionParticipantKickedNotification(string SessionId, PeerDTO Peer, string? Reason)
+public record VideoSessionParticipantKickedNotification(int SessionId, PeerDTO Peer, string? Reason)
     : VideoSessionUpdatedNotification(VideoSessionStateChangedType.UserKicked);
 
-public record VideoSessionParticipantBannedNotification(string SessionId, PeerDTO Peer, string? Reason)
+public record VideoSessionParticipantBannedNotification(int SessionId, PeerDTO Peer, string? Reason)
     : VideoSessionUpdatedNotification(VideoSessionStateChangedType.UserBanned);
 
-public record VideoSessionParticipantApprovedNotification(string SessionId, PeerDTO Peer)
+public record VideoSessionParticipantApprovedNotification(int SessionId, PeerDTO Peer)
     : VideoSessionUpdatedNotification(VideoSessionStateChangedType.UserApproved);
 
-public record VideoSessionParticipantRejectedNotification(string SessionId, PeerDTO Peer, string? Reason)
+public record VideoSessionParticipantRejectedNotification(int SessionId, PeerDTO Peer, string? Reason)
     : VideoSessionUpdatedNotification(VideoSessionStateChangedType.UserRejected);
 
-public record VideoSessionHostJoinedNotification(string SessionId, PeerDTO Peer)
+public record VideoSessionHostJoinedNotification(int SessionId, PeerDTO Peer)
     : VideoSessionUpdatedNotification(VideoSessionStateChangedType.HostJoined);
 
-public record VideoSessionHostConnectedNotification(string SessionId, PeerDTO Peer)
+public record VideoSessionHostConnectedNotification(int SessionId, PeerDTO Peer)
     : VideoSessionUpdatedNotification(VideoSessionStateChangedType.HostConnected);
     
-public record VideoSessionHostLeavedNotification(string SessionId, PeerDTO Peer)
+public record VideoSessionHostLeavedNotification(int SessionId, PeerDTO Peer)
     : VideoSessionUpdatedNotification(VideoSessionStateChangedType.HostJoined);
 
-public record VideoSessionHostDisconnectedNotification(string SessionId, PeerDTO Peer)
+public record VideoSessionHostDisconnectedNotification(int SessionId, PeerDTO Peer)
     : VideoSessionUpdatedNotification(VideoSessionStateChangedType.HostDisconnected);
 
-public record VideoSessionHostKickedNotification(string SessionId, PeerDTO Peer, string? Reason)
+public record VideoSessionHostKickedNotification(int SessionId, PeerDTO Peer, string? Reason)
     : VideoSessionUpdatedNotification(VideoSessionStateChangedType.HostKicked);
 
-public record VideoSessionAnswerReadyNotification(string SessionId, string UserId, object Data)
+public record VideoSessionAnswerReadyNotification(int SessionId, int UserId, object Data)
     : VideoSessionUpdatedNotification(VideoSessionStateChangedType.HostKicked);
 
-public record VideoSessionIceReadyNotification(string SessionId, string UserId, object Data)
+public record VideoSessionIceReadyNotification(int SessionId, int UserId, object Data)
     : VideoSessionUpdatedNotification(VideoSessionStateChangedType.HostKicked);
 

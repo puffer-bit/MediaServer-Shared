@@ -4,7 +4,7 @@ namespace Shared.Models.Responses.SessionActions.VideoSession;
 
 public record JoinSessionResponse(
     string RequestId,
-    string SessionId,
+    int SessionId,
     SessionType SessionType,
     JoinSessionResult Result ) : IVideoSessionResponse
 {

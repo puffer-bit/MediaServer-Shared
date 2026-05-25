@@ -5,10 +5,10 @@ using Shared.Models.Responses.Users;
 
 namespace Shared.Models.Requests.Users;
 
-public record UserInfoRequest(IList<string> UserIds)
+public record UserInfoRequest(IList<int> UserIds)
 {
     public string RequestId { get; init; } = Guid.NewGuid().ToString();
 
-    public UserInfoResponse ToResponse(IDictionary<string, UserDTO> userList, UsersRequestResult result)
+    public UserInfoResponse ToResponse(IDictionary<int, UserDTO> userList, UsersRequestResult result)
         => new(RequestId, userList, result);
 }

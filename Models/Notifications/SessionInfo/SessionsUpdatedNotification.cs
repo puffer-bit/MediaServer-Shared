@@ -11,6 +11,6 @@ public record SessionCreatedNotification(SessionDTO Session)
 public record SessionReconfiguredNotification(SessionDTO Session)
     : SessionsUpdatedNotification(SessionsStateChangedType.SessionReconfigured);
 
-public record SessionDeletedNotification(string SessionId)
+public record SessionDeletedNotification(int SessionId)
     : SessionsUpdatedNotification(SessionsStateChangedType.SessionDeleted);
 

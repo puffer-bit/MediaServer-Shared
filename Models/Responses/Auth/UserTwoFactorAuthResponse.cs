@@ -7,7 +7,6 @@ namespace Shared.Models.Responses.Auth;
 public record UserTwoFactorAuthResponse(
     string RequestId,
     UserDTO? UserDTO,
-    CoordinatorSessionDTO? CoordinatorSessionDTO,
     AuthResult AuthResult) : IAuthResponse
 {
     public AuthType Type => AuthType.TwoFactorAuth;

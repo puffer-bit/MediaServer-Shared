@@ -12,13 +12,13 @@ public record CoordinatorUserListUpdatedNotification(IList<UserDTO> Users)
 public record CoordinatorUserConnectedNotification(UserDTO User)
     : CoordinatorUpdatedNotification(CoordinatorStateChangedType.UserConnected);
 
-public record CoordinatorUserDisconnectedNotification(UserDTO User, string? Reason = null)
+public record CoordinatorUserDisconnectedNotification(int UserId, string? Reason = null)
     : CoordinatorUpdatedNotification(CoordinatorStateChangedType.UserDisconnected);
 
-public record CoordinatorUserKickedNotification(UserDTO User, string? Reason = null)
+public record CoordinatorUserKickedNotification(int UserId, string? Reason = null)
     : CoordinatorUpdatedNotification(CoordinatorStateChangedType.UserKicked);
 
-public record CoordinatorUserBannedNotification(UserDTO User, string? Reason = null)
+public record CoordinatorUserBannedNotification(int UserId, string? Reason = null)
     : CoordinatorUpdatedNotification(CoordinatorStateChangedType.UserBanned);
 
 public record CoordinatorReconfiguredNotification(CoordinatorSessionDTO CoordinatorSessionDTO)

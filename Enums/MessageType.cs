@@ -3,13 +3,14 @@ namespace Shared.Enums
     public enum MessageType
     {
         Undefined = 0,
-        WebRTCInit = 2,
-        SessionRequest = 6,
-        UserAuth = 7,
-        UserInfoRequest = 8,
+        WebRTCAction = 2,
+        SessionAction = 6,
+        UserAuthAction = 7,
+        UserAction = 8,
         SessionInfoRequest = 10,
-        Heartbeat = 11,
+        HeartbeatAction = 11,
         SessionsStateChanged = 12,
-        TextChatRequest = 13
+        TextChatAction = 13,
+        CoordinatorAction
     }
 }

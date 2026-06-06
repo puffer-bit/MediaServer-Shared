@@ -10,5 +10,5 @@ public record TextChatHistoryResponse(
     List<ChatMessageDTO>? Messages,
     FetchMessagesResult Result) : IChatSessionResponse
 {
-    public TextChatRequestType Type => TextChatRequestType.ChatHistory;
+    public TextChatRequestType ActionType => TextChatRequestType.ChatHistory;
 }

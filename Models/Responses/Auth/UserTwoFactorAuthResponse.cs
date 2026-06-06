@@ -9,5 +9,5 @@ public record UserTwoFactorAuthResponse(
     UserDTO? UserDTO,
     AuthResult AuthResult) : IAuthResponse
 {
-    public AuthType Type => AuthType.TwoFactorAuth;
+    public AuthType ActionType => AuthType.TwoFactorAuth;
 }

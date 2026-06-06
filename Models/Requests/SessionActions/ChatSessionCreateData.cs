@@ -13,5 +13,5 @@ public record ChatSessionCreateData(
     bool IsDelayedMessagesAllowed = true
 ) : ICreateSessionData
 {
-    public SessionType Type => SessionType.Chat;
+    public SessionType SessionType => SessionType.Chat;
 }

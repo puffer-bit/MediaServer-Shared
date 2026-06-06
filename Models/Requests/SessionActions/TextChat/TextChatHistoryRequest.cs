@@ -12,7 +12,7 @@ public record TextChatHistoryRequest(
 )
 {
     public string RequestId { get; init; } = Guid.NewGuid().ToString();
-    public TextChatRequestType Type => TextChatRequestType.ChatHistory;
+    public TextChatRequestType ActionType => TextChatRequestType.ChatHistory;
     
     public TextChatHistoryResponse ToResponse(FetchMessagesResult result, List<ChatMessageDTO>? messages)
         => new(RequestId, messages, result);

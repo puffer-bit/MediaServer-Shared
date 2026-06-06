@@ -8,5 +8,5 @@ public record LeaveSessionResponse(
     SessionType SessionType,
     LeaveSessionResult Result ) : IVideoSessionResponse
 {
-    public SessionRequestType Type => SessionRequestType.Leave;
+    public SessionRequestType ActionType => SessionRequestType.Leave;
 }

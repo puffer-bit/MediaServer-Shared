@@ -4,5 +4,5 @@ namespace Shared.Models.Responses.SessionActions.TextChat;
 
 public interface IChatSessionResponse : IResponse
 {
-    TextChatRequestType Type { get; }
+    TextChatRequestType ActionType { get; }
 }

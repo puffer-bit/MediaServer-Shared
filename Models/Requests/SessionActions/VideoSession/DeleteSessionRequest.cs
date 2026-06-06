@@ -9,7 +9,7 @@ namespace Shared.Models.Requests.SessionActions.VideoSession
     )
     {
         public string RequestId { get; init; } = Guid.NewGuid().ToString();
-        public SessionRequestType Type => SessionRequestType.Delete;
+        public SessionRequestType ActionType => SessionRequestType.Delete;
 
         public DeleteSessionResponse ToResponse(DeleteSessionResult result)
             => new(RequestId, result);

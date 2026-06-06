@@ -4,5 +4,5 @@ namespace Shared.Models.Responses.Auth;
 
 public interface IAuthResponse : IResponse
 {
-    AuthType Type { get; }
+    AuthType ActionType { get; }
 }

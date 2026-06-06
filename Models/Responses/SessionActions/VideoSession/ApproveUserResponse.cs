@@ -9,5 +9,5 @@ public record ApproveUserResponse(
     SessionType SessionType,
     ApproveUserSessionResult Result) : IVideoSessionResponse
 {
-    public SessionRequestType Type => SessionRequestType.Approve;
+    public SessionRequestType ActionType => SessionRequestType.Approve;
 }

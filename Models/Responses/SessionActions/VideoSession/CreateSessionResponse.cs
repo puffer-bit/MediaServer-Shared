@@ -8,5 +8,5 @@ public record CreateSessionResponse(
     SessionDTO? Session,
     CreateSessionResult Result ) : IVideoSessionResponse
 {
-    public SessionRequestType Type => SessionRequestType.Create;
+    public SessionRequestType ActionType => SessionRequestType.Create;
 }

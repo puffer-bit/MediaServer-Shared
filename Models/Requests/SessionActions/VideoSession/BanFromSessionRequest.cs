@@ -11,7 +11,7 @@ public record BanFromSessionRequest(
 )
 {
     public string RequestId { get; init; } = Guid.NewGuid().ToString();
-    public SessionRequestType Type => SessionRequestType.Ban;
+    public SessionRequestType ActionType => SessionRequestType.Ban;
 
     public BanFromSessionResponse ToResponse(BanFromSessionResult result)
         => new(RequestId, SessionId, UserTargetId, SessionType, result);

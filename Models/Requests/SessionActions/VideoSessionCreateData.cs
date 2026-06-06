@@ -19,5 +19,5 @@ public record VideoSessionCreateData(
     bool DisableTurn = false
 ) : ICreateSessionData
 {
-    public SessionType Type => SessionType.Video;
+    public SessionType SessionType => SessionType.Video;
 }

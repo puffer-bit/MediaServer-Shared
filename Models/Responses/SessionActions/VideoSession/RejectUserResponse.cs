@@ -9,5 +9,5 @@ public record RejectUserResponse(
     SessionType SessionType,
     RejectUserSessionResult Result ) : IVideoSessionResponse
 {
-    public SessionRequestType Type => SessionRequestType.Reject;
+    public SessionRequestType ActionType => SessionRequestType.Reject;
 }

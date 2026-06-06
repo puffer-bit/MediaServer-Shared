@@ -11,5 +11,5 @@ public record UserAuthResponse(
     AuthResult AuthResult,
     string? ServerMessage) : IAuthResponse
 {
-    public AuthType Type => AuthType.PasswordAuth;
+    public AuthType ActionType => AuthType.PasswordAuth;
 }

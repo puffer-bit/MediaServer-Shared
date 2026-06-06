@@ -11,7 +11,7 @@ public record EditTextMessageRequest(
 )
 {
     public string RequestId { get; init; } = Guid.NewGuid().ToString();
-    public TextChatRequestType Type => TextChatRequestType.EditMessage;
+    public TextChatRequestType ActionType => TextChatRequestType.EditMessage;
 
     public EditMessageResponse ToResponse(EditMessageResult result)
         => new(RequestId, result);

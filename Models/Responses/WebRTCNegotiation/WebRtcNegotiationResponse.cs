@@ -4,7 +4,7 @@ namespace Shared.Models.Responses.WebRTCNegotiation;
 
 public record WebRtcNegotiationResponse(
     string RequestId,
-    WebRtcNegotiationType Type,
+    WebRtcNegotiationType ActionType,
     int SessionId,
     object? Data,
     WebRTCNegotiationResult Result,

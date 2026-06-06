@@ -11,7 +11,7 @@ public record ChatSessionCreateData(
     bool IsVoiceMessageAllowed = true,
     bool IsVideoMessagesAllowed = true,
     bool IsDelayedMessagesAllowed = true
-) : ICreateSessionData
+) : CreateSessionData
 {
     public SessionType SessionType => SessionType.Chat;
 }

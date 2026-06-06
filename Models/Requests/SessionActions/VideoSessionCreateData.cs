@@ -17,7 +17,7 @@ public record VideoSessionCreateData(
     bool IsProxyActive = false,
     bool DisableStun = false,
     bool DisableTurn = false
-) : ICreateSessionData
+) : CreateSessionData
 {
     public SessionType SessionType => SessionType.Video;
 }

@@ -4,5 +4,5 @@ public record CreateSessionModel(
     string Name,
     int HostId,
     int Capacity,
-    ICreateSessionData SessionData
+    CreateSessionData SessionData
 );

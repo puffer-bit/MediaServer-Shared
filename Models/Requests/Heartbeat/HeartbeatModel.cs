@@ -10,10 +10,10 @@ public class HeartbeatModel
     public int Latency { get; set; }
     
     [SetsRequiredMembers]
-    public HeartbeatModel(HeartbeatType type ,int latency = -1)
+    public HeartbeatModel(HeartbeatType actionType ,int latency = -1)
     {
         TimeStamp = DateTime.UtcNow;
-        ActionType = type;
+        ActionType = actionType;
         Latency = latency;
     }
 }

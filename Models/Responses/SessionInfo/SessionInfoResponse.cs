@@ -6,5 +6,5 @@ namespace Shared.Models.Responses.SessionInfo;
 
 public record SessionInfoResponse(
     string RequestId,
-    IDictionary<int, SessionDTO> SessionsList,
+    IDictionary<int, object> SessionsList,
     SessionRequestResult Result) : IResponse;

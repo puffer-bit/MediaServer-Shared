@@ -1,5 +1,7 @@
 ﻿
+using System.Text.Json.Serialization;
 using Shared.Enums;
+using Shared.Models.DTO.TextChat;
 
 namespace Shared.Models.DTO
 {

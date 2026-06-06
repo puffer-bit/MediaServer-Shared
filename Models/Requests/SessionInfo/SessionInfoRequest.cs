@@ -9,7 +9,7 @@ namespace Shared.Models.Requests.SessionInfo
     {
         public string RequestId { get; init; } = Guid.NewGuid().ToString();
         
-        public SessionInfoResponse ToResponse(IDictionary<int, SessionDTO> sessionList, SessionRequestResult result) 
+        public SessionInfoResponse ToResponse(IDictionary<int, object> sessionList, SessionRequestResult result) 
             => new (RequestId, sessionList, result);
     }
 }

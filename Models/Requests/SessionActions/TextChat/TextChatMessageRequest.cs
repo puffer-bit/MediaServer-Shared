@@ -11,7 +11,7 @@ public record TextChatMessageRequest(
 )
 {
     public string RequestId { get; init; } = Guid.NewGuid().ToString();
-    public TextChatRequestType Type => TextChatRequestType.MessageRequest;
+    public TextChatRequestType ActionType => TextChatRequestType.MessageRequest;
     
     public TextChatMessageResponse ToResponse(FetchMessageResult result, ChatMessageDTO? message)
         => new(RequestId, message, result);

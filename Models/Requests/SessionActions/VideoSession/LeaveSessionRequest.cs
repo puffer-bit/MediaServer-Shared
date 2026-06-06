@@ -9,7 +9,7 @@ namespace Shared.Models.Requests.SessionActions.VideoSession
     )
     {
         public string RequestId { get; init; } = Guid.NewGuid().ToString();
-        public SessionRequestType Type => SessionRequestType.Leave;
+        public SessionRequestType ActionType => SessionRequestType.Leave;
 
         public LeaveSessionResponse ToResponse(LeaveSessionResult result)
             => new(RequestId, SessionId, SessionType, result);

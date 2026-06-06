@@ -10,7 +10,7 @@ namespace Shared.Enums
         SessionInfoRequest = 10,
         HeartbeatAction = 11,
         SessionsStateChanged = 12,
-        TextChatAction = 13,
+        ChatSessionAction = 13,
         CoordinatorAction
     }
 }

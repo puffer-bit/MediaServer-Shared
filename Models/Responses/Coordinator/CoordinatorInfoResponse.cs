@@ -7,5 +7,5 @@ public record CoordinatorInfoResponse(
     string RequestId,
     CoordinatorSessionDTO CoordinatorSessionDto) : IResponse
 {
-    public CoordinatorActionType Type => CoordinatorActionType.InfoRequest;
+    public CoordinatorActionType ActionType => CoordinatorActionType.InfoRequest;
 }

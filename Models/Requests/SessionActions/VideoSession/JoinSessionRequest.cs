@@ -9,7 +9,7 @@ namespace Shared.Models.Requests.SessionActions.VideoSession
     )
     {
         public string RequestId { get; init; } = Guid.NewGuid().ToString();
-        public SessionRequestType Type => SessionRequestType.Join;
+        public SessionRequestType ActionType => SessionRequestType.Join;
 
         public JoinSessionResponse ToResponse(JoinSessionResult result)
             => new(RequestId, SessionId, SessionType, result);

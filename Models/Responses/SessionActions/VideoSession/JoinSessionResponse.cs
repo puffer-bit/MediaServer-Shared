@@ -8,5 +8,5 @@ public record JoinSessionResponse(
     SessionType SessionType,
     JoinSessionResult Result ) : IVideoSessionResponse
 {
-    public SessionRequestType Type => SessionRequestType.Join;
+    public SessionRequestType ActionType => SessionRequestType.Join;
 }

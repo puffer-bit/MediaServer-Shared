@@ -6,5 +6,5 @@ public record DeleteSessionResponse(
     string RequestId,
     DeleteSessionResult Result ) : IVideoSessionResponse
 {
-    public SessionRequestType Type => SessionRequestType.Delete;
+    public SessionRequestType ActionType => SessionRequestType.Delete;
 }

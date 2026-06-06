@@ -7,5 +7,5 @@ public record SendMessageResponse(
     string RequestId,
     AddMessageResult Result) : IChatSessionResponse
 {
-    public TextChatRequestType Type => TextChatRequestType.SendMessage;
+    public TextChatRequestType ActionType => TextChatRequestType.SendMessage;
 }

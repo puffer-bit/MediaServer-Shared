@@ -10,7 +10,7 @@ public record DeleteTextMessageRequest(
 )
 {
     public string RequestId { get; init; } = Guid.NewGuid().ToString();
-    public TextChatRequestType Type => TextChatRequestType.DeleteMessage;
+    public TextChatRequestType ActionType => TextChatRequestType.DeleteMessage;
 
     public DeleteMessageResponse ToResponse(DeleteMessageResult result)
         => new(RequestId, result);

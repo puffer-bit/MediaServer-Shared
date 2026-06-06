@@ -11,7 +11,7 @@ namespace Shared.Models.Requests.SessionActions.VideoSession
     )
     {        
         public string RequestId { get; init; } = Guid.NewGuid().ToString();
-        public SessionRequestType Type => SessionRequestType.Kick;
+        public SessionRequestType ActionType => SessionRequestType.Kick;
 
         public KickFromSessionResponse ToResponse(LeaveSessionResult result)
             => new(RequestId, SessionId, UserTargetId, SessionType, result);

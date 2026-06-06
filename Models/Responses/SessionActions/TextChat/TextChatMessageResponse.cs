@@ -10,5 +10,5 @@ public record TextChatMessageResponse(
     ChatMessageDTO? Message,
     FetchMessageResult Result) : IChatSessionResponse
 {
-    public TextChatRequestType Type => TextChatRequestType.MessageRequest;
+    public TextChatRequestType ActionType => TextChatRequestType.MessageRequest;
 }

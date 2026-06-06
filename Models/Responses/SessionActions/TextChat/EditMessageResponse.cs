@@ -8,5 +8,5 @@ public record EditMessageResponse(
     string RequestId,
     EditMessageResult Result) : IChatSessionResponse
 {
-    public TextChatRequestType Type => TextChatRequestType.EditMessage;
+    public TextChatRequestType ActionType => TextChatRequestType.EditMessage;
 }

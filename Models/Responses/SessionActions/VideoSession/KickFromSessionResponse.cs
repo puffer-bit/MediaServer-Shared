@@ -9,5 +9,5 @@ public record KickFromSessionResponse(
     SessionType SessionType,
     LeaveSessionResult Result ) : IVideoSessionResponse
 {
-    public SessionRequestType Type => SessionRequestType.Kick;
+    public SessionRequestType ActionType => SessionRequestType.Kick;
 }

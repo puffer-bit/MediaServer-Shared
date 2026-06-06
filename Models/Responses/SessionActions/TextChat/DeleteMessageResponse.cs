@@ -7,5 +7,5 @@ public record DeleteMessageResponse(
     string RequestId,
     DeleteMessageResult Result) : IChatSessionResponse
 {
-    public TextChatRequestType Type => TextChatRequestType.DeleteMessage;
+    public TextChatRequestType ActionType => TextChatRequestType.DeleteMessage;
 }

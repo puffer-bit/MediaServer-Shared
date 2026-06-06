@@ -8,7 +8,7 @@ public record CoordinatorInfoRequest()
 {
     public string RequestId { get; init; } = Guid.NewGuid().ToString();
 
-    public CoordinatorActionType Type => CoordinatorActionType.InfoRequest;
+    public CoordinatorActionType ActionType => CoordinatorActionType.InfoRequest;
         
     public CoordinatorInfoResponse ToResponse(
         CoordinatorSessionDTO coordinatorSessionDto) => 

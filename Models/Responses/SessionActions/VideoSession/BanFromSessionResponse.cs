@@ -9,5 +9,5 @@ public record BanFromSessionResponse(
     SessionType SessionType,
     BanFromSessionResult Result ) : IVideoSessionResponse
 {
-    public SessionRequestType Type => SessionRequestType.Ban;
+    public SessionRequestType ActionType => SessionRequestType.Ban;
 }

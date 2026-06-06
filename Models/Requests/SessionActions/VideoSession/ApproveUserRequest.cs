@@ -10,7 +10,7 @@ public record ApproveUserRequest(
 )
 {
     public string RequestId { get; init; } = Guid.NewGuid().ToString();
-    public SessionRequestType Type => SessionRequestType.Approve;
+    public SessionRequestType ActionType => SessionRequestType.Approve;
     
     public ApproveUserResponse ToResponse(ApproveUserSessionResult result)
         => new(RequestId, SessionId, UserTargetId, SessionType, result);

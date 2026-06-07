@@ -1,12 +1,15 @@
-﻿using Shared.Enums.Auth;
+﻿using Shared.Enums;
+using Shared.Enums.Auth;
 using Shared.Models.DTO;
 using Shared.Models.Responses.Auth;
 
 namespace Shared.Models.Requests.Auth
 {
-    public record UserAuthRequest(string? Password, string? UserIdentity)
+    public record UserAuthRequest(
+        string? Password, 
+        string? UserIdentity) : AuthRequest
     {
-        public string RequestId { get; init; } = Guid.NewGuid().ToString();
+        public override AuthActionType ActionType { get; init; } = AuthActionType.Login;
         
         public UserAuthResponse ToResponse(AuthResult authResult, string userIdentity, UserDTO? userDTO = null,
             string? serverMessage = null)

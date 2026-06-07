@@ -4,7 +4,7 @@ using Shared.Models.Notifications.SessionInfo;
 
 namespace Shared.Models.Notifications.CoordinatorInfo;
 
-public abstract record CoordinatorUpdatedNotification(CoordinatorStateChangedType Type);
+public abstract record CoordinatorUpdatedNotification(CoordinatorStateChangedType Type) : Notification;
 
 public record CoordinatorUserListUpdatedNotification(IList<UserDTO> Users)
     : CoordinatorUpdatedNotification(CoordinatorStateChangedType.UsersListUpdated);

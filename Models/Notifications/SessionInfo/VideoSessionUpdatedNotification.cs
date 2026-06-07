@@ -3,7 +3,7 @@ using Shared.Models.DTO;
 
 namespace Shared.Models.Notifications.SessionInfo;
 
-public abstract record VideoSessionUpdatedNotification(VideoSessionStateChangedType Type);
+public abstract record VideoSessionUpdatedNotification(VideoSessionStateChangedType Type): Notification;
 
 public record VideoSessionParticipantJoinedNotification(int SessionId, PeerDTO Peer)
     : VideoSessionUpdatedNotification(VideoSessionStateChangedType.UserJoined);

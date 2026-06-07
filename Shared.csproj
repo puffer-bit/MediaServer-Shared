@@ -17,6 +17,170 @@
     <Compile Update="Models\Requests\SessionActionsRequests\CreateSessionModel.cs">
       <DependentUpon>CreateSessionRequest.cs</DependentUpon>
     </Compile>
+    <Compile Update="Models\Requests\SessionActions\VideoSession\JoinSessionRequest.cs">
+      <DependentUpon>GenericSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\VideoSession\RejectUserRequest.cs">
+      <DependentUpon>GenericSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\VideoSession\ApproveUserRequest.cs">
+      <DependentUpon>GenericSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\VideoSession\BanInSessionRequest.cs">
+      <DependentUpon>GenericSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\VideoSession\CreateSessionRequest.cs">
+      <DependentUpon>GenericSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\VideoSession\DeleteSessionRequest.cs">
+      <DependentUpon>GenericSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\VideoSession\KickFromSessionRequest.cs">
+      <DependentUpon>GenericSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\VideoSession\LeaveSessionRequest.cs">
+      <DependentUpon>GenericSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\TextChat\TextChatMessageRequest.cs">
+      <DependentUpon>ChatSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\TextChat\SendTextMessageRequest.cs">
+      <DependentUpon>ChatSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\TextChat\EditTextMessageRequest.cs">
+      <DependentUpon>ChatSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\TextChat\DeleteTextMessageRequest.cs">
+      <DependentUpon>ChatSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\TextChat\TextChatHistoryRequest.cs">
+      <DependentUpon>ChatSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\Heartbeat\HeartbeatPingRequest.cs">
+      <DependentUpon>HeartbeatRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\Coordinator\CoordinatorInfoRequest.cs">
+      <DependentUpon>CoordinatorRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\Auth\UserAuthRequest.cs">
+      <DependentUpon>AuthRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\VideoSession\SessionInfoRequset.cs">
+      <DependentUpon>GenericSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\Coordinator\CoordinatorUserInfoRequest.cs">
+      <DependentUpon>CoordinatorRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\Coordinator\CoordinatorInfoResponse.cs">
+      <DependentUpon>CoordinatorResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\Coordinator\CoordinatorUserInfoResponse.cs">
+      <DependentUpon>CoordinatorResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\Auth\UserAuthResponse.cs">
+      <DependentUpon>AuthResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\SessionActions\TextChat\DeleteMessageResponse.cs">
+      <DependentUpon>ChatSessionResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\SessionActions\TextChat\EditMessageResponse.cs">
+      <DependentUpon>ChatSessionResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\SessionActions\TextChat\SendTextMessageResponse.cs">
+      <DependentUpon>ChatSessionResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\SessionActions\TextChat\TextChatHistoryResponse.cs">
+      <DependentUpon>ChatSessionResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\SessionActions\TextChat\TextChatMessageResponse.cs">
+      <DependentUpon>ChatSessionResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\SessionActions\Generic\BanFromSessionResponse.cs">
+      <DependentUpon>GenericSessionResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\SessionActions\Generic\ApproveUserResponse.cs">
+      <DependentUpon>GenericSessionResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\SessionActions\Generic\DeleteSessionResponse.cs">
+      <DependentUpon>GenericSessionResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\SessionActions\Generic\CreateSessionResponse.cs">
+      <DependentUpon>GenericSessionResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\SessionActions\Generic\RejectUserResponse.cs">
+      <DependentUpon>GenericSessionResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\SessionActions\Generic\JoinSessionResponse.cs">
+      <DependentUpon>GenericSessionResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\SessionActions\Generic\KickFromSessionResponse.cs">
+      <DependentUpon>GenericSessionResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\SessionActions\Generic\LeaveSessionResponse.cs">
+      <DependentUpon>GenericSessionResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\SessionActions\Generic\SessionInfoResponse.cs">
+      <DependentUpon>GenericSessionResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\Heartbeat\HeartbeatPingResponse.cs">
+      <DependentUpon>HeartbeatResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\ChatSession\DeleteTextMessageRequest.cs">
+      <DependentUpon>ChatSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\ChatSession\EditTextMessageRequest.cs">
+      <DependentUpon>ChatSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\ChatSession\SendTextMessageRequest.cs">
+      <DependentUpon>ChatSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\ChatSession\ChatSessionHistoryRequest.cs">
+      <DependentUpon>ChatSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\ChatSession\ChatSessionMessageRequest.cs">
+      <DependentUpon>ChatSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\Generic\ApproveUserRequest.cs">
+      <DependentUpon>GenericSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\Generic\DeleteSessionRequest.cs">
+      <DependentUpon>GenericSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\Generic\BanInSessionRequest.cs">
+      <DependentUpon>GenericSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\Generic\CreateSessionRequest.cs">
+      <DependentUpon>GenericSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\Generic\JoinSessionRequest.cs">
+      <DependentUpon>GenericSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\Generic\SessionInfoRequset.cs">
+      <DependentUpon>GenericSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\Generic\KickFromSessionRequest.cs">
+      <DependentUpon>GenericSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\Generic\LeaveSessionRequest.cs">
+      <DependentUpon>GenericSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\Generic\RejectUserRequest.cs">
+      <DependentUpon>GenericSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\WebRTCNegotiation\WebRtcNegotiationRequest.cs">
+      <DependentUpon>WebRtcRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\WebRTCNegotiation\WebRtcNegotiationResponse.cs">
+      <DependentUpon>WebRtcResponse.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Enums\Coordinator\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="Shared.csproj" />
   </ItemGroup>
 
 </Project>

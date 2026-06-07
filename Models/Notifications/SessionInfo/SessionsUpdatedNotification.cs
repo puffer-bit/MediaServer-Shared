@@ -3,7 +3,7 @@ using Shared.Models.DTO;
 
 namespace Shared.Models.Notifications.SessionInfo;
 
-public abstract record SessionsUpdatedNotification(SessionsStateChangedType Type);
+public abstract record SessionsUpdatedNotification(SessionsStateChangedType Type): Notification;
 
 public record SessionCreatedNotification(SessionDTO Session)
     : SessionsUpdatedNotification(SessionsStateChangedType.SessionCreated);

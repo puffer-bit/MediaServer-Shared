@@ -1,14 +1,12 @@
-using Shared.Enums.Coordinator;
+using Shared.Enums;
 using Shared.Models.DTO;
 using Shared.Models.Responses.Coordinator;
 
 namespace Shared.Models.Requests.Coordinator;
 
-public record CoordinatorInfoRequest()
+public record CoordinatorInfoRequest() : CoordinatorRequest
 {
-    public string RequestId { get; init; } = Guid.NewGuid().ToString();
-
-    public CoordinatorActionType ActionType => CoordinatorActionType.InfoRequest;
+    public override CoordinatorActionType ActionType => CoordinatorActionType.InfoRequest;
         
     public CoordinatorInfoResponse ToResponse(
         CoordinatorSessionDTO coordinatorSessionDto) => 

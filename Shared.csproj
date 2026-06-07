@@ -179,8 +179,4 @@
     <Folder Include="Enums\Coordinator\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="Shared.csproj" />
-  </ItemGroup>
-
 </Project>

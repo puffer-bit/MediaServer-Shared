@@ -4,5 +4,5 @@ namespace Shared.Models.Requests.SessionActions;
 
 public record CreateSessionData
 {
-    SessionType SessionType { get; }
+    public SessionType SessionType { get; }
 }

@@ -175,8 +175,4 @@
     </Compile>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Enums\Coordinator\" />
-  </ItemGroup>
-
 </Project>

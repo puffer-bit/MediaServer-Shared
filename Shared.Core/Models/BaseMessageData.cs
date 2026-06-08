@@ -1,11 +1,11 @@
 namespace Shared.Models;
 
-public abstract record BaseMessageData()
+public abstract record BaseMessageData
 {
-    public abstract BaseMessageType Type { get; init; }
+    public abstract BaseMessageDataType DataType { get; init; }
 }
 
-public enum BaseMessageType
+public enum BaseMessageDataType
 {
     Request,
     Response,

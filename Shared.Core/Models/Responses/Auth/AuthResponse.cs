@@ -3,7 +3,7 @@ using Shared.Enums.Auth;
 
 namespace Shared.Models.Responses.Auth;
 
-public record AuthResponse
+public abstract record AuthResponse : Response
 {
-    public virtual AuthActionType ActionType { get; init; }
+    public abstract AuthActionType ActionType { get; init; }
 }

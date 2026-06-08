@@ -1,7 +1,6 @@
 using Shared.Enums;
-using Shared.Models.Requests.SessionActions.VideoSession;
 
-namespace Shared.Models.Requests.SessionActions;
+namespace Shared.Models.Requests.SessionActions.Generic.Models;
 
 public record ChatSessionCreateData(
     string? Description = null,
@@ -13,5 +12,5 @@ public record ChatSessionCreateData(
     bool IsDelayedMessagesAllowed = true
 ) : CreateSessionData
 {
-    public SessionType SessionType => SessionType.Chat;
+    public override SessionType SessionType { get; init; } = SessionType.Chat;
 }

@@ -4,5 +4,5 @@ namespace Shared.Models.Responses;
 
 public record FailedResponse(
     string RequestId,
-    string? Message) 
+    string? Message)
     : Response;

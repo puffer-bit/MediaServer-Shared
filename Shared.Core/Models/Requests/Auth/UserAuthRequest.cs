@@ -1,6 +1,6 @@
 ﻿using Shared.Enums;
 using Shared.Enums.Auth;
-using Shared.Models.DTO;
+using Shared.Models.DataTransferObjects;
 using Shared.Models.Responses.Auth;
 
 namespace Shared.Models.Requests.Auth

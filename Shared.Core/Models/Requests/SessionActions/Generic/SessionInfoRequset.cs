@@ -1,13 +1,13 @@
 using Shared.Enums;
-using Shared.Models.DTO;
-using Shared.Models.Responses.SessionInfo;
+using Shared.Models.DataTransferObjects;
+using Shared.Models.Responses.SessionActions.Generic;
 
-namespace Shared.Models.Requests.SessionActions.VideoSession;
+namespace Shared.Models.Requests.SessionActions.Generic;
 
 public record SessionInfoRequest(
     int? SessionId) : GenericSessionRequest
 {
-    public override SessionActionType ActionType => SessionActionType.InfoRequest;
+    public override SessionActionType ActionType { get; init; } = SessionActionType.InfoRequest;
     
     public SessionInfoResponse ToResponse(IDictionary<int, SessionDTO> sessionList, SessionRequestResult result) 
         => new (RequestId, sessionList, result);

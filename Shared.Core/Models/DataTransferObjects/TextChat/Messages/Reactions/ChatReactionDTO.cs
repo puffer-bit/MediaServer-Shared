@@ -1,4 +1,4 @@
-namespace Shared.Models.DTO.TextChat.Messages.Reactions;
+namespace Shared.Models.DataTransferObjects.TextChat.Messages.Reactions;
 
 public class ChatReactionDTO
 {

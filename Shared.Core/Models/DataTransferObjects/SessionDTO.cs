@@ -1,9 +1,6 @@
-﻿
-using System.Text.Json.Serialization;
-using Shared.Enums;
-using Shared.Models.DTO.TextChat;
+﻿using Shared.Enums;
 
-namespace Shared.Models.DTO
+namespace Shared.Models.DataTransferObjects
 {
     public class SessionDTO
     {

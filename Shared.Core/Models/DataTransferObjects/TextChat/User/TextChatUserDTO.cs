@@ -1,6 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 
-namespace Shared.Models.DTO.TextChat.User;
+namespace Shared.Models.DataTransferObjects.TextChat.User;
 
 public class TextChatUserDTO
 {

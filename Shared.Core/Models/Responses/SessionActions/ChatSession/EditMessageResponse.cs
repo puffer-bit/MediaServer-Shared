@@ -1,12 +1,11 @@
 using Shared.Enums;
 using Shared.Enums.TextChat;
-using Shared.Models.DTO.TextChat;
 
-namespace Shared.Models.Responses.SessionActions.TextChat;
+namespace Shared.Models.Responses.SessionActions.ChatSession;
 
 public record EditMessageResponse(
     string RequestId,
     EditMessageResult Result) : ChatSessionResponse
 {
-    public override ChatSessionActionType ActionType => ChatSessionActionType.EditMessage;
+    public override ChatSessionActionType ActionType { get; init; } = ChatSessionActionType.EditMessage;
 }

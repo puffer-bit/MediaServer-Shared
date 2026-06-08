@@ -1,6 +1,4 @@
-using System;
-
-namespace Shared.Models.DTO;
+namespace Shared.Models.DataTransferObjects;
 
 public class CoordinatorSessionDTO
 {

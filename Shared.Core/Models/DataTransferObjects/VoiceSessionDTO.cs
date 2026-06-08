@@ -1,4 +1,4 @@
-namespace Shared.Models.DTO;
+namespace Shared.Models.DataTransferObjects;
 
 public class VoiceSessionDTO : SessionDTO
 {

@@ -1,12 +1,12 @@
-using System.Diagnostics.CodeAnalysis;
 using Shared.Enums;
 
-namespace Shared.Models.Requests.Heartbeat;
+namespace Shared.Models.Responses.Heartbeat;
 
 public record HeartbeatPingResponse(
     string RequestId,
-    int UserId,
+    string ConnectionId,
+    int? UserId,
     long Timestamp) : HeartbeatResponse
 {
-    public override HeartbeatActionType ActionType => HeartbeatActionType.Ping;
+    public override HeartbeatActionType ActionType { get; init; } = HeartbeatActionType.Ping;
 }

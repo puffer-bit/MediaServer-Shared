@@ -1,9 +1,9 @@
 using Shared.Enums;
-using Shared.Models.DTO;
+using Shared.Models.DataTransferObjects;
 
 namespace Shared.Models.Notifications.SessionInfo;
 
-public abstract record VideoSessionUpdatedNotification(VideoSessionStateChangedType Type): Notification;
+public abstract record VideoSessionUpdatedNotification(VideoSessionStateChangedType NotificationType): Notification;
 
 public record VideoSessionParticipantJoinedNotification(int SessionId, PeerDTO Peer)
     : VideoSessionUpdatedNotification(VideoSessionStateChangedType.UserJoined);

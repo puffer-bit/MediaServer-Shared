@@ -1,6 +1,6 @@
 using Shared.Enums;
 
-namespace Shared.Models.Responses.SessionActions.VideoSession;
+namespace Shared.Models.Responses.SessionActions.Generic;
 
 public record JoinSessionResponse(
     string RequestId,
@@ -8,5 +8,5 @@ public record JoinSessionResponse(
     SessionType SessionType,
     JoinSessionResult Result ) : GenericSessionResponse
 {
-    public override SessionActionType ActionType => SessionActionType.JoinRequest;
+    public override SessionActionType ActionType { get; init; } = SessionActionType.JoinRequest;
 }

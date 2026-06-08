@@ -1,9 +1,6 @@
-﻿using System;
-using System.Diagnostics.CodeAnalysis;
-using Shared.Enums;
-using Shared.Enums.User;
+﻿using Shared.Enums.User;
 
-namespace Shared.Models.DTO
+namespace Shared.Models.DataTransferObjects
 {
     public class UserDTO
     {

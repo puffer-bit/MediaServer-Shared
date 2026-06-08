@@ -1,3 +1,3 @@
 namespace Shared.Models.Requests.WebRTCNegotiation;
 
-public record WebRtcRequest() : Request;
+public abstract record WebRtcRequest() : Request;

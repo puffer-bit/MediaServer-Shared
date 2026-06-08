@@ -1,8 +1,7 @@
 using Shared.Enums;
 using Shared.Enums.WebRTC;
-using Shared.Models.Requests.SessionActions.VideoSession;
 
-namespace Shared.Models.Requests.SessionActions;
+namespace Shared.Models.Requests.SessionActions.Generic.Models;
 
 public record VideoSessionCreateData(
     WebRTCEngine EngineType,
@@ -19,5 +18,5 @@ public record VideoSessionCreateData(
     bool DisableTurn = false
 ) : CreateSessionData
 {
-    public SessionType SessionType => SessionType.Video;
+    public override SessionType SessionType { get; init; } = SessionType.Video;
 }

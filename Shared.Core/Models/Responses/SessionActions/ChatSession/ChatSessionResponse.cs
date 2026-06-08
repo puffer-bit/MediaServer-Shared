@@ -1,8 +1,8 @@
 using Shared.Enums.TextChat;
 
-namespace Shared.Models.Responses.SessionActions.TextChat;
+namespace Shared.Models.Responses.SessionActions.ChatSession;
 
-public record ChatSessionResponse
+public abstract record ChatSessionResponse : Response
 {
-    public virtual ChatSessionActionType ActionType { get; init; }
+    public abstract ChatSessionActionType ActionType { get; init; }
 }

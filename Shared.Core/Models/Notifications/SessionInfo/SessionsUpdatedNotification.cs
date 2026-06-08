@@ -1,9 +1,9 @@
 using Shared.Enums;
-using Shared.Models.DTO;
+using Shared.Models.DataTransferObjects;
 
 namespace Shared.Models.Notifications.SessionInfo;
 
-public abstract record SessionsUpdatedNotification(SessionsStateChangedType Type): Notification;
+public abstract record SessionsUpdatedNotification(SessionsStateChangedType NotificationType): Notification;
 
 public record SessionCreatedNotification(SessionDTO Session)
     : SessionsUpdatedNotification(SessionsStateChangedType.SessionCreated);

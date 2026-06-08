@@ -2,7 +2,7 @@ using Shared.Enums;
 
 namespace Shared.Models.Requests.Coordinator;
 
-public record CoordinatorRequest : Request
+public abstract record CoordinatorRequest : Request
 {
-    public virtual CoordinatorActionType ActionType { get; init; }
+    public abstract CoordinatorActionType ActionType { get; init; }
 }

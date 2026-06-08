@@ -1,11 +1,12 @@
-using System.Collections.Generic;
 using Shared.Enums;
-using Shared.Models.DTO;
-using Shared.Models.Responses.Coordinator;
+using Shared.Models.DataTransferObjects;
 
-namespace Shared.Models.Responses.Users;
+namespace Shared.Models.Responses.Coordinator;
 
 public record CoordinatorUserInfoResponse(
     string RequestId,
     IDictionary<int, UserDTO> UserList, 
-    UsersRequestResult Result) : CoordinatorResponse;
+    UsersRequestResult Result) : CoordinatorResponse
+{
+    public override CoordinatorActionType ActionType { get; init; } = CoordinatorActionType.InfoRequest;
+}

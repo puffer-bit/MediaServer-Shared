@@ -1,4 +1,4 @@
-namespace Shared.Models.Requests.SessionActions;
+namespace Shared.Models.Requests.SessionActions.Generic.Models;
 
 public record CreateSessionModel(
     string Name,

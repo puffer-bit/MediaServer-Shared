@@ -1,8 +1,8 @@
 using Shared.Enums;
 
-namespace Shared.Models.Requests.Heartbeat;
+namespace Shared.Models.Responses.Heartbeat;
 
-public record HeartbeatResponse
+public abstract record HeartbeatResponse : Response
 {
-    public virtual HeartbeatActionType ActionType { get; init; }
+    public abstract HeartbeatActionType ActionType { get; init; }
 }

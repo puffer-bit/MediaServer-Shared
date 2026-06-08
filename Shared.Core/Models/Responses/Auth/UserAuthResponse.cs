@@ -1,6 +1,6 @@
 using Shared.Enums;
 using Shared.Enums.Auth;
-using Shared.Models.DTO;
+using Shared.Models.DataTransferObjects;
 
 namespace Shared.Models.Responses.Auth;
 
@@ -11,5 +11,5 @@ public record UserAuthResponse(
     AuthResult AuthResult,
     string? ServerMessage) : AuthResponse
 {
-    public override AuthActionType ActionType => AuthActionType.Login;
+    public override AuthActionType ActionType { get; init; } = AuthActionType.Login;
 }

@@ -1,8 +1,8 @@
 using Shared.Enums;
 
-namespace Shared.Models.Requests.SessionActions;
+namespace Shared.Models.Requests.SessionActions.Generic.Models;
 
-public record CreateSessionData
+public abstract record CreateSessionData
 {
-    public SessionType SessionType { get; }
+    public abstract SessionType SessionType { get; init; }
 }

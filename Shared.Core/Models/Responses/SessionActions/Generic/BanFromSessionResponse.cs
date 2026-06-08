@@ -1,6 +1,6 @@
 using Shared.Enums;
 
-namespace Shared.Models.Responses.SessionActions.VideoSession;
+namespace Shared.Models.Responses.SessionActions.Generic;
 
 public record BanFromSessionResponse(
     string RequestId,
@@ -9,5 +9,5 @@ public record BanFromSessionResponse(
     SessionType SessionType,
     BanFromSessionResult Result ) : GenericSessionResponse
 {
-    public override SessionActionType ActionType => SessionActionType.BanRequest;
+    public override SessionActionType ActionType { get; init; } = SessionActionType.BanRequest;
 }

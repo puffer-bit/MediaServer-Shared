@@ -1,7 +1,7 @@
-using Shared.Models.DTO.TextChat.Messages.Content;
-using Shared.Models.DTO.TextChat.Messages.Reactions;
+using Shared.Models.DataTransferObjects.TextChat.Messages.Content;
+using Shared.Models.DataTransferObjects.TextChat.Messages.Reactions;
 
-namespace Shared.Models.DTO.TextChat.Messages;
+namespace Shared.Models.DataTransferObjects.TextChat.Messages;
 
 public class ChatMessageDTO
 {

@@ -2,7 +2,7 @@ using Shared.Enums;
 
 namespace Shared.Models.Requests.Heartbeat;
 
-public record HeartbeatRequest : Request
+public abstract record HeartbeatRequest : Request
 {
-    public virtual HeartbeatActionType ActionType { get; init; }
+    public abstract HeartbeatActionType ActionType { get; init; }
 }

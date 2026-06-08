@@ -1,9 +1,9 @@
 using Shared.Enums;
 using Shared.Enums.TextChat;
-using Shared.Models.DTO.TextChat.Messages;
-using Shared.Models.Responses.SessionActions.TextChat;
+using Shared.Models.DataTransferObjects.TextChat.Messages;
+using Shared.Models.Responses.SessionActions.ChatSession;
 
-namespace Shared.Models.Requests.SessionActions.TextChat;
+namespace Shared.Models.Requests.SessionActions.ChatSession;
 
 public record ChatSessionHistoryRequest(
     int ChatId,
@@ -11,8 +11,8 @@ public record ChatSessionHistoryRequest(
     int? Skip
 ) : ChatSessionRequest
 {
-    public override ChatSessionActionType ActionType => ChatSessionActionType.ChatHistory;
+    public override ChatSessionActionType ActionType { get; init; } = ChatSessionActionType.ChatHistory;
     
-    public TextChatHistoryResponse ToResponse(FetchMessagesResult result, List<ChatMessageDTO>? messages)
+    public ChatSessionHistoryResponse ToResponse(FetchMessagesResult result, List<ChatMessageDTO>? messages)
         => new(RequestId, messages, result);
 }

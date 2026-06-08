@@ -1,7 +1,7 @@
 using Shared.Enums;
-using Shared.Models.Responses.SessionActions.VideoSession;
+using Shared.Models.Responses.SessionActions.Generic;
 
-namespace Shared.Models.Requests.SessionActions.VideoSession;
+namespace Shared.Models.Requests.SessionActions.Generic;
 
 public record ApproveUserRequest(
     int SessionId,
@@ -9,7 +9,7 @@ public record ApproveUserRequest(
     SessionType SessionType
 ) : GenericSessionRequest
 {
-    public override SessionActionType ActionType => SessionActionType.ApproveRequest;
+    public override SessionActionType ActionType { get; init; } = SessionActionType.ApproveRequest;
     
     public ApproveUserResponse ToResponse(ApproveUserSessionResult result)
         => new(RequestId, SessionId, UserTargetId, SessionType, result);

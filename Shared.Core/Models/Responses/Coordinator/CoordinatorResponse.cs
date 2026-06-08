@@ -2,7 +2,7 @@ using Shared.Enums;
 
 namespace Shared.Models.Responses.Coordinator;
 
-public record CoordinatorResponse
+public abstract record CoordinatorResponse : Response
 {
-    public virtual CoordinatorActionType ActionType { get; init; }
+    public abstract CoordinatorActionType ActionType { get; init; }
 }

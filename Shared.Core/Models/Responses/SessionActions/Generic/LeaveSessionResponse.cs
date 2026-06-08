@@ -1,6 +1,6 @@
 using Shared.Enums;
 
-namespace Shared.Models.Responses.SessionActions.VideoSession;
+namespace Shared.Models.Responses.SessionActions.Generic;
 
 public record LeaveSessionResponse(
     string RequestId,
@@ -8,5 +8,5 @@ public record LeaveSessionResponse(
     SessionType SessionType,
     LeaveSessionResult Result ) : GenericSessionResponse
 {
-    public override SessionActionType ActionType => SessionActionType.LeaveRequest;
+    public override SessionActionType ActionType { get; init; } = SessionActionType.LeaveRequest;
 }

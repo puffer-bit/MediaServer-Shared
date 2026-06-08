@@ -1,7 +1,7 @@
 using Shared.Enums;
-using Shared.Models.Responses.SessionActions.VideoSession;
+using Shared.Models.Responses.SessionActions.Generic;
 
-namespace Shared.Models.Requests.SessionActions.VideoSession;
+namespace Shared.Models.Requests.SessionActions.Generic;
 
 public record BanInSessionRequest(
     int SessionId,
@@ -10,7 +10,7 @@ public record BanInSessionRequest(
     string? Reason
 ) : GenericSessionRequest
 {
-    public override SessionActionType ActionType => SessionActionType.BanRequest;
+    public override SessionActionType ActionType { get; init; } = SessionActionType.BanRequest;
 
     public BanFromSessionResponse ToResponse(BanFromSessionResult result)
         => new(RequestId, SessionId, UserTargetId, SessionType, result);

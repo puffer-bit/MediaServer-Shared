@@ -173,6 +173,21 @@
     <Compile Update="Models\Responses\WebRTCNegotiation\WebRtcNegotiationResponse.cs">
       <DependentUpon>WebRtcResponse.cs</DependentUpon>
     </Compile>
+    <Compile Update="Models\Responses\SessionActions\ChatSession\ChatSessionHistoryResponse.cs">
+      <DependentUpon>ChatSessionResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\SessionActions\ChatSession\ChatSessionMessageResponse.cs">
+      <DependentUpon>ChatSessionResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\SessionActions\ChatSession\DeleteMessageResponse.cs">
+      <DependentUpon>ChatSessionResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\SessionActions\ChatSession\EditMessageResponse.cs">
+      <DependentUpon>ChatSessionResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\SessionActions\ChatSession\SendTextMessageResponse.cs">
+      <DependentUpon>ChatSessionResponse.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 </Project>

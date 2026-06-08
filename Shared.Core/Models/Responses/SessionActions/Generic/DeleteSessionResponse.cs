@@ -1,10 +1,10 @@
 using Shared.Enums;
 
-namespace Shared.Models.Responses.SessionActions.VideoSession;
+namespace Shared.Models.Responses.SessionActions.Generic;
 
 public record DeleteSessionResponse(
     string RequestId,
     DeleteSessionResult Result ) : GenericSessionResponse
 {
-    public override SessionActionType ActionType => SessionActionType.DeleteRequest;
+    public override SessionActionType ActionType { get; init; } = SessionActionType.DeleteRequest;
 }

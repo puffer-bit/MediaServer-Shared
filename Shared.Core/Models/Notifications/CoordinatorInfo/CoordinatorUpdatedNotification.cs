@@ -1,10 +1,10 @@
 using Shared.Enums;
-using Shared.Models.DTO;
+using Shared.Models.DataTransferObjects;
 using Shared.Models.Notifications.SessionInfo;
 
 namespace Shared.Models.Notifications.CoordinatorInfo;
 
-public abstract record CoordinatorUpdatedNotification(CoordinatorStateChangedType Type) : Notification;
+public abstract record CoordinatorUpdatedNotification(CoordinatorStateChangedType NotificationType) : Notification;
 
 public record CoordinatorUserListUpdatedNotification(IList<UserDTO> Users)
     : CoordinatorUpdatedNotification(CoordinatorStateChangedType.UsersListUpdated);

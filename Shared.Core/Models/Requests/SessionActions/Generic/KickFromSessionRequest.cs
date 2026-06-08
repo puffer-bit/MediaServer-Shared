@@ -1,7 +1,7 @@
 using Shared.Enums;
-using Shared.Models.Responses.SessionActions.VideoSession;
+using Shared.Models.Responses.SessionActions.Generic;
 
-namespace Shared.Models.Requests.SessionActions.VideoSession
+namespace Shared.Models.Requests.SessionActions.Generic
 {
     public record KickFromSessionRequest(
         int SessionId,
@@ -10,7 +10,7 @@ namespace Shared.Models.Requests.SessionActions.VideoSession
         string? Reason
     ) : GenericSessionRequest
     {        
-        public override SessionActionType ActionType => SessionActionType.KickRequest;
+        public override SessionActionType ActionType { get; init; } = SessionActionType.KickRequest;
 
         public KickFromSessionResponse ToResponse(LeaveSessionResult result)
             => new(RequestId, SessionId, UserTargetId, SessionType, result);

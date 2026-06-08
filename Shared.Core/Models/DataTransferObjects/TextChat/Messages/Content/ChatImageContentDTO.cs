@@ -1,4 +1,4 @@
-namespace Shared.Models.DTO.TextChat.Messages.Content;
+namespace Shared.Models.DataTransferObjects.TextChat.Messages.Content;
 
 public class ChatImageContentDTO
 {

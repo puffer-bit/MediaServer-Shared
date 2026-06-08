@@ -33,10 +33,16 @@ public enum VideoSessionStateChangedType
     HostJoined
 }
 
-public enum TextChatStateChangedType
+public enum ChatSessionStateChangedType
 {
     UserTyping = 1,
     MessageAdded = 2,
     MessageEdited,
     MessageDeleted
+}
+
+public enum HeartbeatStateChangedType
+{
+    ServerClosing,
+    ServerRestarting
 }

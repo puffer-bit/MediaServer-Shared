@@ -1,6 +1,6 @@
 ﻿using Shared.Enums;
 
-namespace Shared.Models.DTO
+namespace Shared.Models.DataTransferObjects
 {
     public class PeerDTO
     {

@@ -5,8 +5,6 @@ using Shared.Models.Requests.Auth;
 
 namespace Shared.Models
 {
-    [JsonPolymorphic(TypeDiscriminatorPropertyName = "Type")]
-    [JsonDerivedType(typeof(UserAuthRequest), typeDiscriminator: (int)MessageType.UserAuthAction)]
     public class BaseMessage
     {
         public string Id { get; init; } = GenerateTimestampId();

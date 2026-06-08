@@ -1,8 +1,8 @@
 using Shared.Enums;
 
-namespace Shared.Models.Requests.SessionActions.VideoSession;
+namespace Shared.Models.Requests.SessionActions.Generic;
 
-public record GenericSessionRequest : Request
+public abstract record GenericSessionRequest : Request
 {
-    public virtual SessionActionType ActionType { get; init; }
+    public abstract SessionActionType ActionType { get; init; }
 }

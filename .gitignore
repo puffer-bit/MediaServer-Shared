@@ -8,3 +8,6 @@
 Shared.Core/bin/
 Shared.Core/obj/
 Shared.Core/.idea
+Shared.Core.Tests/bin/
+Shared.Core.Tests/obj/
+Shared.Core.Tests/.idea

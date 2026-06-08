@@ -4,3 +4,7 @@
 
 /bin/
 /obj
+.idea/
+Shared.Core/bin/
+Shared.Core/obj/
+Shared.Core/.idea

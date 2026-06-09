@@ -5,7 +5,7 @@ using Shared.Models.DataTransferObjects.TextChat.Messages;
 namespace Shared.Models.Responses.SessionActions.ChatSession;
 
 public record ChatSessionHistoryResponse(
-    string RequestId,
+    Guid RequestId,
     List<ChatMessageDTO>? Messages,
     FetchMessagesResult Result) : ChatSessionResponse
 {

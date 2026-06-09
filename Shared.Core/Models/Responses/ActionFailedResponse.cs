@@ -3,6 +3,6 @@ using Shared.Enums;
 namespace Shared.Models.Responses;
 
 public record FailedResponse(
-    string RequestId,
+    Guid RequestId,
     string? Message)
     : Response;

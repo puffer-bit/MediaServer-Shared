@@ -4,7 +4,7 @@ using Shared.Models.DataTransferObjects;
 namespace Shared.Models.Responses.SessionActions.Generic;
 
 public record SessionInfoResponse(
-    string RequestId,
+    Guid RequestId,
     IDictionary<int, SessionDTO> SessionsList,
     SessionRequestResult Result) : GenericSessionResponse
 {

@@ -4,7 +4,7 @@ using Shared.Models.DataTransferObjects;
 namespace Shared.Models.Responses.Coordinator;
 
 public record CoordinatorInfoResponse(
-    string RequestId,
+    Guid RequestId,
     CoordinatorSessionDTO CoordinatorSessionDto) : CoordinatorResponse
 {
     public override CoordinatorActionType ActionType { get; init; } = CoordinatorActionType.InfoRequest;

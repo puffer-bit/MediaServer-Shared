@@ -3,7 +3,7 @@ using Shared.Enums;
 namespace Shared.Models.Responses.SessionActions.Generic;
 
 public record RejectUserResponse(
-    string RequestId,
+    Guid RequestId,
     int SessionId,
     int UserTargetId,
     SessionType SessionType,

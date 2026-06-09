@@ -10,7 +10,7 @@ namespace Shared.Models.Requests.SessionActions.Generic
     ) : GenericSessionRequest
     {
         public override SessionActionType ActionType { get; init; } = SessionActionType.CreateRequest;
-        public CreateSessionResponse ToResponse(CreateSessionResult result, SessionDTO? sessionDTO)
+        public CreateSessionResponse ToResponse(CreateSessionResult result, SessionDTO? sessionDTO = null)
             => new(RequestId, sessionDTO, result);
     }
 }

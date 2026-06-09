@@ -11,7 +11,7 @@ namespace Shared.Models.Requests.Auth
     {
         public override AuthActionType ActionType { get; init; } = AuthActionType.Login;
         
-        public UserAuthResponse ToResponse(AuthResult authResult, string userIdentity, UserDTO? userDTO = null,
+        public UserAuthResponse ToResponse(AuthResult authResult, string? userIdentity = null, UserDTO? userDTO = null,
             string? serverMessage = null)
             => new(RequestId, userDTO, userIdentity, authResult, serverMessage);
     }

@@ -5,9 +5,9 @@ using Shared.Models.DataTransferObjects;
 namespace Shared.Models.Responses.Auth;
 
 public record UserAuthResponse(
-    string RequestId,
+    Guid RequestId,
     UserDTO? UserDTO,
-    string UserIdentity,
+    string? UserIdentity,
     AuthResult AuthResult,
     string? ServerMessage) : AuthResponse
 {

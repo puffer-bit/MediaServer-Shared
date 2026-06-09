@@ -1,6 +1,6 @@
 namespace Shared.Models.Notifications;
 
-public abstract record Notification() : BaseMessageData
+public abstract record Notification() : BaseMessage
 {
-    public override BaseMessageDataType DataType { get; init; } = BaseMessageDataType.Notification;
+    
 }

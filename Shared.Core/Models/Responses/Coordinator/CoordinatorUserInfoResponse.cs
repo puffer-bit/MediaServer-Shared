@@ -4,7 +4,7 @@ using Shared.Models.DataTransferObjects;
 namespace Shared.Models.Responses.Coordinator;
 
 public record CoordinatorUserInfoResponse(
-    string RequestId,
+    Guid RequestId,
     IDictionary<int, UserDTO> UserList, 
     UsersRequestResult Result) : CoordinatorResponse
 {

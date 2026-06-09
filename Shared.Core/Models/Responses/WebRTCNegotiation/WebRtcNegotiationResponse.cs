@@ -3,7 +3,7 @@ using Shared.Enums;
 namespace Shared.Models.Responses.WebRTCNegotiation;
 
 public record WebRtcNegotiationResponse(
-    string RequestId,
+    Guid RequestId,
     WebRtcActionType ActionType,
     int SessionId,
     object? Data,

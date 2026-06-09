@@ -118,7 +118,8 @@ namespace Shared.Enums
         ForbiddenMessage = 2,
         ForbiddenRequest = 3,
         JsonParseError = 4,
-        NoUserId = 5
+        NoUserId = 5,
+        GatewayNotFound
     }
     
     public enum ValidateMessageResult

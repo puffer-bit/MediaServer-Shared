@@ -8,6 +8,10 @@
 Shared.Core/bin/
 Shared.Core/obj/
 Shared.Core/.idea
-Shared.Core.Tests/bin/
-Shared.Core.Tests/obj/
-Shared.Core.Tests/.idea
+Shared.Parsers/bin/
+Shared.Parsers/obj/
+Shared.Parsers/.idea/
+Shared.Tests/.idea
+Shared.Tests/bin/
+Shared.Tests/obj/
+Shared.Tests/.idea

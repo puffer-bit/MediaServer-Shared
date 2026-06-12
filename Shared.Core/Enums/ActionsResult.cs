@@ -12,7 +12,8 @@ namespace Shared.Enums
         NameAlreadyUsed = 1,
         WrongCapacity = 2,
         UnexceptedParameters = 3,
-        TimedOut = 4
+        TimedOut = 4,
+        WrongResponse
     }
     
     public enum EditSessionResult
@@ -32,7 +33,8 @@ namespace Shared.Enums
         RoomContainsUsers = 1,
         RoomNotExists = 2,
         TimedOut,
-        InvalidResponse
+        InvalidResponse,
+        WrongResponse
     }
         
     public enum JoinSessionResult
@@ -42,6 +44,7 @@ namespace Shared.Enums
         RoomNotExists = 1,
         RoomFull = 2,
         TimedOut = 4,
+        WrongResponse
     }
     
     public enum LeaveFromSessionResult
@@ -99,7 +102,8 @@ namespace Shared.Enums
         InternalError = -1,
         NoError = 0,
         RoomNotExists = 1,
-        TimedOut = 4
+        TimedOut = 4,
+        WrongResponse
     }
     
     public enum UsersRequestResult
@@ -147,7 +151,8 @@ namespace Shared.Enums
         NotExceptedError = 1,
         ChatDontExist = 3,
         InvalidResponse,
-        TimedOut
+        TimedOut,
+        WrongResponse
     }
     
     public enum FetchMessageResult
@@ -158,7 +163,8 @@ namespace Shared.Enums
         ChatDontExist = 3,
         InvalidResponse,
         MessageDoesntExist,
-        TimedOut
+        TimedOut,
+        WrongResponse
     }
     
     public enum AddMessageResult
@@ -168,7 +174,8 @@ namespace Shared.Enums
         SameMessageAlreadyExist = 1,
         ChatDontExist = 3,
         TimedOut,
-        InvalidResponse
+        InvalidResponse,
+        WrongResponse
     }
 
     public enum EditMessageResult
@@ -187,7 +194,8 @@ namespace Shared.Enums
         MessageDontExist = 2,
         ChatDontExist = 3,
         TimedOut,
-        InvalidResponse
+        InvalidResponse,
+        WrongResponse
     }
     
     public enum TextChatHistoryResult

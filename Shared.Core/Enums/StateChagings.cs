@@ -30,7 +30,10 @@ public enum VideoSessionStateChangedType
     HostKicked = 14,
     UserJoined,
     UserLeaved,
-    HostJoined
+    HostJoined,
+    AnswerReady,
+    IceReady,
+    HostLeaved
 }
 
 public enum ChatSessionStateChangedType

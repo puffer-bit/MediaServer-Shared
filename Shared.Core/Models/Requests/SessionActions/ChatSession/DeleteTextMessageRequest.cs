@@ -11,6 +11,6 @@ public record DeleteTextMessageRequest(
 {
     public override ChatSessionActionType ActionType { get; init; } = ChatSessionActionType.DeleteMessage;
 
-    public DeleteMessageResponse ToResponse(DeleteMessageResult result)
+    public DeleteTextMessageResponse ToResponse(DeleteMessageResult result)
         => new(RequestId, result);
 }

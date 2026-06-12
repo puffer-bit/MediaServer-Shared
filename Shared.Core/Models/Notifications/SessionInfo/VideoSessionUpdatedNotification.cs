@@ -36,7 +36,7 @@ public record VideoSessionHostConnectedNotification(int SessionId, PeerDTO Peer)
     : VideoSessionUpdatedNotification(VideoSessionStateChangedType.HostConnected);
     
 public record VideoSessionHostLeavedNotification(int SessionId, PeerDTO Peer)
-    : VideoSessionUpdatedNotification(VideoSessionStateChangedType.HostJoined);
+    : VideoSessionUpdatedNotification(VideoSessionStateChangedType.HostLeaved);
 
 public record VideoSessionHostDisconnectedNotification(int SessionId, PeerDTO Peer)
     : VideoSessionUpdatedNotification(VideoSessionStateChangedType.HostDisconnected);
@@ -45,8 +45,8 @@ public record VideoSessionHostKickedNotification(int SessionId, PeerDTO Peer, st
     : VideoSessionUpdatedNotification(VideoSessionStateChangedType.HostKicked);
 
 public record VideoSessionAnswerReadyNotification(int SessionId, int UserId, object Data)
-    : VideoSessionUpdatedNotification(VideoSessionStateChangedType.HostKicked);
+    : VideoSessionUpdatedNotification(VideoSessionStateChangedType.AnswerReady);
 
 public record VideoSessionIceReadyNotification(int SessionId, int UserId, object Data)
-    : VideoSessionUpdatedNotification(VideoSessionStateChangedType.HostKicked);
+    : VideoSessionUpdatedNotification(VideoSessionStateChangedType.IceReady);
 

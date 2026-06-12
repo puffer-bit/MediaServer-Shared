@@ -12,6 +12,6 @@ public record BanInSessionRequest(
 {
     public override SessionActionType ActionType { get; init; } = SessionActionType.BanRequest;
 
-    public BanFromSessionResponse ToResponse(BanFromSessionResult result)
+    public BanInSessionResponse ToResponse(BanFromSessionResult result)
         => new(RequestId, SessionId, UserTargetId, SessionType, result);
 }

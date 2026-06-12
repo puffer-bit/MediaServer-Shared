@@ -3,7 +3,7 @@ using Shared.Enums.TextChat;
 
 namespace Shared.Models.Responses.SessionActions.ChatSession;
 
-public record SendMessageResponse(
+public record SendTextMessageResponse(
     Guid RequestId,
     AddMessageResult Result) : ChatSessionResponse
 {

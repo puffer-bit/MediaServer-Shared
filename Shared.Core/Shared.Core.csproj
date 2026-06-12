@@ -95,7 +95,7 @@
     <Compile Update="Models\Responses\SessionActions\TextChat\TextChatMessageResponse.cs">
       <DependentUpon>ChatSessionResponse.cs</DependentUpon>
     </Compile>
-    <Compile Update="Models\Responses\SessionActions\Generic\BanFromSessionResponse.cs">
+    <Compile Update="Models\Responses\SessionActions\Generic\BanInSessionResponse.cs">
       <DependentUpon>GenericSessionResponse.cs</DependentUpon>
     </Compile>
     <Compile Update="Models\Responses\SessionActions\Generic\ApproveUserResponse.cs">
@@ -155,7 +155,7 @@
     <Compile Update="Models\Requests\SessionActions\Generic\JoinSessionRequest.cs">
       <DependentUpon>GenericSessionRequest.cs</DependentUpon>
     </Compile>
-    <Compile Update="Models\Requests\SessionActions\Generic\SessionInfoRequset.cs">
+    <Compile Update="Models\Requests\SessionActions\Generic\SessionInfoRequest.cs">
       <DependentUpon>GenericSessionRequest.cs</DependentUpon>
     </Compile>
     <Compile Update="Models\Requests\SessionActions\Generic\KickFromSessionRequest.cs">
@@ -179,7 +179,7 @@
     <Compile Update="Models\Responses\SessionActions\ChatSession\ChatSessionMessageResponse.cs">
       <DependentUpon>ChatSessionResponse.cs</DependentUpon>
     </Compile>
-    <Compile Update="Models\Responses\SessionActions\ChatSession\DeleteMessageResponse.cs">
+    <Compile Update="Models\Responses\SessionActions\ChatSession\DeleteTextMessageResponse.cs">
       <DependentUpon>ChatSessionResponse.cs</DependentUpon>
     </Compile>
     <Compile Update="Models\Responses\SessionActions\ChatSession\EditMessageResponse.cs">

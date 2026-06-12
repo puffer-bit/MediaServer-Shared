@@ -2,7 +2,7 @@ using Shared.Enums;
 
 namespace Shared.Models.Responses.SessionActions.Generic;
 
-public record BanFromSessionResponse(
+public record BanInSessionResponse(
     Guid RequestId,
     int SessionId,
     int UserTargetId,

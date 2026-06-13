@@ -3,6 +3,7 @@ using Shared.Enums;
 using Shared.Models.Notifications.CoordinatorInfo;
 using Shared.Models.Notifications.Heartbeat;
 using Shared.Models.Notifications.SessionInfo;
+using Shared.Models.Requests;
 using Shared.Models.Requests.Auth;
 using Shared.Models.Requests.Coordinator;
 using Shared.Models.Requests.Heartbeat;
@@ -58,25 +59,20 @@ namespace Shared.Models
     [JsonDerivedType(typeof(VideoSessionIceReadyNotification), typeDiscriminator: "VideoSessionIceReadyNotification")]
 
     // Requests
-
-    [JsonDerivedType(typeof(AuthRequest), typeDiscriminator: "AuthRequest")]
+    
     [JsonDerivedType(typeof(UserAuthRequest), typeDiscriminator: "UserAuthRequest")]
 
-    [JsonDerivedType(typeof(CoordinatorRequest), typeDiscriminator: "CoordinatorRequest")]
     [JsonDerivedType(typeof(CoordinatorInfoRequest), typeDiscriminator: "CoordinatorInfoRequest")]
     [JsonDerivedType(typeof(CoordinatorUserInfoRequest), typeDiscriminator: "CoordinatorUserInfoRequest")]
 
-    [JsonDerivedType(typeof(HeartbeatRequest), typeDiscriminator: "HeartbeatRequest")]
     [JsonDerivedType(typeof(HeartbeatPingRequest), typeDiscriminator: "HeartbeatPingRequest")]
 
-    [JsonDerivedType(typeof(ChatSessionRequest), typeDiscriminator: "ChatSessionRequest")]
     [JsonDerivedType(typeof(ChatSessionHistoryRequest), typeDiscriminator: "ChatSessionHistoryRequest")]
     [JsonDerivedType(typeof(ChatSessionMessageRequest), typeDiscriminator: "ChatSessionMessageRequest")]
     [JsonDerivedType(typeof(DeleteTextMessageRequest), typeDiscriminator: "DeleteTextMessageRequest")]
     [JsonDerivedType(typeof(EditTextMessageRequest), typeDiscriminator: "EditTextMessageRequest")]
     [JsonDerivedType(typeof(SendTextMessageRequest), typeDiscriminator: "SendTextMessageRequest")]
 
-    [JsonDerivedType(typeof(GenericSessionRequest), typeDiscriminator: "GenericSessionRequest")]
     [JsonDerivedType(typeof(ApproveUserRequest), typeDiscriminator: "ApproveUserRequest")]
     [JsonDerivedType(typeof(BanInSessionRequest), typeDiscriminator: "BanInSessionRequest")]
     [JsonDerivedType(typeof(CreateSessionRequest), typeDiscriminator: "CreateSessionRequest")]
@@ -87,29 +83,23 @@ namespace Shared.Models
     [JsonDerivedType(typeof(RejectUserRequest), typeDiscriminator: "RejectUserRequest")]
     [JsonDerivedType(typeof(SessionInfoRequest), typeDiscriminator: "SessionInfoRequest")] 
 
-    [JsonDerivedType(typeof(WebRtcRequest), typeDiscriminator: "WebRtcRequest")]
     [JsonDerivedType(typeof(WebRtcNegotiationRequest), typeDiscriminator: "WebRtcNegotiationRequest")]
     
     // Responses
     
-    [JsonDerivedType(typeof(AuthResponse), typeDiscriminator: "Auth")]
     [JsonDerivedType(typeof(UserAuthResponse), typeDiscriminator: "UserAuth")]
 
-    [JsonDerivedType(typeof(CoordinatorResponse), typeDiscriminator: "Coordinator")]
     [JsonDerivedType(typeof(CoordinatorInfoResponse), typeDiscriminator: "CoordinatorInfo")]
     [JsonDerivedType(typeof(CoordinatorUserInfoResponse), typeDiscriminator: "CoordinatorUserInfo")]
 
-    [JsonDerivedType(typeof(HeartbeatResponse), typeDiscriminator: "Heartbeat")]
     [JsonDerivedType(typeof(HeartbeatPingResponse), typeDiscriminator: "HeartbeatPing")]
 
-    [JsonDerivedType(typeof(ChatSessionResponse), typeDiscriminator: "ChatSession")]
     [JsonDerivedType(typeof(ChatSessionHistoryResponse), typeDiscriminator: "ChatSessionHistory")]
     [JsonDerivedType(typeof(ChatSessionMessageResponse), typeDiscriminator: "ChatSessionMessage")]
     [JsonDerivedType(typeof(DeleteTextMessageResponse), typeDiscriminator: "DeleteTextMessage")]
     [JsonDerivedType(typeof(EditMessageResponse), typeDiscriminator: "EditMessage")]
     [JsonDerivedType(typeof(SendTextMessageResponse), typeDiscriminator: "SendTextMessage")]
 
-    [JsonDerivedType(typeof(GenericSessionResponse), typeDiscriminator: "GenericSession")]
     [JsonDerivedType(typeof(ApproveUserResponse), typeDiscriminator: "ApproveUser")]
     [JsonDerivedType(typeof(BanInSessionResponse), typeDiscriminator: "BanInSession")]
     [JsonDerivedType(typeof(CreateSessionResponse), typeDiscriminator: "CreateSession")]
@@ -120,7 +110,6 @@ namespace Shared.Models
     [JsonDerivedType(typeof(RejectUserResponse), typeDiscriminator: "RejectUser")]
     [JsonDerivedType(typeof(SessionInfoResponse), typeDiscriminator: "SessionInfo")]
 
-    [JsonDerivedType(typeof(WebRtcResponse), typeDiscriminator: "WebRtc")]
     [JsonDerivedType(typeof(WebRtcNegotiationResponse), typeDiscriminator: "WebRtcNegotiation")]
     public abstract record BaseMessage
     {

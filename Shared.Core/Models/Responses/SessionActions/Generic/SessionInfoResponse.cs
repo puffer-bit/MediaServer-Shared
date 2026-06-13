@@ -5,7 +5,7 @@ namespace Shared.Models.Responses.SessionActions.Generic;
 
 public record SessionInfoResponse(
     Guid RequestId,
-    IDictionary<int, SessionDTO> SessionsList,
+    IList<SessionDTO> SessionsList,
     SessionRequestResult Result) : GenericSessionResponse(RequestId)
 {
     public override SessionActionType ActionType { get; init; } = SessionActionType.InfoRequest;

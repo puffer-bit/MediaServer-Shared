@@ -6,6 +6,6 @@ public record WebRtcNegotiationResponse(
     Guid RequestId,
     WebRtcActionType ActionType,
     int SessionId,
-    object? Data,
+    string? Data,
     WebRTCNegotiationResult Result,
     bool IsGstWebRTC) : WebRtcResponse(RequestId);

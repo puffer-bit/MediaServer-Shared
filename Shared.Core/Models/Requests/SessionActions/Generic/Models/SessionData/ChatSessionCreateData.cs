@@ -1,4 +1,5 @@
 using Shared.Enums;
+using Shared.Models.Requests.SessionActions.Generic.Models.SessionData;
 
 namespace Shared.Models.Requests.SessionActions.Generic.Models;
 

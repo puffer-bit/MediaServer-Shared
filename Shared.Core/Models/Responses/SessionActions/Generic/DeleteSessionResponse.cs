@@ -4,7 +4,7 @@ namespace Shared.Models.Responses.SessionActions.Generic;
 
 public record DeleteSessionResponse(
     Guid RequestId,
-    DeleteSessionResult Result ) : GenericSessionResponse
+    DeleteSessionResult Result ) : GenericSessionResponse(RequestId)
 {
     public override SessionActionType ActionType { get; init; } = SessionActionType.DeleteRequest;
 }

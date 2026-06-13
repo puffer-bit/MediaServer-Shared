@@ -8,4 +8,4 @@ public record WebRtcNegotiationResponse(
     int SessionId,
     object? Data,
     WebRTCNegotiationResult Result,
-    bool IsGstWebRTC) : WebRtcResponse;
+    bool IsGstWebRTC) : WebRtcResponse(RequestId);

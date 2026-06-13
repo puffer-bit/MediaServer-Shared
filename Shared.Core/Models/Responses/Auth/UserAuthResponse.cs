@@ -9,7 +9,7 @@ public record UserAuthResponse(
     UserDTO? UserDTO,
     string? UserIdentity,
     AuthResult AuthResult,
-    string? ServerMessage) : AuthResponse
+    string? ServerMessage) : AuthResponse(RequestId)
 {
     public override AuthActionType ActionType { get; init; } = AuthActionType.Login;
 }

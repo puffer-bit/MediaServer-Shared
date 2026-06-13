@@ -7,7 +7,7 @@ public record KickFromSessionResponse(
     int SessionId,
     int UserTargetId,
     SessionType SessionType,
-    LeaveSessionResult Result ) : GenericSessionResponse
+    LeaveSessionResult Result ) : GenericSessionResponse(RequestId)
 {
     public override SessionActionType ActionType { get; init; } = SessionActionType.KickRequest;
 }

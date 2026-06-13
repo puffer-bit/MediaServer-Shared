@@ -19,5 +19,5 @@ public record VideoSessionCreateData(
     bool DisableTurn = false
 ) : CreateSessionData
 {
-    public override SessionType SessionType { get; init; } = SessionType.Video;
+    public override SessionType SessionType { get; init; } = SessionType.Hybrid;
 }

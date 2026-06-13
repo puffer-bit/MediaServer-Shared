@@ -13,7 +13,6 @@ namespace Shared.Enums
         WrongCapacity = 2,
         UnexceptedParameters = 3,
         TimedOut = 4,
-        WrongResponse
     }
     
     public enum EditSessionResult
@@ -33,8 +32,6 @@ namespace Shared.Enums
         RoomContainsUsers = 1,
         RoomNotExists = 2,
         TimedOut,
-        InvalidResponse,
-        WrongResponse
     }
         
     public enum JoinSessionResult
@@ -44,7 +41,116 @@ namespace Shared.Enums
         RoomNotExists = 1,
         RoomFull = 2,
         TimedOut = 4,
-        WrongResponse
+        InsufficientPermissions,
+        SFUError
+    }
+    
+    public enum StartScreenShareResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        UnsupportedMedia = 1,
+        InsufficientPermissions = 2,
+        PeerNotExists,
+        SFUError
+    }
+    
+    public enum StopScreenShareResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        ScreenShareNotActive = 1,
+        InsufficientPermissions = 2,
+        PeerNotExists,
+        SFUError
+    }
+    
+    public enum StartVideoShareResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        UnsupportedMedia = 1,
+        InsufficientPermissions = 2,
+        SFUError,
+        PeerNotExists
+    }
+    
+    public enum StopVideoShareResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        ScreenShareNotActive = 1,
+        InsufficientPermissions = 2,
+    }
+    
+    public enum UpdateScreenShareResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        UnsupportedMedia = 1,
+        InsufficientPermissions = 2,
+        PeerNotExists,
+        SFUError
+    }
+    
+    public enum UpdateVideoShareResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        UnsupportedMedia = 1,
+        InsufficientPermissions = 2,
+    }
+    
+    public enum MuteMicrophoneResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        InsufficientPermissions = 2,
+    }
+    
+    public enum UnmuteMicrophoneResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        InsufficientPermissions = 2,
+    }
+    
+    public enum MuteSoundResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        InsufficientPermissions = 2,
+    }
+    
+    public enum UnmuteSoundResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        InsufficientPermissions = 2,
+    }
+    
+    public enum SetAfkResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        InsufficientPermissions = 2,
+        AfkModeDisabled
+    }
+    
+    public enum ResetAfkResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        InsufficientPermissions = 2,
+        AfkModeDisabled
+    }
+    
+    public enum PokeResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        InsufficientPermissions = 2,
+        PokeDisabled
     }
     
     public enum LeaveFromSessionResult
@@ -52,8 +158,6 @@ namespace Shared.Enums
         InternalError = -1,
         NoError = 0,
         RoomNotExists = 1,
-        HostCannotBeKicked = 2,
-        InsufficientPermissions = 3,
         TimedOut = 4,
         ParticipantNotExists
     }
@@ -64,7 +168,7 @@ namespace Shared.Enums
         NoError = 0,
         RoomNotExists = 1,
         TimedOut = 4,
-        ParticipantNotExists
+        PeerNotExists
     }
     
     public enum BanFromSessionResult
@@ -83,8 +187,9 @@ namespace Shared.Enums
         NoError = 0,
         RoomNotExists = 1,
         TimedOut = 4,
-        ParticipantNotExists,
-        AlreadyRejected
+        PeerNotExists,
+        AlreadyRejected,
+        SFUError
     }
     
     public enum RejectUserSessionResult
@@ -93,7 +198,7 @@ namespace Shared.Enums
         NoError = 0,
         RoomNotExists = 1,
         TimedOut = 4,
-        ParticipantNotExists,
+        PeerNotExists,
         AlreadyApproved
     }
     
@@ -142,6 +247,47 @@ namespace Shared.Enums
         InternalError = -1,
         NoError = 0,
         NotExceptedError = 1
+    }
+        
+    public enum SFUTransportCreateResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        SFUServiceError = 3,
+        SFUServiceNotAvailable = 4,
+        PortAllocationFailed = 5,
+        MaxTransportsReached = 6
+    }
+    
+    public enum SFUOutboundCreateResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        UnsupportedMediaType = 2,
+        SFUServiceError = 3,
+        SFUServiceNotAvailable = 4,
+        DuplicateOutbound = 5,
+        TransportClosed = 7
+    }
+
+    public enum SFUOutboundDowngradeResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        SFUServiceError = 3,
+        SFUServiceNotAvailable = 4,
+        InvalidSSRC = 1,
+        AlreadyDowngraded = 5,
+    }
+    
+    public enum SFUOutboundUpgradeResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        SFUServiceError = 3,
+        SFUServiceNotAvailable = 4,
+        InvalidSSRC = 1,
+        AlreadyUpgraded = 5,
     }
 
     public enum FetchMessagesResult

@@ -12,28 +12,50 @@ public enum CoordinatorStateChangedType
 
 public enum SessionsStateChangedType
 {
-    SessionCreated = 7,
-    SessionDeleted = 8,
-    SessionReconfigured = 9
+    HybridSessionCreated = 7,
+    HybridSessionDeleted = 8,
+    HybridSessionReconfigured = 9,
+    ChatSessionCreated = 10,
+    ChatSessionDeleted = 11,
+    ChatSessionReconfigured = 12,
 }
 
 public enum VideoSessionStateChangedType
 {
-    UserConnected = 1,
-    UserDisconnected = 2,
-    UserKicked = 3,
-    UserBanned = 5,
-    UserApproved = 6,
-    HostConnected = 10,
-    HostDisconnected = 11,
-    UserRejected = 13,
-    HostKicked = 14,
-    UserJoined,
-    UserLeaved,
-    HostJoined,
-    AnswerReady,
-    IceReady,
-    HostLeaved
+    PeerConnected = 1,
+    PeerDisconnected,
+    PeerKicked,
+    PeerKickedIdle,
+    PeerBanned,
+    PeerJoined,
+    PeerApproved,
+    PeerRejected,
+    PeerLeft,
+    PeerStartedScreenShare,
+    PeerUpdatedScreenShare,
+    PeerStoppedScreenShare,
+    PeerMutedScreenShareSound,
+    PeerPausedScreenShare,
+    PeerResumedScreenShareSound,
+    PeerResumedScreenShare,
+    PeerStartedVideoShare,
+    PeerUpdatedVideoShare,
+    PeerStoppedVideoShare,
+    PeerPausedVideoShare,
+    PeerResumedVideoShare,
+    PeerStartedVoiceShare,
+    PeerUpdatedVoiceShare,
+    PeerStoppedVoiceShare,
+    PeerPausedVoiceShare,
+    PeerMuteMicrophone,
+    PeerUnmuteMicrophone,
+    PeerMuteSound,
+    PeerUnmuteSound,
+    PeerAfk,
+    PeerNotAfk,
+    PeerPoked,
+    PeerMovedOut,
+    PeerMovedIn,
 }
 
 public enum ChatSessionStateChangedType

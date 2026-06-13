@@ -188,6 +188,12 @@
     <Compile Update="Models\Responses\SessionActions\ChatSession\SendTextMessageResponse.cs">
       <DependentUpon>ChatSessionResponse.cs</DependentUpon>
     </Compile>
+    <Compile Update="Models\Responses\SFUNegotiation\SFUTransportCreateResponse.cs">
+      <DependentUpon>SFUResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SFUNegotiation\SFUOutboundCreateRequest.cs">
+      <DependentUpon>SFURequest.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 </Project>

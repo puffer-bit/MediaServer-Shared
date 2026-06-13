@@ -1,9 +1,7 @@
 ﻿using System.Text.Json.Serialization;
-using Shared.Enums;
 using Shared.Models.Notifications.CoordinatorInfo;
 using Shared.Models.Notifications.Heartbeat;
 using Shared.Models.Notifications.SessionInfo;
-using Shared.Models.Requests;
 using Shared.Models.Requests.Auth;
 using Shared.Models.Requests.Coordinator;
 using Shared.Models.Requests.Heartbeat;
@@ -38,25 +36,44 @@ namespace Shared.Models
     [JsonDerivedType(typeof(ChatSessionMessageDeletedNotification), typeDiscriminator: "ChatSessionMessageDeletedNotification")]
     [JsonDerivedType(typeof(ChatSessionUserTypingNotification), typeDiscriminator: "ChatSessionUserTypingNotification")]
 
-    [JsonDerivedType(typeof(SessionCreatedNotification), typeDiscriminator: "SessionCreatedNotification")]
-    [JsonDerivedType(typeof(SessionReconfiguredNotification), typeDiscriminator: "SessionReconfiguredNotification")]
-    [JsonDerivedType(typeof(SessionDeletedNotification), typeDiscriminator: "SessionDeletedNotification")]
+    [JsonDerivedType(typeof(HybridSessionCreatedNotification), typeDiscriminator: "HybridSessionCreatedNotification")]
+    [JsonDerivedType(typeof(HybridSessionReconfiguredNotification), typeDiscriminator: "HybridSessionReconfiguredNotification")]
+    [JsonDerivedType(typeof(HybridSessionDeletedNotification), typeDiscriminator: "HybridSessionDeletedNotification")]
+    [JsonDerivedType(typeof(ChatSessionCreatedNotification), typeDiscriminator: "ChatSessionCreatedNotification")]
+    [JsonDerivedType(typeof(ChatSessionReconfiguredNotification), typeDiscriminator: "ChatSessionReconfiguredNotification")]
+    [JsonDerivedType(typeof(ChatSessionDeletedNotification), typeDiscriminator: "ChatSessionDeletedNotification")]
 
-    [JsonDerivedType(typeof(VideoSessionParticipantJoinedNotification), typeDiscriminator: "VideoSessionParticipantJoinedNotification")]
-    [JsonDerivedType(typeof(VideoSessionParticipantConnectedNotification), typeDiscriminator: "VideoSessionParticipantConnectedNotification")]
-    [JsonDerivedType(typeof(VideoSessionParticipantLeavedNotification), typeDiscriminator: "VideoSessionParticipantLeavedNotification")]
-    [JsonDerivedType(typeof(VideoSessionParticipantDisconnectedNotification), typeDiscriminator: "VideoSessionParticipantDisconnectedNotification")]
-    [JsonDerivedType(typeof(VideoSessionParticipantKickedNotification), typeDiscriminator: "VideoSessionParticipantKickedNotification")]
-    [JsonDerivedType(typeof(VideoSessionParticipantBannedNotification), typeDiscriminator: "VideoSessionParticipantBannedNotification")]
-    [JsonDerivedType(typeof(VideoSessionParticipantApprovedNotification), typeDiscriminator: "VideoSessionParticipantApprovedNotification")]
-    [JsonDerivedType(typeof(VideoSessionParticipantRejectedNotification), typeDiscriminator: "VideoSessionParticipantRejectedNotification")]
-    [JsonDerivedType(typeof(VideoSessionHostJoinedNotification), typeDiscriminator: "VideoSessionHostJoinedNotification")]
-    [JsonDerivedType(typeof(VideoSessionHostConnectedNotification), typeDiscriminator: "VideoSessionHostConnectedNotification")]
-    [JsonDerivedType(typeof(VideoSessionHostLeavedNotification), typeDiscriminator: "VideoSessionHostLeavedNotification")]
-    [JsonDerivedType(typeof(VideoSessionHostDisconnectedNotification), typeDiscriminator: "VideoSessionHostDisconnectedNotification")]
-    [JsonDerivedType(typeof(VideoSessionHostKickedNotification), typeDiscriminator: "VideoSessionHostKickedNotification")]
-    [JsonDerivedType(typeof(VideoSessionAnswerReadyNotification), typeDiscriminator: "VideoSessionAnswerReadyNotification")]
-    [JsonDerivedType(typeof(VideoSessionIceReadyNotification), typeDiscriminator: "VideoSessionIceReadyNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerConnectedNotification), typeDiscriminator: "VideoSessionPeerConnectedNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerDisconnectedNotification), typeDiscriminator: "VideoSessionPeerDisconnectedNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerJoinedNotification), typeDiscriminator: "VideoSessionPeerJoinedNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerLeftNotification), typeDiscriminator: "VideoSessionPeerLeftNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerKickedNotification), typeDiscriminator: "VideoSessionPeerKickedNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerIdleKickedNotification), typeDiscriminator: "VideoSessionPeerIdleKickedNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerBannedNotification), typeDiscriminator: "VideoSessionPeerBannedNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerMovedOutNotification), typeDiscriminator: "VideoSessionPeerMovedOutNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerMovedInNotification), typeDiscriminator: "VideoSessionPeerMovedInNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerStartedScreenShareNotification), typeDiscriminator: "VideoSessionPeerStartedScreenShareNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerUpdatedScreenShareNotification), typeDiscriminator: "VideoSessionPeerUpdatedScreenShareNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerStoppedScreenShareNotification), typeDiscriminator: "VideoSessionPeerStoppedScreenShareNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerMutedScreenShareSoundNotification), typeDiscriminator: "VideoSessionPeerMutedScreenShareSoundNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerPausedScreenShareNotification), typeDiscriminator: "VideoSessionPeerPausedScreenShareNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerUnmutedScreenShareSoundNotification), typeDiscriminator: "VideoSessionPeerUnmutedScreenShareSoundNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerResumedScreenShareNotification), typeDiscriminator: "VideoSessionPeerResumedScreenShareNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerStartedHybridShareNotification), typeDiscriminator: "VideoSessionPeerStartedVideoShareNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerUpdatedHybridShareNotification), typeDiscriminator: "VideoSessionPeerUpdatedVideoShareNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerStoppedHybridShareNotification), typeDiscriminator: "VideoSessionPeerStoppedVideoShareNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerPausedHybridShareNotification), typeDiscriminator: "VideoSessionPeerPausedVideoShareNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerResumedHybridShareNotification), typeDiscriminator: "VideoSessionPeerResumedVideoShareNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerStartedVoiceShareNotification), typeDiscriminator: "VideoSessionPeerStartedVoiceShareNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerUpdatedVoiceShareNotification), typeDiscriminator: "VideoSessionPeerUpdatedVoiceShareNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerStoppedVoiceShareNotification), typeDiscriminator: "VideoSessionPeerStoppedVoiceShareNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerMuteMicrophoneNotification), typeDiscriminator: "VideoSessionPeerMuteMicrophoneNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerUnmuteMicrophoneNotification), typeDiscriminator: "VideoSessionPeerUnmuteMicrophoneNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerMuteSoundNotification), typeDiscriminator: "VideoSessionPeerMuteSoundNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerUnmuteSoundNotification), typeDiscriminator: "VideoSessionPeerUnmuteSoundNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerAfkNotification), typeDiscriminator: "VideoSessionPeerAfkNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerNotAfkNotification), typeDiscriminator: "VideoSessionPeerNotAfkNotification")]
+    [JsonDerivedType(typeof(HybridSessionPeerPokedNotification), typeDiscriminator: "VideoSessionPeerPokedNotification")]
 
     // Requests
     

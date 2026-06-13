@@ -1,7 +1,14 @@
-﻿using Shared.Enums;
+﻿using System.Text.Json.Serialization;
+using Shared.Enums;
+using Shared.Models.DataTransferObjects.TextChat;
 
 namespace Shared.Models.DataTransferObjects
 {
+    [JsonPolymorphic(TypeDiscriminatorPropertyName = "SessionType",
+     UnknownDerivedTypeHandling = JsonUnknownDerivedTypeHandling.FallBackToNearestAncestor)]
+    
+    [JsonDerivedType(typeof(TextChatDTO), typeDiscriminator: 1)]
+    [JsonDerivedType(typeof(VideoSessionDTO), typeDiscriminator: 2)]
     public class SessionDTO
     {
         public required int Id { get; set; }

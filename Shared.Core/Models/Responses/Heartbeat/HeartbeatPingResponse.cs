@@ -4,7 +4,7 @@ namespace Shared.Models.Responses.Heartbeat;
 
 public record HeartbeatPingResponse(
     Guid RequestId,
-    long Timestamp) : HeartbeatResponse
+    long Timestamp) : HeartbeatResponse(RequestId)
 {
     public override HeartbeatActionType ActionType { get; init; } = HeartbeatActionType.Ping;
 }

@@ -5,10 +5,10 @@ using Shared.Models.Responses.WebRTCNegotiation;
 namespace Shared.Models.Requests.WebRTCNegotiation
 {
     public record WebRtcNegotiationRequest(
-        WebRtcActionType ActionType, int SessionId, object Data, bool IsGstWebRTC = false) : WebRtcRequest
+        WebRtcActionType ActionType, int SessionId, string Data, bool IsGstWebRTC = false) : WebRtcRequest
     {
         public WebRtcNegotiationResponse ToResponse(WebRtcActionType type, WebRTCNegotiationResult result,
-            object data)
+            string? data)
             => new(RequestId, type, SessionId, data, result, IsGstWebRTC);
     }
 }

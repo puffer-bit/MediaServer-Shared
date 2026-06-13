@@ -4,8 +4,8 @@ using Shared.Models.DataTransferObjects.TextChat;
 
 namespace Shared.Models.DataTransferObjects
 {
-    [JsonPolymorphic(TypeDiscriminatorPropertyName = "SessionType",
-     UnknownDerivedTypeHandling = JsonUnknownDerivedTypeHandling.FallBackToNearestAncestor)]
+    [JsonPolymorphic(TypeDiscriminatorPropertyName = "$type",
+        UnknownDerivedTypeHandling = JsonUnknownDerivedTypeHandling.FallBackToNearestAncestor)]
     
     [JsonDerivedType(typeof(TextChatDTO), typeDiscriminator: 1)]
     [JsonDerivedType(typeof(VideoSessionDTO), typeDiscriminator: 2)]

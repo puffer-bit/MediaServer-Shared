@@ -2,7 +2,7 @@ namespace Shared.Models.Responses.SFUNegotiation;
 
 public enum MediaType
 {
-    Audio,
-    Video,
+    Audio = 0,
+    Video = 1,
     Tunnel,
 }

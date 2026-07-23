@@ -38,11 +38,12 @@ namespace Shared.Enums
     {
         InternalError = -1,
         NoError = 0,
-        RoomNotExists = 1,
+        SessionNotExists = 1,
         RoomFull = 2,
         TimedOut = 4,
         InsufficientPermissions,
-        SFUError
+        SFUError,
+        UnknowSessionType
     }
     
     public enum StartScreenShareResult
@@ -166,40 +167,44 @@ namespace Shared.Enums
     {
         InternalError = -1,
         NoError = 0,
-        RoomNotExists = 1,
+        SessionNotExists = 1,
         TimedOut = 4,
-        PeerNotExists
+        PeerNotExists,
+        UnknowSessionType
     }
     
     public enum BanFromSessionResult
     {
         InternalError = -1,
         NoError = 0,
-        RoomNotExists = 1,
+        SessionNotExists = 1,
         HostCannotBeBanned = 2,
         InsufficientPermissions = 3,
-        TimedOut = 4
+        TimedOut = 4,
+        UnknowSessionType
     }
     
     public enum ApproveUserSessionResult
     {
         InternalError = -1,
         NoError = 0,
-        RoomNotExists = 1,
+        SessionNotExists = 1,
         TimedOut = 4,
         PeerNotExists,
         AlreadyRejected,
-        SFUError
+        SFUError,
+        UnknowSessionType
     }
     
     public enum RejectUserSessionResult
     {
         InternalError = -1,
         NoError = 0,
-        RoomNotExists = 1,
+        SessionNotExists = 1,
         TimedOut = 4,
         PeerNotExists,
-        AlreadyApproved
+        AlreadyApproved,
+        UnknowSessionType
     }
     
     public enum SessionRequestResult

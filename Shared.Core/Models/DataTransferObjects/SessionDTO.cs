@@ -7,7 +7,7 @@ namespace Shared.Models.DataTransferObjects
     [JsonPolymorphic(TypeDiscriminatorPropertyName = "$type",
         UnknownDerivedTypeHandling = JsonUnknownDerivedTypeHandling.FallBackToNearestAncestor)]
     
-    [JsonDerivedType(typeof(TextChatDTO), typeDiscriminator: 1)]
+    [JsonDerivedType(typeof(ChatSessionDTO), typeDiscriminator: 1)]
     [JsonDerivedType(typeof(VideoSessionDTO), typeDiscriminator: 2)]
     public class SessionDTO
     {

@@ -2,7 +2,7 @@ using Shared.Models.DataTransferObjects.TextChat.User;
 
 namespace Shared.Models.DataTransferObjects.TextChat;
 
-public class TextChatDTO : SessionDTO
+public class ChatSessionDTO : SessionDTO
 {
     public required int CreatorUserId { get; set; }
     public int AdminUserId { get; set; }

@@ -7,7 +7,7 @@ namespace Shared.Models.Requests.SessionActions.ChatSession;
 
 public record SendTextMessageRequest(
     int ChatId,
-    NewChatMessageModel Message
+    NewChatMessageModel MessageModel
 ) : ChatSessionRequest
 {
     public override ChatSessionActionType ActionType { get; init; } = ChatSessionActionType.SendMessage;

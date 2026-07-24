@@ -1,36 +1,26 @@
 using Shared.Enums;
 using Shared.Models.DataTransferObjects;
+using Shared.Models.DataTransferObjects.TextChat;
 
 namespace Shared.Models.Notifications.SessionInfo;
 
 public abstract record SessionsUpdatedNotification(SessionsStateChangedType NotificationType) : Notification;
 
-public abstract record SessionCreatedNotification(SessionsStateChangedType NotificationType, SessionDTO Session) 
-    : SessionsUpdatedNotification(NotificationType);
+public record HybridSessionCreatedNotification(HybridSessionDTO Session)
+    : SessionsUpdatedNotification(SessionsStateChangedType.HybridSessionCreated);
 
-public abstract record SessionReconfiguredNotification(SessionsStateChangedType NotificationType, SessionDTO Session) 
-    : SessionsUpdatedNotification(NotificationType);
-
-public abstract record SessionDeletedNotification(SessionsStateChangedType NotificationType, int SessionId) 
-    : SessionsUpdatedNotification(NotificationType);
-
-
-public record HybridSessionCreatedNotification(SessionDTO Session)
-    : SessionCreatedNotification(SessionsStateChangedType.HybridSessionCreated, Session);
-
-public record ChatSessionCreatedNotification(SessionDTO Session)
-    : SessionCreatedNotification(SessionsStateChangedType.ChatSessionCreated, Session);
-
-
-public record HybridSessionReconfiguredNotification(SessionDTO Session)
-    : SessionReconfiguredNotification(SessionsStateChangedType.HybridSessionReconfigured, Session);
-
-public record ChatSessionReconfiguredNotification(SessionDTO Session)
-    : SessionReconfiguredNotification(SessionsStateChangedType.ChatSessionReconfigured, Session);
-
+public record HybridSessionReconfiguredNotification(HybridSessionDTO Session)
+    : SessionsUpdatedNotification(SessionsStateChangedType.HybridSessionReconfigured);
 
 public record HybridSessionDeletedNotification(int SessionId)
-    : SessionDeletedNotification(SessionsStateChangedType.HybridSessionDeleted, SessionId);
+    : SessionsUpdatedNotification(SessionsStateChangedType.HybridSessionDeleted);
+
+public record ChatSessionCreatedNotification(ChatSessionDTO Session)
+    : SessionsUpdatedNotification(SessionsStateChangedType.ChatSessionCreated);
+
+public record ChatSessionReconfiguredNotification(ChatSessionDTO Session)
+    : SessionsUpdatedNotification(SessionsStateChangedType.ChatSessionReconfigured);
 
 public record ChatSessionDeletedNotification(int SessionId)
-    : SessionDeletedNotification(SessionsStateChangedType.ChatSessionDeleted, SessionId);
+    : SessionsUpdatedNotification(SessionsStateChangedType.ChatSessionDeleted);
+    

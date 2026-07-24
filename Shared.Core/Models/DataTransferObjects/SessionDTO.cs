@@ -8,7 +8,7 @@ namespace Shared.Models.DataTransferObjects
         UnknownDerivedTypeHandling = JsonUnknownDerivedTypeHandling.FallBackToNearestAncestor)]
     
     [JsonDerivedType(typeof(ChatSessionDTO), typeDiscriminator: 1)]
-    [JsonDerivedType(typeof(VideoSessionDTO), typeDiscriminator: 2)]
+    [JsonDerivedType(typeof(HybridSessionDTO), typeDiscriminator: 2)]
     public class SessionDTO
     {
         public required int Id { get; set; }

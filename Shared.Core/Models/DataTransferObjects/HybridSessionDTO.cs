@@ -2,7 +2,7 @@ using Shared.Enums.WebRTC;
 
 namespace Shared.Models.DataTransferObjects;
 
-public class VideoSessionDTO : SessionDTO
+public class HybridSessionDTO : SessionDTO
 {
     public required WebRTCEngine EngineType { get; set; }
     

@@ -2,7 +2,7 @@ using Shared.Models.DataTransferObjects.TextChat.Messages.Content;
 
 namespace Shared.Models.Requests.SessionActions.ChatSession.Models;
 
-public class NewChatMessageModel
+public class NewChatMessageDTO
 {
     public required int ChatId { get; init; }
     public required int SenderUserId { get; init; }

@@ -5,6 +5,7 @@ namespace Shared.Models.Notifications.SessionInfo;
 
 public abstract record SessionsUpdatedNotification(SessionsStateChangedType NotificationType) : Notification;
 
+
 public abstract record SessionCreatedNotification(SessionsStateChangedType NotificationType, SessionDTO Session) 
     : SessionsUpdatedNotification(NotificationType);
 

@@ -8,7 +8,7 @@ public record JoinSessionResponse(
     int SessionId,
     SessionType SessionType,
     JoinSessionResult Result,
-    TransportData? TransportData) : GenericSessionResponse(RequestId)
+    TransportData? Data) : GenericSessionResponse(RequestId)
 {
     public override SessionActionType ActionType { get; init; } = SessionActionType.JoinRequest;
 }

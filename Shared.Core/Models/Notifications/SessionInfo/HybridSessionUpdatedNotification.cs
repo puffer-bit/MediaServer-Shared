@@ -63,19 +63,19 @@ public record HybridSessionPeerResumedScreenShareNotification(int SessionId, int
     : HybridSessionUpdatedNotification(VideoSessionStateChangedType.PeerResumedScreenShare);
 
 
-public record HybridSessionPeerStartedHybridShareNotification(int SessionId, int PeerId, Inbound inbound)
+public record HybridSessionPeerStartedVideoShareNotification(int SessionId, int PeerId, Inbound inbound)
     : HybridSessionUpdatedNotification(VideoSessionStateChangedType.PeerStartedVideoShare);
 
-public record HybridSessionPeerUpdatedHybridShareNotification(int SessionId, int PeerId, Inbound inbound)
+public record HybridSessionPeerUpdatedVideoShareNotification(int SessionId, int PeerId, Inbound inbound)
     : HybridSessionUpdatedNotification(VideoSessionStateChangedType.PeerUpdatedVideoShare);
 
-public record HybridSessionPeerStoppedHybridShareNotification(int SessionId, int PeerId, int? InitiatorPeerId = null)
+public record HybridSessionPeerStoppedVideoShareNotification(int SessionId, int PeerId, int? InitiatorPeerId = null)
     : HybridSessionUpdatedNotification(VideoSessionStateChangedType.PeerStoppedVideoShare);
 
-public record HybridSessionPeerPausedHybridShareNotification(int SessionId, int PeerId, int? InitiatorPeerId = null, string? Reason = null)
+public record HybridSessionPeerPausedVideoShareNotification(int SessionId, int PeerId, int? InitiatorPeerId = null, string? Reason = null)
     : HybridSessionUpdatedNotification(VideoSessionStateChangedType.PeerPausedVideoShare);
 
-public record HybridSessionPeerResumedHybridShareNotification(int SessionId, int PeerId, int? InitiatorPeerId = null, string? Reason = null)
+public record HybridSessionPeerResumedVideoShareNotification(int SessionId, int PeerId, int? InitiatorPeerId = null, string? Reason = null)
     : HybridSessionUpdatedNotification(VideoSessionStateChangedType.PeerResumedVideoShare);
 
 

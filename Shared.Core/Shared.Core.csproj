@@ -194,6 +194,35 @@
     <Compile Update="Models\Requests\SFUNegotiation\SFUOutboundCreateRequest.cs">
       <DependentUpon>SFURequest.cs</DependentUpon>
     </Compile>
+    <Compile Update="Models\Requests\SessionActions\HybridSession\HybridSessionPeerListRequest.cs">
+      <DependentUpon>HybridSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\HybridSession\HybridSessionStartVideoRequest.cs">
+      <DependentUpon>HybridSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\SessionActions\HybridSession\HybridSessionStartVideoResponse.cs">
+      <DependentUpon>HybridSessionResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\HybridSession\HybridSessionJoinRequest.cs">
+      <DependentUpon>HybridSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\SessionActions\HybridSession\HybridSessionPeerListResponse.cs">
+      <DependentUpon>HybridSessionResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\SessionActions\HybridSession\HybridSessionJoinResponse.cs">
+      <DependentUpon>HybridSessionResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Responses\SessionActions\HybridSession\HybridSessionStopVideoResponse.cs">
+      <DependentUpon>HybridSessionResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Requests\SessionActions\HybridSession\HybridSessionStopVideoRequest.cs">
+      <DependentUpon>HybridSessionRequest.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Enums\HybridSession\" />
+    <Folder Include="Enums\RTP\" />
   </ItemGroup>
 
 </Project>

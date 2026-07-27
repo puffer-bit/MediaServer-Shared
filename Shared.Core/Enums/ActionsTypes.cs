@@ -28,6 +28,46 @@ public enum SessionActionType
     InfoRequest
 }
 
+public enum ChatSessionActionType
+{
+    SendMessage = 1,
+    EditMessage = 2,
+    DeleteMessage = 3,
+    ChatHistory,
+    MessageRequest
+}
+
+public enum HybridSessionActionType
+{
+    Join = 1,
+    Leave = 2,
+    Rejoin = 3,
+    KickPeer = 10,
+    BanPeer = 11,
+    MovePeer = 12,
+    PokePeer = 13,
+    ApprovePeer = 14,
+    RejectPeer = 15,
+    StartScreenShare = 20,
+    StopScreenShare = 21,
+    PauseScreenShare = 22,
+    ResumeScreenShare = 23,
+    MuteScreenShareSound = 24,
+    UnmuteScreenShareSound = 25,
+    StartVideoShare = 30,
+    StopVideoShare = 31,
+    PauseVideoShare = 32,
+    ResumeVideoShare = 33,
+    StartVoiceShare = 40,
+    StopVoiceShare = 41,
+    ToggleMicrophoneMute = 42,
+    ToggleSoundMute = 43,
+    SetAfkStatus = 50,
+    ChangeRoom = 51,
+    
+    PeerListRequest = 52,
+}
+
 public enum WebRtcActionType
 {
     Offer = 0,

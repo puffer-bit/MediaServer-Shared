@@ -1,4 +1,4 @@
-using Shared.Enums.TextChat;
+using Shared.Enums;
 
 namespace Shared.Models.Responses.SessionActions.ChatSession;
 

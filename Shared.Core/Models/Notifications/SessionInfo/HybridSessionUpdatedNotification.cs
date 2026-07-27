@@ -88,7 +88,6 @@ public record HybridSessionPeerUpdatedVoiceShareNotification(int SessionId, int 
 public record HybridSessionPeerStoppedVoiceShareNotification(int SessionId, int PeerId, int? InitiatorPeerId = null)
     : HybridSessionUpdatedNotification(VideoSessionStateChangedType.PeerStoppedVoiceShare);
 
-
 public record HybridSessionPeerMuteMicrophoneNotification(int SessionId, int PeerId, int? InitiatorPeerId = null)
     : HybridSessionUpdatedNotification(VideoSessionStateChangedType.PeerMuteMicrophone);
 

@@ -2,8 +2,9 @@ namespace Shared.Models.Responses.SFUNegotiation;
 
 public enum MediaSourceType
 {
-    Microphone = 0,
-    Camera = 1,
-    Screen = 2,
-    Tunnel = 3
+    Camera = 0,
+    Microphone = 1,
+    ScreenVideo = 2,
+    ScreenAudio = 3,
+    Tunnel = 4
 }

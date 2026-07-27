@@ -46,6 +46,30 @@ namespace Shared.Enums
         UnknowSessionType
     }
     
+    public enum HybridSessionJoinResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        SessionNotExists = 1,
+        RoomFull = 2,
+        TimedOut = 4,
+        InsufficientPermissions,
+        SFUError,
+        UnknowSessionType
+    }
+    
+    public enum HybridSessionLeaveResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        SessionNotExists = 1,
+        TimedOut = 4,
+        InsufficientPermissions,
+        SFUError,
+        UnknowSessionType,
+        NotMemberOfSession
+    }
+    
     public enum StartScreenShareResult
     {
         InternalError = -1,
@@ -73,6 +97,7 @@ namespace Shared.Enums
         UnsupportedMedia = 1,
         InsufficientPermissions = 2,
         SFUError,
+        SessionNotExist,
         PeerNotExists
     }
     
@@ -82,6 +107,7 @@ namespace Shared.Enums
         NoError = 0,
         ScreenShareNotActive = 1,
         InsufficientPermissions = 2,
+        PeerNotExists
     }
     
     public enum UpdateScreenShareResult
@@ -358,6 +384,15 @@ namespace Shared.Enums
         ChatDontExist = 3,
         InavlidResponse,
         TimedOut
+    }
+    
+    public enum PeerListRequestResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        SessionNotExist = 1,
+        SessionIsNotHybrid = 2,
+        SessionNotExists
     }
 }
 

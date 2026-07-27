@@ -7,7 +7,7 @@ namespace Shared.Models.Requests.WebRTCNegotiation
         int SessionId) : SFURequest
     {
         public SFUTransportCreateResponse ToResponse(SFUTransportCreateResult result,
-            string? ip = null, int? port = null, TransportData? transportData = null)
+            TransportData? transportData = null)
             => new(RequestId, SessionId, result, transportData);
     }
 }

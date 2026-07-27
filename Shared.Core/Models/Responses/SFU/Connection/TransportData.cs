@@ -2,8 +2,9 @@ namespace Shared.Models.Responses.SFUNegotiation;
 
 public record TransportData(
     string Id,
-    string? Ip,
-    int? Port,
-    string DtlsParametersJson,
+    string? ServerIp,
+    int? ServerPort,
+    DTLSParameters DTLSData,
+    ICEParameters ICEData,
     List<Inbound>? Inbounds
 );

@@ -1,6 +1,6 @@
 namespace Shared.Enums;
 
-public enum VideoSessionPeerState
+public enum HybridSessionPeerState
 {
     New = 0,
     WaitingForApprove = 1,

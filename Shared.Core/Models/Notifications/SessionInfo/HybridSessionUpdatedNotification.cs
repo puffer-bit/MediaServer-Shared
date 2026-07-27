@@ -41,10 +41,10 @@ public record HybridSessionPeerMovedInNotification(int SessionId, int PeerId, in
     : HybridSessionUpdatedNotification(VideoSessionStateChangedType.PeerMovedIn);
 
 
-public record HybridSessionPeerStartedScreenShareNotification(int SessionId, int PeerId, Inbound inbound)
+public record HybridSessionPeerStartedScreenShareNotification(int SessionId, int PeerId, Inbound Inbound)
     : HybridSessionUpdatedNotification(VideoSessionStateChangedType.PeerStartedScreenShare);
 
-public record HybridSessionPeerUpdatedScreenShareNotification(int SessionId, int PeerId, Inbound inbound)
+public record HybridSessionPeerUpdatedScreenShareNotification(int SessionId, int PeerId, Inbound Inbound)
     : HybridSessionUpdatedNotification(VideoSessionStateChangedType.PeerUpdatedScreenShare);
 
 public record HybridSessionPeerStoppedScreenShareNotification(int SessionId, int PeerId, int? InitiatorPeerId = null)
@@ -63,10 +63,10 @@ public record HybridSessionPeerResumedScreenShareNotification(int SessionId, int
     : HybridSessionUpdatedNotification(VideoSessionStateChangedType.PeerResumedScreenShare);
 
 
-public record HybridSessionPeerStartedVideoShareNotification(int SessionId, int PeerId, Inbound inbound)
+public record HybridSessionPeerStartedVideoShareNotification(int SessionId, int PeerId, Inbound Inbound)
     : HybridSessionUpdatedNotification(VideoSessionStateChangedType.PeerStartedVideoShare);
 
-public record HybridSessionPeerUpdatedVideoShareNotification(int SessionId, int PeerId, Inbound inbound)
+public record HybridSessionPeerUpdatedVideoShareNotification(int SessionId, int PeerId, Inbound Inbound)
     : HybridSessionUpdatedNotification(VideoSessionStateChangedType.PeerUpdatedVideoShare);
 
 public record HybridSessionPeerStoppedVideoShareNotification(int SessionId, int PeerId, int? InitiatorPeerId = null)
@@ -79,15 +79,14 @@ public record HybridSessionPeerResumedVideoShareNotification(int SessionId, int 
     : HybridSessionUpdatedNotification(VideoSessionStateChangedType.PeerResumedVideoShare);
 
 
-public record HybridSessionPeerStartedVoiceShareNotification(int SessionId, int PeerId, Inbound inbound)
+public record HybridSessionPeerStartedVoiceShareNotification(int SessionId, int PeerId, Inbound Inbound)
     : HybridSessionUpdatedNotification(VideoSessionStateChangedType.PeerStartedVoiceShare);
 
-public record HybridSessionPeerUpdatedVoiceShareNotification(int SessionId, int PeerId, Inbound inbound)
+public record HybridSessionPeerUpdatedVoiceShareNotification(int SessionId, int PeerId, Inbound Inbound)
     : HybridSessionUpdatedNotification(VideoSessionStateChangedType.PeerUpdatedVoiceShare);
 
 public record HybridSessionPeerStoppedVoiceShareNotification(int SessionId, int PeerId, int? InitiatorPeerId = null)
     : HybridSessionUpdatedNotification(VideoSessionStateChangedType.PeerStoppedVoiceShare);
-
 
 public record HybridSessionPeerMuteMicrophoneNotification(int SessionId, int PeerId, int? InitiatorPeerId = null)
     : HybridSessionUpdatedNotification(VideoSessionStateChangedType.PeerMuteMicrophone);

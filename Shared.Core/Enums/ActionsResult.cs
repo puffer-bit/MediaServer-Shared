@@ -300,6 +300,28 @@ namespace Shared.Enums
         DuplicateOutbound = 5,
         TransportClosed = 7
     }
+    
+    public enum SFUInboundCreateResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        UnsupportedMediaType = 2,
+        SFUServiceError = 3,
+        SFUServiceNotAvailable = 4,
+        DuplicateOutbound = 5,
+        TransportClosed = 7
+    }
+    
+    public enum SFUInboundRemoveResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        UnsupportedMediaType = 2,
+        SFUServiceError = 3,
+        SFUServiceNotAvailable = 4,
+        DuplicateOutbound = 5,
+        TransportClosed = 7
+    }
 
     public enum SFUOutboundDowngradeResult
     {

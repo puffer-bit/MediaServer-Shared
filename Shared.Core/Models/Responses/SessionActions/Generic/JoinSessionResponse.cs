@@ -10,5 +10,5 @@ public record JoinSessionResponse(
     JoinSessionResult Result,
     TransportData? Data) : GenericSessionResponse(RequestId)
 {
-    public override SessionActionType ActionType { get; init; } = SessionActionType.JoinRequest;
+    public override SessionActionType ActionType => SessionActionType.JoinRequest;
 }

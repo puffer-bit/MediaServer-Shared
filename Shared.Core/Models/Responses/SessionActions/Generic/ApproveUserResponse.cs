@@ -8,8 +8,7 @@ public record ApproveUserResponse(
     int SessionId,
     int UserTargetId,
     SessionType SessionType,
-    ApproveUserSessionResult Result,
-    TransportData? TransportData) : GenericSessionResponse(RequestId)
+    ApproveUserSessionResult Result) : GenericSessionResponse(RequestId)
 {
-    public override SessionActionType ActionType { get; init; } = SessionActionType.ApproveRequest;
+    public override SessionActionType ActionType => SessionActionType.ApproveRequest;
 }

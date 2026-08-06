@@ -9,5 +9,5 @@ public record BanInSessionResponse(
     SessionType SessionType,
     BanFromSessionResult Result ) : GenericSessionResponse(RequestId)
 {
-    public override SessionActionType ActionType { get; init; } = SessionActionType.BanRequest;
+    public override SessionActionType ActionType => SessionActionType.BanRequest;
 }

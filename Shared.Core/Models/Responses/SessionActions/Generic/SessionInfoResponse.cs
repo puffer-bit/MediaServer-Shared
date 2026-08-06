@@ -8,5 +8,5 @@ public record SessionInfoResponse(
     IDictionary<int, SessionDTO> SessionsList,
     SessionRequestResult Result) : GenericSessionResponse(RequestId)
 {
-    public override SessionActionType ActionType { get; init; } = SessionActionType.InfoRequest;
+    public override SessionActionType ActionType => SessionActionType.InfoRequest;
 }

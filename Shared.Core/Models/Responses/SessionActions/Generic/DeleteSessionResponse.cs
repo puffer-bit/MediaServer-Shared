@@ -6,5 +6,5 @@ public record DeleteSessionResponse(
     Guid RequestId,
     DeleteSessionResult Result ) : GenericSessionResponse(RequestId)
 {
-    public override SessionActionType ActionType { get; init; } = SessionActionType.DeleteRequest;
+    public override SessionActionType ActionType => SessionActionType.DeleteRequest;
 }

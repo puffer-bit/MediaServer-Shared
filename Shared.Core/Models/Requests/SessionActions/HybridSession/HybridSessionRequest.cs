@@ -4,5 +4,5 @@ namespace Shared.Models.Requests.SessionActions.HybridSession;
 
 public abstract record HybridSessionRequest : Request
 {
-    public abstract HybridSessionActionType ActionType { get; init; }
+    public abstract HybridSessionActionType ActionType { get; }
 }

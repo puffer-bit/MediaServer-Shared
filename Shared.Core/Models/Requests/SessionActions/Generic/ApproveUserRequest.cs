@@ -12,7 +12,7 @@ public record ApproveUserRequest(
 {
     public override SessionActionType ActionType { get; init; } = SessionActionType.ApproveRequest;
     
-    public ApproveUserResponse ToResponse(ApproveUserSessionResult result, TransportData? transportData = null)
-        => new(RequestId, SessionId, UserTargetId, SessionType, result, transportData);
+    public ApproveUserResponse ToResponse(ApproveUserSessionResult result)
+        => new(RequestId, SessionId, UserTargetId, SessionType, result);
 }
 

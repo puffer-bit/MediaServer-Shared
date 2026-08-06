@@ -9,5 +9,5 @@ public record RejectUserResponse(
     SessionType SessionType,
     RejectUserSessionResult Result ) : GenericSessionResponse(RequestId)
 {
-    public override SessionActionType ActionType { get; init; } = SessionActionType.RejectRequest;
+    public override SessionActionType ActionType => SessionActionType.RejectRequest;
 }

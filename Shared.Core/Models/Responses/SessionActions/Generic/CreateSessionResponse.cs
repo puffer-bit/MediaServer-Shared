@@ -8,5 +8,5 @@ public record CreateSessionResponse(
     SessionDTO? Session,
     CreateSessionResult Result ) : GenericSessionResponse(RequestId)
 {
-    public override SessionActionType ActionType { get; init; } = SessionActionType.CreateRequest;
+    public override SessionActionType ActionType => SessionActionType.CreateRequest;
 }

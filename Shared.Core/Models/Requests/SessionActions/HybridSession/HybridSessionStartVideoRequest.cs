@@ -7,7 +7,7 @@ namespace Shared.Models.Requests.SessionActions.HybridSession;
 public record HybridSessionStartVideoRequest(
     int SessionId) : HybridSessionRequest
 {
-    public override HybridSessionActionType ActionType { get; init; } = HybridSessionActionType.StartVideoShare;
+    public override HybridSessionActionType ActionType => HybridSessionActionType.StartVideoShare;
     
     public HybridSessionStartVideoResponse ToResponse(StartVideoShareResult result, Outbound? outbound = null) 
         => new (RequestId, result, outbound);

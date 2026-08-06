@@ -9,7 +9,9 @@ namespace Shared.Models.Requests.SessionActions.Generic
         int SessionId
     ) : HybridSessionRequest
     {
-        public override HybridSessionActionType ActionType { get; init; } = HybridSessionActionType.Join;
+        public override HybridSessionActionType ActionType => HybridSessionActionType.Join;
+
+        public DTLSParameters DtlsParameters { get; init; }
         
         public HybridSessionJoinResponse ToResponse(HybridSessionJoinResult result, TransportData? transportData = null)
             => new(RequestId, result, transportData);

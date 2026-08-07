@@ -242,6 +242,9 @@
     <Compile Update="Models\Responses\SFU\SFUOutboundDowngradeResponse.cs">
       <DependentUpon>SFUResponse.cs</DependentUpon>
     </Compile>
+    <Compile Update="Models\Responses\SFU\SFUTransportCreateResponse.cs">
+      <DependentUpon>SFUResponse.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

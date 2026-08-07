@@ -1,6 +1,6 @@
 namespace Shared.Models.Responses.SFUNegotiation;
     
-public record MediaCodecInfo
+public record SFUMediaInfo
 {
     public int ClockRate { get; init; }
     public int PreferredPayloadType { get; init; }

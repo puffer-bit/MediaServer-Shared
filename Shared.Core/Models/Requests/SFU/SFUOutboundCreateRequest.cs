@@ -6,6 +6,6 @@ namespace Shared.Models.Requests.WebRTCNegotiation;
 public record SFUOutboundCreateRequest(
     int SessionId, Outbound Outbound) : SFURequest
 {
-    public SFUOutboundCreateResponse ToResponse(SFUOutboundCreateResult result)
-        => new(RequestId, SessionId, result);
+    public SFUOutboundCreateResponse ToResponse(SFUOutboundCreateResult result, Outbound? outbound = null)
+        => new(RequestId, SessionId, result, outbound);
 }

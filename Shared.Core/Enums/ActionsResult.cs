@@ -55,6 +55,7 @@ namespace Shared.Enums
         TimedOut = 4,
         InsufficientPermissions,
         SFUError,
+        SFUNotActive,
         UnknowSessionType
     }
     
@@ -90,6 +91,30 @@ namespace Shared.Enums
         SFUError
     }
     
+    public enum StartVoiceShareResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        UnsupportedMedia = 1,
+        InsufficientPermissions = 2,
+        SFUError,
+        SessionNotExist,
+        PeerNotExists,
+        SFUNotActive
+    }
+    
+    public enum StopVoiceShareResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        ScreenShareNotActive = 1,
+        InsufficientPermissions = 2,
+        PeerNotExists,
+        SFUError,
+        SFUNotActive
+    }
+
+    
     public enum StartVideoShareResult
     {
         InternalError = -1,
@@ -98,7 +123,8 @@ namespace Shared.Enums
         InsufficientPermissions = 2,
         SFUError,
         SessionNotExist,
-        PeerNotExists
+        PeerNotExists,
+        SFUNotActive
     }
     
     public enum StopVideoShareResult
@@ -196,7 +222,8 @@ namespace Shared.Enums
         SessionNotExists = 1,
         TimedOut = 4,
         PeerNotExists,
-        UnknowSessionType
+        UnknowSessionType,
+        SFUNotActive
     }
     
     public enum BanFromSessionResult
@@ -219,7 +246,8 @@ namespace Shared.Enums
         PeerNotExists,
         AlreadyRejected,
         SFUError,
-        UnknowSessionType
+        UnknowSessionType,
+        SFUNotActive
     }
     
     public enum RejectUserSessionResult
@@ -230,7 +258,8 @@ namespace Shared.Enums
         TimedOut = 4,
         PeerNotExists,
         AlreadyApproved,
-        UnknowSessionType
+        UnknowSessionType,
+        SFUNotActive
     }
     
     public enum SessionRequestResult
@@ -284,7 +313,7 @@ namespace Shared.Enums
     {
         InternalError = -1,
         NoError = 0,
-        SFUServiceError = 3,
+        SFUNodeError = 3,
         SFUServiceNotAvailable = 4,
         PortAllocationFailed = 5,
         MaxTransportsReached = 6
@@ -295,7 +324,7 @@ namespace Shared.Enums
         InternalError = -1,
         NoError = 0,
         UnsupportedMediaType = 2,
-        SFUServiceError = 3,
+        SFUNodeError = 3,
         SFUServiceNotAvailable = 4,
         DuplicateOutbound = 5,
         TransportClosed = 7
@@ -306,7 +335,7 @@ namespace Shared.Enums
         InternalError = -1,
         NoError = 0,
         UnsupportedMediaType = 2,
-        SFUServiceError = 3,
+        SFUNodeError = 3,
         SFUServiceNotAvailable = 4,
         DuplicateOutbound = 5,
         TransportClosed = 7
@@ -327,7 +356,7 @@ namespace Shared.Enums
     {
         InternalError = -1,
         NoError = 0,
-        SFUServiceError = 3,
+        SFUNodeError = 3,
         SFUServiceNotAvailable = 4,
         InvalidSSRC = 1,
         AlreadyDowngraded = 5,
@@ -337,7 +366,7 @@ namespace Shared.Enums
     {
         InternalError = -1,
         NoError = 0,
-        SFUServiceError = 3,
+        SFUNodeError = 3,
         SFUServiceNotAvailable = 4,
         InvalidSSRC = 1,
         AlreadyUpgraded = 5,

@@ -1,9 +1,10 @@
+using Server.Shared.SFUService;
+
 namespace Shared.Models.Responses.SFUNegotiation;
 
 public record TransportData(
-    string? ServerIp,
-    int? ServerPort,
+    string Host,
+    ushort Port,
     DTLSParameters DTLSData,
-    ICEParameters ICEData,
-    List<Inbound>? Inbounds
+    ICEParameters ICEData
 );

@@ -1,9 +1,8 @@
 ﻿using Shared.Enums;
-using Shared.Models.Requests.SessionActions.HybridSession;
-using Shared.Models.Responses.SessionActions.Generic;
+using Shared.Models.Responses.SessionActions.HybridSession;
 using Shared.Models.Responses.SFUNegotiation;
 
-namespace Shared.Models.Requests.SessionActions.Generic
+namespace Shared.Models.Requests.SessionActions.HybridSession
 {
     public record HybridSessionJoinRequest(
         int SessionId

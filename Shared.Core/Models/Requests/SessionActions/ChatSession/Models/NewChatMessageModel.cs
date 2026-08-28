@@ -1,4 +1,4 @@
-using Shared.Models.DataTransferObjects.TextChat.Messages.Content;
+using Shared.Models.DataTransferObjects.ChatSession.Messages.Content;
 
 namespace Shared.Models.Requests.SessionActions.ChatSession.Models;
 

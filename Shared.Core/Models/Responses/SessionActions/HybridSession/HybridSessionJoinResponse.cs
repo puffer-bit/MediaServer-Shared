@@ -1,7 +1,7 @@
 using Shared.Enums;
 using Shared.Models.Responses.SFUNegotiation;
 
-namespace Shared.Models.Requests.SessionActions.HybridSession;
+namespace Shared.Models.Responses.SessionActions.HybridSession;
 
 public record HybridSessionJoinResponse(
     Guid RequestId,

@@ -245,6 +245,9 @@
     <Compile Update="Models\Responses\SFU\SFUTransportCreateResponse.cs">
       <DependentUpon>SFUResponse.cs</DependentUpon>
     </Compile>
+    <Compile Update="Models\Requests\SessionActions\HybridSession\HybridSessionLeaveRequest.cs">
+      <DependentUpon>HybridSessionRequest.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

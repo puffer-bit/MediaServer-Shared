@@ -14,6 +14,7 @@ using Shared.Models.Responses.Coordinator;
 using Shared.Models.Responses.Heartbeat;
 using Shared.Models.Responses.SessionActions.ChatSession;
 using Shared.Models.Responses.SessionActions.Generic;
+using Shared.Models.Responses.SessionActions.HybridSession;
 using Shared.Models.Responses.WebRTCNegotiation;
 
 namespace Shared.Models
@@ -141,10 +142,9 @@ namespace Shared.Models
     [JsonDerivedType(typeof(HybridSessionStopVideoResponse), typeDiscriminator: nameof(HybridSessionStopVideoResponse))] 
 
     [JsonDerivedType(typeof(WebRtcConnectResponse), typeDiscriminator: nameof(WebRtcConnectResponse))]
+    
     public abstract record BaseMessage
     {
-        public Guid Id { get; init; } = Guid.NewGuid();
-        
-        public int UserId { get; set; }
+
     }
 }

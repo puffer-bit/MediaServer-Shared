@@ -1,15 +1,13 @@
 ﻿using Shared.Enums;
-using Shared.Models.Requests.SessionActions.HybridSession;
-using Shared.Models.Responses.SessionActions.Generic;
-using Shared.Models.Responses.SFUNegotiation;
+using Shared.Models.Responses.SessionActions.HybridSession;
 
-namespace Shared.Models.Requests.SessionActions.Generic
+namespace Shared.Models.Requests.SessionActions.HybridSession
 {
     public record HybridSessionLeaveRequest(
         int SessionId
     ) : HybridSessionRequest
     {
-        public override HybridSessionActionType ActionType => HybridSessionActionType.Join;
+        public override HybridSessionActionType ActionType => HybridSessionActionType.Leave;
 
         public HybridSessionLeaveResponse ToResponse(HybridSessionLeaveResult result)
             => new(RequestId, result);

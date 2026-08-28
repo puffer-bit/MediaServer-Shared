@@ -1,8 +1,6 @@
-using Shared.Enums;
-using Shared.Models.DataTransferObjects;
 using Shared.Models.Responses.SFUNegotiation;
 
-namespace Shared.Models.Notifications.SessionInfo;
+namespace Shared.Models.Notifications.SFU;
 
 public abstract record SFUSessionUpdatedNotification(): Notification;
 

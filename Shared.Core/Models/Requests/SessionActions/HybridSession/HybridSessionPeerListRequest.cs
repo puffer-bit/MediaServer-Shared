@@ -1,5 +1,6 @@
 using Shared.Enums;
 using Shared.Models.DataTransferObjects;
+using Shared.Models.Responses.SessionActions.HybridSession;
 
 namespace Shared.Models.Requests.SessionActions.HybridSession;
 

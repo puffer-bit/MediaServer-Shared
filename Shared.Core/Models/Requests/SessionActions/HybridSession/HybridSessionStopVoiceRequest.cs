@@ -4,11 +4,11 @@ using Shared.Models.Responses.SessionActions.HybridSession;
 
 namespace Shared.Models.Requests.SessionActions.HybridSession;
 
-public record HybridSessionStopVideoRequest(
+public record HybridSessionStopVoiceRequest(
     int SessionId) : HybridSessionRequest
 {
-    public override HybridSessionActionType ActionType => HybridSessionActionType.StopVideoShare;
+    public override HybridSessionActionType ActionType => HybridSessionActionType.StopVoiceShare;
     
-    public HybridSessionStopVideoResponse ToResponse(StopVideoShareResult result) 
+    public HybridSessionStopVoiceResponse ToResponse(StopVoiceShareResult result) 
         => new (RequestId, result);
 }

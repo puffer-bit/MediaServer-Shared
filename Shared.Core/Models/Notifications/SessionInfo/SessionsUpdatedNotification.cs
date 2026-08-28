@@ -1,6 +1,6 @@
 using Shared.Enums;
 using Shared.Models.DataTransferObjects;
-using Shared.Models.DataTransferObjects.TextChat;
+using Shared.Models.DataTransferObjects.ChatSession;
 
 namespace Shared.Models.Notifications.SessionInfo;
 

@@ -1,5 +1,5 @@
 using Shared.Enums;
-using Shared.Models.DataTransferObjects.TextChat.Messages;
+using Shared.Models.DataTransferObjects.ChatSession.Messages;
 
 namespace Shared.Models.Responses.SessionActions.ChatSession;
 

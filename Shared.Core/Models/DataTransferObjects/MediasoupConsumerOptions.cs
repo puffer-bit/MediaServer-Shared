@@ -1,4 +1,4 @@
-namespace Server.Shared.MediaSoup;
+namespace Shared.Models.DataTransferObjects;
 
 public record MediasoupConsumerOptions
 {

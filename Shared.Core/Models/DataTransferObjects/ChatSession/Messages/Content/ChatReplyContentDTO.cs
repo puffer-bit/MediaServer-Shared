@@ -1,4 +1,4 @@
-namespace Shared.Models.DataTransferObjects.TextChat.Messages.Content;
+namespace Shared.Models.DataTransferObjects.ChatSession.Messages.Content;
 
 public class ChatReplyContentDTO
 {

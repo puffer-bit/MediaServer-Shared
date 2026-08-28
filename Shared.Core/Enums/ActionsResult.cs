@@ -100,7 +100,8 @@ namespace Shared.Enums
         SFUError,
         SessionNotExist,
         PeerNotExists,
-        SFUNotActive
+        SFUNotActive,
+        TimedOut
     }
     
     public enum StopVoiceShareResult
@@ -111,7 +112,8 @@ namespace Shared.Enums
         InsufficientPermissions = 2,
         PeerNotExists,
         SFUError,
-        SFUNotActive
+        SFUNotActive,
+        TimedOut
     }
 
     
@@ -124,7 +126,8 @@ namespace Shared.Enums
         SFUError,
         SessionNotExist,
         PeerNotExists,
-        SFUNotActive
+        SFUNotActive,
+        TimedOut
     }
     
     public enum StopVideoShareResult
@@ -133,7 +136,8 @@ namespace Shared.Enums
         NoError = 0,
         ScreenShareNotActive = 1,
         InsufficientPermissions = 2,
-        PeerNotExists
+        PeerNotExists,
+        TimedOut
     }
     
     public enum UpdateScreenShareResult

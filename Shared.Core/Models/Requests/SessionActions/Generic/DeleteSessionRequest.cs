@@ -4,8 +4,7 @@ using Shared.Models.Responses.SessionActions.Generic;
 namespace Shared.Models.Requests.SessionActions.Generic
 {
     public record DeleteSessionRequest(
-        int SessionId,
-        SessionType SessionType
+        int SessionId
     ) : GenericSessionRequest
     {
         public override SessionActionType ActionType { get; init; } = SessionActionType.DeleteRequest;

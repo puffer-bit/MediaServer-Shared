@@ -1,6 +1,6 @@
-using Shared.Models.DataTransferObjects.TextChat.User;
+using Shared.Models.DataTransferObjects.ChatSession.User;
 
-namespace Shared.Models.DataTransferObjects.TextChat;
+namespace Shared.Models.DataTransferObjects.ChatSession;
 
 public class ChatSessionDTO : SessionDTO
 {

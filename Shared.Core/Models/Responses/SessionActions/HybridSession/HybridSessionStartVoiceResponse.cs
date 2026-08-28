@@ -5,10 +5,10 @@ using Shared.Models.Responses.SFUNegotiation;
 
 namespace Shared.Models.Requests.SessionActions.HybridSession;
 
-public record HybridSessionStartVideoResponse(
+public record HybridSessionStartVoiceResponse(
     Guid RequestId,
-    StartVideoShareResult Result,
+    StartVoiceShareResult Result,
     Outbound? Outbound) : HybridSessionResponse(RequestId)
 {
-    public override HybridSessionActionType ActionType { get; init; } = HybridSessionActionType.StartVideoShare;
+    public override HybridSessionActionType ActionType { get; init; } = HybridSessionActionType.StartVoiceShare;
 }

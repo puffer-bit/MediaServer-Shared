@@ -39,5 +39,5 @@ public enum ChatContentType
     Text,
     Image,
     Video,
-    Repost
+    Reply
 }

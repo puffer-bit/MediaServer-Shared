@@ -3,10 +3,10 @@ using Shared.Enums.WebRTC;
 
 namespace Shared.Models.Requests.SessionActions.Generic.Models.SessionData;
 
-public record VideoSessionCreateData(
+public record HybridSessionCreateData(
     WebRTCEngine EngineType,
     WebRTCVideoCodecs VideoCodecs = WebRTCVideoCodecs.H264,
-    WebRTCAudioCodecs AudioCodecs = WebRTCAudioCodecs.PCM,
+    WebRTCAudioCodecs AudioCodecs = WebRTCAudioCodecs.Opus,
     VideoResolutions Resolution = VideoResolutions.FHD,
     int? VideoBitrate = 2500,
     bool IsAudioTransferEnabled = false,

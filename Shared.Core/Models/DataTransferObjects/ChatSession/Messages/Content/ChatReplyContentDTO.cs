@@ -2,7 +2,10 @@ namespace Shared.Models.DataTransferObjects.ChatSession.Messages.Content;
 
 public class ChatReplyContentDTO
 {
-    public int MessageId { get; init; }
-    public bool IsDeleted { get; set; }
-    public ChatContentType Type => ChatContentType.Repost;
+    public required int MessageId { get; init; }
+    public CompactUserDTO SenderUser { get; init; }
+    public DateTime SentTime { get; init; }
+    public ChatTextContentDTO TextContent { get; init; }
+    public int IsDeleted { get; set; }
+    public ChatContentType Type => ChatContentType.Reply;
 }

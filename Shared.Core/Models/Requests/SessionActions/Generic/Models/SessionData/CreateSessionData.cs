@@ -6,7 +6,7 @@ namespace Shared.Models.Requests.SessionActions.Generic.Models.SessionData;
 [JsonPolymorphic(TypeDiscriminatorPropertyName = "$type",
     UnknownDerivedTypeHandling = JsonUnknownDerivedTypeHandling.FallBackToNearestAncestor)]
 
-[JsonDerivedType(typeof(VideoSessionCreateData), typeDiscriminator: "VideoData")]
+[JsonDerivedType(typeof(HybridSessionCreateData), typeDiscriminator: "VideoData")]
 [JsonDerivedType(typeof(ChatSessionCreateData), typeDiscriminator: "ChatData")]
 public abstract record CreateSessionData
 {

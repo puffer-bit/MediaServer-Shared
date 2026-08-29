@@ -142,9 +142,13 @@ namespace Shared.Models
     [JsonDerivedType(typeof(HybridSessionStopVideoResponse), typeDiscriminator: nameof(HybridSessionStopVideoResponse))] 
 
     [JsonDerivedType(typeof(WebRtcConnectResponse), typeDiscriminator: nameof(WebRtcConnectResponse))]
-    
     public abstract record BaseMessage
     {
 
+    }
+
+    public interface IUserMessage
+    {
+        public int UserId { get; set; }
     }
 }

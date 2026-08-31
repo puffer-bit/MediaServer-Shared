@@ -248,6 +248,9 @@
     <Compile Update="Models\Requests\SessionActions\HybridSession\HybridSessionLeaveRequest.cs">
       <DependentUpon>HybridSessionRequest.cs</DependentUpon>
     </Compile>
+    <Compile Update="Models\Requests\SessionActions\HybridSession\HybridSessionConnectTransportRequest.cs">
+      <DependentUpon>HybridSessionRequest.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

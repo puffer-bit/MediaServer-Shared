@@ -3,6 +3,9 @@ using System.Linq;
 using System.Text;
 using Shared.Models.Responses.SFUNegotiation;
 
+[Obsolete("Produces an SDP that mediasoup cannot use: static payload types, no rtcp-mux and a " +
+          "single m-section per media kind instead of one per producer or consumer. " +
+          "Use Client.GStreamer.Services.Sdp.SdpBuilder instead.")]
 public static class SdpParser
 {
     public static string ParseToSdp(TransportData transportData)

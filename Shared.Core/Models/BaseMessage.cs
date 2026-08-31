@@ -103,6 +103,7 @@ namespace Shared.Models
     [JsonDerivedType(typeof(SessionInfoRequest), typeDiscriminator: nameof(SessionInfoRequest))] 
     
     [JsonDerivedType(typeof(HybridSessionJoinRequest), typeDiscriminator: nameof(HybridSessionJoinRequest))] 
+    [JsonDerivedType(typeof(HybridSessionConnectTransportRequest), typeDiscriminator: nameof(HybridSessionConnectTransportRequest))] 
     [JsonDerivedType(typeof(HybridSessionLeaveRequest), typeDiscriminator: nameof(HybridSessionLeaveRequest))] 
     [JsonDerivedType(typeof(HybridSessionPeerListRequest), typeDiscriminator: nameof(HybridSessionPeerListRequest))] 
     [JsonDerivedType(typeof(HybridSessionStartVideoRequest), typeDiscriminator: nameof(HybridSessionStartVideoRequest))] 
@@ -136,6 +137,7 @@ namespace Shared.Models
     [JsonDerivedType(typeof(SessionInfoResponse), typeDiscriminator: nameof(SessionInfoResponse))]
     
     [JsonDerivedType(typeof(HybridSessionJoinResponse), typeDiscriminator: nameof(HybridSessionJoinResponse))] 
+    [JsonDerivedType(typeof(HybridSessionConnectTransportResponse), typeDiscriminator: nameof(HybridSessionConnectTransportResponse))] 
     [JsonDerivedType(typeof(HybridSessionLeaveResponse), typeDiscriminator: nameof(HybridSessionLeaveResponse))] 
     [JsonDerivedType(typeof(HybridSessionPeerListResponse), typeDiscriminator: nameof(HybridSessionPeerListResponse))] 
     [JsonDerivedType(typeof(HybridSessionStartVideoResponse), typeDiscriminator: nameof(HybridSessionStartVideoResponse))] 

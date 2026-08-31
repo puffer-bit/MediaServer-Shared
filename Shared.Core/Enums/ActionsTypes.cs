@@ -42,6 +42,7 @@ public enum HybridSessionActionType
     Join = 1,
     Leave = 2,
     Rejoin = 3,
+    ConnectTransport = 4,
     KickPeer = 10,
     BanPeer = 11,
     MovePeer = 12,

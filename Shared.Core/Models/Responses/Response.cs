@@ -3,6 +3,4 @@ using Shared.Enums;
 namespace Shared.Models.Responses;
 
 public abstract record Response(Guid RequestId) : BaseMessage
-{
-    public int UserId { get; set; }
-}
+{ }

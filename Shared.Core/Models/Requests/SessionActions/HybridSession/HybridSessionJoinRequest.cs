@@ -9,8 +9,12 @@ namespace Shared.Models.Requests.SessionActions.HybridSession
     ) : HybridSessionRequest
     {
         public override HybridSessionActionType ActionType => HybridSessionActionType.Join;
-
-        public DTLSParameters DtlsParameters { get; init; }
+        
+        /// <summary>
+        /// Identifies the DTLS context of the client. The SFU reuses an existing transport while
+        /// this value stays the same and recreates it once the client has rebuilt its own side.
+        /// </summary>
+        public string? ClientEpoch { get; init; }
         
         public HybridSessionJoinResponse ToResponse(HybridSessionJoinResult result, TransportData? transportData = null)
             => new(RequestId, result, transportData);

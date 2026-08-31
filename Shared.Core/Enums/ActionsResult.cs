@@ -46,6 +46,16 @@ namespace Shared.Enums
         UnknowSessionType
     }
     
+    public enum HybridSessionConnectTransportResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        SessionNotExists = 1,
+        TransportNotExists = 2,
+        InvalidDtlsParameters = 3,
+        SFUError = 4
+    }
+
     public enum HybridSessionJoinResult
     {
         InternalError = -1,

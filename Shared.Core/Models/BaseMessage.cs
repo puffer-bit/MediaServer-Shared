@@ -45,8 +45,7 @@ namespace Shared.Models
     [JsonDerivedType(typeof(ChatSessionReconfiguredNotification), typeDiscriminator: nameof(ChatSessionReconfiguredNotification))]
     [JsonDerivedType(typeof(ChatSessionDeletedNotification), typeDiscriminator: nameof(ChatSessionDeletedNotification))]
 
-    [JsonDerivedType(typeof(HybridSessionPeerConnectedNotification), typeDiscriminator: nameof(HybridSessionPeerConnectedNotification))]
-    [JsonDerivedType(typeof(HybridSessionPeerDisconnectedNotification), typeDiscriminator: nameof(HybridSessionPeerDisconnectedNotification))]
+    [JsonDerivedType(typeof(HybridSessionPeerStateChangedNotification), typeDiscriminator: nameof(HybridSessionPeerStateChangedNotification))]
     [JsonDerivedType(typeof(HybridSessionPeerJoinedNotification), typeDiscriminator: nameof(HybridSessionPeerJoinedNotification))]
     [JsonDerivedType(typeof(HybridSessionPeerLeftNotification), typeDiscriminator: nameof(HybridSessionPeerLeftNotification))]
     [JsonDerivedType(typeof(HybridSessionPeerKickedNotification), typeDiscriminator: nameof(HybridSessionPeerKickedNotification))]

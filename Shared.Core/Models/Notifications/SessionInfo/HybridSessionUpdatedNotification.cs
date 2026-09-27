@@ -7,11 +7,17 @@ namespace Shared.Models.Notifications.SessionInfo;
 public abstract record HybridSessionUpdatedNotification(VideoSessionStateChangedType Type) 
     : Notification;
 
-public record HybridSessionPeerConnectedNotification(int SessionId, int PeerId)
-    : HybridSessionUpdatedNotification(VideoSessionStateChangedType.PeerConnected);
+public record HybridSessionSFUNodeChangedNotification(int SessionId)
+    : HybridSessionUpdatedNotification(VideoSessionStateChangedType.SFUNodeChanged);
 
-public record HybridSessionPeerDisconnectedNotification(int SessionId, int PeerId)
-    : HybridSessionUpdatedNotification(VideoSessionStateChangedType.PeerDisconnected);
+public record HybridSessionSFUNodeDisconnectedNotification(int SessionId)
+    : HybridSessionUpdatedNotification(VideoSessionStateChangedType.SFUNodeDisconnected);
+
+public record HybridSessionSFUNodeConnectedNotification(int SessionId)
+    : HybridSessionUpdatedNotification(VideoSessionStateChangedType.SFUNodeConnected);
+
+public record HybridSessionPeerStateChangedNotification(int SessionId, int PeerId, HybridSessionPeerState State)
+    : HybridSessionUpdatedNotification(VideoSessionStateChangedType.PeerStateChaged);
 
 public record HybridSessionPeerJoinedNotification(int SessionId, PeerDTO Peer)
     : HybridSessionUpdatedNotification(VideoSessionStateChangedType.PeerJoined);

@@ -44,9 +44,8 @@ namespace Shared.Models
     [JsonDerivedType(typeof(ChatSessionCreatedNotification), typeDiscriminator: nameof(ChatSessionCreatedNotification))]
     [JsonDerivedType(typeof(ChatSessionReconfiguredNotification), typeDiscriminator: nameof(ChatSessionReconfiguredNotification))]
     [JsonDerivedType(typeof(ChatSessionDeletedNotification), typeDiscriminator: nameof(ChatSessionDeletedNotification))]
-
-    [JsonDerivedType(typeof(HybridSessionPeerConnectedNotification), typeDiscriminator: nameof(HybridSessionPeerConnectedNotification))]
-    [JsonDerivedType(typeof(HybridSessionPeerDisconnectedNotification), typeDiscriminator: nameof(HybridSessionPeerDisconnectedNotification))]
+            
+    [JsonDerivedType(typeof(HybridSessionPeerStateChangedNotification), typeDiscriminator: nameof(HybridSessionPeerStateChangedNotification))]
     [JsonDerivedType(typeof(HybridSessionPeerJoinedNotification), typeDiscriminator: nameof(HybridSessionPeerJoinedNotification))]
     [JsonDerivedType(typeof(HybridSessionPeerLeftNotification), typeDiscriminator: nameof(HybridSessionPeerLeftNotification))]
     [JsonDerivedType(typeof(HybridSessionPeerKickedNotification), typeDiscriminator: nameof(HybridSessionPeerKickedNotification))]
@@ -108,6 +107,8 @@ namespace Shared.Models
     [JsonDerivedType(typeof(HybridSessionPeerListRequest), typeDiscriminator: nameof(HybridSessionPeerListRequest))] 
     [JsonDerivedType(typeof(HybridSessionStartVideoRequest), typeDiscriminator: nameof(HybridSessionStartVideoRequest))] 
     [JsonDerivedType(typeof(HybridSessionStopVideoRequest), typeDiscriminator: nameof(HybridSessionStopVideoRequest))] 
+    [JsonDerivedType(typeof(HybridSessionStartVoiceRequest), typeDiscriminator: nameof(HybridSessionStartVoiceRequest))] 
+    [JsonDerivedType(typeof(HybridSessionStopVoiceRequest), typeDiscriminator: nameof(HybridSessionStopVoiceRequest))] 
 
     [JsonDerivedType(typeof(WebRtcConnectRequest), typeDiscriminator: nameof(WebRtcConnectRequest))]
 
@@ -142,6 +143,8 @@ namespace Shared.Models
     [JsonDerivedType(typeof(HybridSessionPeerListResponse), typeDiscriminator: nameof(HybridSessionPeerListResponse))] 
     [JsonDerivedType(typeof(HybridSessionStartVideoResponse), typeDiscriminator: nameof(HybridSessionStartVideoResponse))] 
     [JsonDerivedType(typeof(HybridSessionStopVideoResponse), typeDiscriminator: nameof(HybridSessionStopVideoResponse))] 
+    [JsonDerivedType(typeof(HybridSessionStartVoiceResponse), typeDiscriminator: nameof(HybridSessionStartVoiceResponse))] 
+    [JsonDerivedType(typeof(HybridSessionStopVoiceResponse), typeDiscriminator: nameof(HybridSessionStopVoiceResponse))] 
 
     [JsonDerivedType(typeof(WebRtcConnectResponse), typeDiscriminator: nameof(WebRtcConnectResponse))]
     public abstract record BaseMessage

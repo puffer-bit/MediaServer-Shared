@@ -4,7 +4,8 @@ public enum HybridSessionPeerState
 {
     New = 0,
     WaitingForApprove = 1,
-    WaitingForNegotiation = 2,
-    Connected = 3,
-    Closed = 4,
+    Connecting = 3,
+    WaitingForServer = 4,
+    Connected = 5,
+    Closed = 6,
 }

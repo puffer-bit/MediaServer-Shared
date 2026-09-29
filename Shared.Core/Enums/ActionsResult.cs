@@ -182,6 +182,19 @@ namespace Shared.Enums
         InsufficientPermissions = 2,
     }
     
+    public enum SetMicrophoneMuteResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        InsufficientPermissions = 2,
+        SessionNotExist,
+        PeerNotExists,
+        VoiceNotStarted,
+        SFUError,
+        SFUNotActive,
+        TimedOut,
+    }
+    
     public enum MuteSoundResult
     {
         InternalError = -1,

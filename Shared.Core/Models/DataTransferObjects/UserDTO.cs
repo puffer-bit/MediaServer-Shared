@@ -5,8 +5,8 @@ namespace Shared.Models.DataTransferObjects
     public class UserDTO
     {
         public int Id { get; set; }
-        public string CoordinatorInstanceId { get; set; }
-        public string Username { get; set; }
+        public string CoordinatorInstanceId { get; set; } = string.Empty;
+        public string Username { get; set; } = string.Empty;
         public string? Ip { get; set; }
         public string? RegionName { get; set; }
         public string? RegionCode { get; set; }

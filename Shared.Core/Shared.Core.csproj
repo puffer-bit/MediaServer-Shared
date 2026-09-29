@@ -251,6 +251,9 @@
     <Compile Update="Models\Requests\SessionActions\HybridSession\HybridSessionConnectTransportRequest.cs">
       <DependentUpon>HybridSessionRequest.cs</DependentUpon>
     </Compile>
+    <Compile Update="Models\Notifications\CoordinatorInfo\CoordinatorUpdatedNotification.Users.cs">
+      <DependentUpon>CoordinatorUpdatedNotification.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

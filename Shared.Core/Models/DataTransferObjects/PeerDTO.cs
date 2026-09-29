@@ -5,7 +5,6 @@ namespace Shared.Models.DataTransferObjects
 {
     public class PeerDTO
     {
-        public int Id { get; init; }
         public int UserId { get; init; }
         public bool IsAudioRequested { get; set; }
         public bool IsNegotiated { get; set; }
@@ -20,7 +19,7 @@ namespace Shared.Models.DataTransferObjects
         public HybridSessionPeerState State { get; set; }
         public string? AfkMessage { get; set; }
 
-        public Dictionary<string, Outbound> Outbounds { get; init; }
-        public Dictionary<string, Inbound> Inbounds { get; init; }
+        public Dictionary<string, Outbound> Outbounds { get; init; } = new();
+        public Dictionary<string, Inbound> Inbounds { get; init; } = new();
     }
 }

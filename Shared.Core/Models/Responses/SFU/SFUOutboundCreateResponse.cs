@@ -6,7 +6,7 @@ namespace Shared.Models.Responses.SFUNegotiation
         Guid RequestId, 
         int SessionId, 
         SFUOutboundCreateResult Result,
-        Outbound Outbound
+        Outbound? Outbound
     ) : SFUResponse(RequestId)
     {
         

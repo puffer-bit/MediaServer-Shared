@@ -1,5 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 using Shared.Models.Notifications.CoordinatorInfo;
+using Shared.Models.Notifications.CoordinatorInfo.Users;
 using Shared.Models.Notifications.Heartbeat;
 using Shared.Models.Notifications.SessionInfo;
 using Shared.Models.Requests.Auth;
@@ -114,6 +115,7 @@ namespace Shared.Models
     [JsonDerivedType(typeof(HybridSessionStopVideoRequest), typeDiscriminator: nameof(HybridSessionStopVideoRequest))] 
     [JsonDerivedType(typeof(HybridSessionStartVoiceRequest), typeDiscriminator: nameof(HybridSessionStartVoiceRequest))] 
     [JsonDerivedType(typeof(HybridSessionStopVoiceRequest), typeDiscriminator: nameof(HybridSessionStopVoiceRequest))] 
+    [JsonDerivedType(typeof(HybridSessionSetMicrophoneMuteRequest), typeDiscriminator: nameof(HybridSessionSetMicrophoneMuteRequest))] 
 
     [JsonDerivedType(typeof(WebRtcConnectRequest), typeDiscriminator: nameof(WebRtcConnectRequest))]
 
@@ -150,10 +152,16 @@ namespace Shared.Models
     [JsonDerivedType(typeof(HybridSessionStopVideoResponse), typeDiscriminator: nameof(HybridSessionStopVideoResponse))] 
     [JsonDerivedType(typeof(HybridSessionStartVoiceResponse), typeDiscriminator: nameof(HybridSessionStartVoiceResponse))] 
     [JsonDerivedType(typeof(HybridSessionStopVoiceResponse), typeDiscriminator: nameof(HybridSessionStopVoiceResponse))] 
+    [JsonDerivedType(typeof(HybridSessionSetMicrophoneMuteResponse), typeDiscriminator: nameof(HybridSessionSetMicrophoneMuteResponse))] 
 
     [JsonDerivedType(typeof(WebRtcConnectResponse), typeDiscriminator: nameof(WebRtcConnectResponse))]
     public abstract record BaseMessage
     {
-        public int UserId { get; set; }
+        /// <summary>
+        /// The authenticated sender, stamped by the server gateway on incoming messages. Not named
+        /// UserId: a positional UserId parameter of a derived record would bind to this property
+        /// instead of declaring its own, and its value would be silently dropped.
+        /// </summary>
+        public int SenderId { get; set; }
     }
 }

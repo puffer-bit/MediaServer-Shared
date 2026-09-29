@@ -7,7 +7,8 @@ public enum CoordinatorStateChangedType
     UserConnected = 9,
     UserDisconnected = 10,
     UserKicked = 11,
-    UserBanned
+    UserBanned,
+    UserUpdated
 }
 
 public enum SessionsStateChangedType

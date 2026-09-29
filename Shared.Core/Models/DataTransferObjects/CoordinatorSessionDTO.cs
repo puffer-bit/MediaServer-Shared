@@ -2,9 +2,9 @@ namespace Shared.Models.DataTransferObjects;
 
 public class CoordinatorSessionDTO
 {
-    public string Id { get; set; }
-    public string Name { get; set; }
-    public string Address { get; set; }
+    public string Id { get; set; } = string.Empty;
+    public string Name { get; set; } = string.Empty;
+    public string Address { get; set; } = string.Empty;
     public int Port { get; set; }
     
     public bool IsStunServerAvailable { get; set; }
@@ -22,7 +22,7 @@ public class CoordinatorSessionDTO
     
     public int ConnectedUsersCount { get; set; }
     
-    public string ServerVersion { get; set; }
+    public string ServerVersion { get; set; } = string.Empty;
         
     public DateTime CreateTime { get; set; }
     public DateTime FirstLaunchTime { get; set; }

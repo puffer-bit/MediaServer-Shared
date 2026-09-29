@@ -27,10 +27,10 @@ public static class SdpParser
         sdp.AppendLine("a=group:BUNDLE 0 1");
         sdp.AppendLine("a=msid-semantic: WMS");
 
-        sdp.AppendLine($"m=audio {transportData.Port} UDP/TLS/RTP/SAVPF 14");
+        sdp.AppendLine($"m=audio {transportData.Port} UDP/TLS/RTP/SAVPF 100");
         sdp.AppendLine($"c=IN IP4 {transportData.Host}");
-        sdp.AppendLine("a=rtpmap:14 opus/48000/2");
-        sdp.AppendLine("a=fmtp:14 minptime=10;useinbandfec=1");
+        sdp.AppendLine("a=rtpmap:100 opus/48000/2");
+        sdp.AppendLine("a=fmtp:100 minptime=10;useinbandfec=1");
         sdp.AppendLine("a=mid:0");
         sdp.AppendLine("a=sendrecv");
         sdp.AppendLine($"a=ice-ufrag:{ice.UsernameFragment}");

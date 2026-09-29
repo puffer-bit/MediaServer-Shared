@@ -57,10 +57,10 @@ public enum VideoSessionStateChangedType
     PeerPoked,
     PeerMovedOut,
     PeerMovedIn,
+    PeerStateChaged,
     SFUNodeChanged,
     SFUNodeDisconnected,
-    SFUNodeConnected,
-    PeerStateChaged
+    SFUNodeConnected
 }
 
 public enum ChatSessionStateChangedType

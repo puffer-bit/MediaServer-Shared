@@ -53,7 +53,8 @@ namespace Shared.Enums
         SessionNotExists = 1,
         TransportNotExists = 2,
         InvalidDtlsParameters = 3,
-        SFUError = 4
+        SFUError = 4,
+        SFUNotActive
     }
 
     public enum HybridSessionJoinResult
@@ -337,6 +338,16 @@ namespace Shared.Enums
     }
         
     public enum SFUTransportCreateResult
+    {
+        InternalError = -1,
+        NoError = 0,
+        SFUNodeError = 3,
+        SFUServiceNotAvailable = 4,
+        PortAllocationFailed = 5,
+        MaxTransportsReached = 6
+    }
+    
+    public enum SFUTransportConnectResult
     {
         InternalError = -1,
         NoError = 0,

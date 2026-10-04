@@ -1,9 +1,5 @@
 namespace Shared.Enums
 {
-    public interface ISessionRequestResult
-    {
-        
-    }
     
     public enum CreateSessionResult
     {
@@ -14,17 +10,7 @@ namespace Shared.Enums
         UnexceptedParameters = 3,
         TimedOut = 4,
     }
-    
-    public enum EditSessionResult
-    {
-        InternalError = -1,
-        NoError = 0,
-        NameAlreadyUsed = 1,
-        WrongCapacity = 2,
-        UnexceptedParameters = 3,
-        TimedOut = 4
-    }
-    
+
     public enum DeleteSessionResult
     {
         InternalError = -1,
@@ -81,27 +67,7 @@ namespace Shared.Enums
         UnknowSessionType,
         NotMemberOfSession
     }
-    
-    public enum StartScreenShareResult
-    {
-        InternalError = -1,
-        NoError = 0,
-        UnsupportedMedia = 1,
-        InsufficientPermissions = 2,
-        PeerNotExists,
-        SFUError
-    }
-    
-    public enum StopScreenShareResult
-    {
-        InternalError = -1,
-        NoError = 0,
-        ScreenShareNotActive = 1,
-        InsufficientPermissions = 2,
-        PeerNotExists,
-        SFUError
-    }
-    
+
     public enum StartVoiceShareResult
     {
         InternalError = -1,
@@ -127,7 +93,6 @@ namespace Shared.Enums
         TimedOut
     }
 
-    
     public enum StartVideoShareResult
     {
         InternalError = -1,
@@ -318,18 +283,7 @@ namespace Shared.Enums
         NoUserId = 5,
         GatewayNotFound
     }
-    
-    public enum ValidateMessageResult
-    {
-        NoError = 0,
-        NotExceptedError = 1,
-        NullDataReceived = 2,
-        JsonParseError = 3,
-        ServerAnswerReceived = 4,
-        ForbiddenData = 5,
-        CastError = 6
-    }
-    
+
     public enum WebRTCNegotiationResult
     {
         InternalError = -1,
@@ -374,17 +328,6 @@ namespace Shared.Enums
         NoError = 0,
         UnsupportedMediaType = 2,
         SFUNodeError = 3,
-        SFUServiceNotAvailable = 4,
-        DuplicateOutbound = 5,
-        TransportClosed = 7
-    }
-    
-    public enum SFUInboundRemoveResult
-    {
-        InternalError = -1,
-        NoError = 0,
-        UnsupportedMediaType = 2,
-        SFUServiceError = 3,
         SFUServiceNotAvailable = 4,
         DuplicateOutbound = 5,
         TransportClosed = 7
@@ -463,18 +406,7 @@ namespace Shared.Enums
         InvalidResponse,
         WrongResponse
     }
-    
-    public enum TextChatHistoryResult
-    {
-        InternalError = -1,
-        NoError = 0,
-        NotExceptedError = 1,
-        MessageDontExist = 2,
-        ChatDontExist = 3,
-        InavlidResponse,
-        TimedOut
-    }
-    
+
     public enum PeerListRequestResult
     {
         InternalError = -1,

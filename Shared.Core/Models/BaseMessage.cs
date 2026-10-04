@@ -25,6 +25,7 @@ namespace Shared.Models
     
     [JsonDerivedType(typeof(CoordinatorUserListUpdatedNotification), typeDiscriminator: nameof(CoordinatorUserListUpdatedNotification))]
     [JsonDerivedType(typeof(CoordinatorUserConnectedNotification), typeDiscriminator: nameof(CoordinatorUserConnectedNotification))]
+    [JsonDerivedType(typeof(CoordinatorUserUpdatedNotification), typeDiscriminator: nameof(CoordinatorUserUpdatedNotification))]
     [JsonDerivedType(typeof(CoordinatorUserDisconnectedNotification), typeDiscriminator: nameof(CoordinatorUserDisconnectedNotification))]
     [JsonDerivedType(typeof(CoordinatorUserKickedNotification), typeDiscriminator: nameof(CoordinatorUserKickedNotification))]
     [JsonDerivedType(typeof(CoordinatorUserBannedNotification), typeDiscriminator: nameof(CoordinatorUserBannedNotification))]

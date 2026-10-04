@@ -69,14 +69,6 @@ public enum HybridSessionActionType
     PeerListRequest = 52,
 }
 
-public enum WebRtcActionType
-{
-    Offer = 0,
-    Answer = 1,
-    ICE = 2,
-    Renegotiation = 4
-}
-
 public enum CoordinatorActionType
 {
     InfoRequest,

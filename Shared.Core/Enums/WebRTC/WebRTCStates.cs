@@ -22,27 +22,3 @@ public enum WebRTCConnectionState
     Fatal = 6
 }
 
-public enum WebRTCSignalingState
-{
-    Stable = 0,
-    HaveLocalOffer = 1,
-    HaveRemoteOffer = 2,
-    Closed = 3
-}
-
-public enum WebRTCICEGatheringState
-{
-    New = 0,
-    Gathering = 1,
-    Complete = 2,
-    Closed = 3
-}
-
-public enum WebRTCDTLSConnectionState
-{
-    New = 0,
-    Connecting = 1,
-    Connected = 2,
-    Closed = 3,
-    Failed = 4
-}

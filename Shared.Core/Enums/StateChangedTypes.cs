@@ -21,7 +21,7 @@ public enum SessionsStateChangedType
     ChatSessionReconfigured = 12,
 }
 
-public enum VideoSessionStateChangedType
+public enum HybridSessionStateChangedType
 {
     PeerConnected = 1,
     PeerDisconnected,
@@ -37,7 +37,7 @@ public enum VideoSessionStateChangedType
     PeerStoppedScreenShare,
     PeerMutedScreenShareSound,
     PeerPausedScreenShare,
-    PeerResumedScreenShareSound,
+    PeerUnmutedScreenShareSound,
     PeerResumedScreenShare,
     PeerStartedVideoShare,
     PeerUpdatedVideoShare,
@@ -57,7 +57,7 @@ public enum VideoSessionStateChangedType
     PeerPoked,
     PeerMovedOut,
     PeerMovedIn,
-    PeerStateChaged,
+    PeerStateChanged,
     SFUNodeChanged,
     SFUNodeDisconnected,
     SFUNodeConnected

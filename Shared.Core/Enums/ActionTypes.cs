@@ -76,7 +76,7 @@ public enum CoordinatorActionType
     ReconfigureRequest,
     DeleteUserRequest,
     BanUserRequest,
-    KickUseRequest,
+    KickUserRequest,
     SuspendUserRequest,
     PurgeUserRequest
 }

@@ -1,5 +1,5 @@
 ﻿using System.Text;
-using Shared.Models.Responses.SFU.Connection;
+using Shared.Models.Media.Transport;
 
 namespace Shared.Tools.WebRTC;
 

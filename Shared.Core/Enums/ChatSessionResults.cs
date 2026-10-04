@@ -8,7 +8,8 @@ public enum FetchMessagesResult
     ChatNotExists = 2,
     InvalidResponse = 3,
     TimedOut = 4,
-    WrongResponse = 5
+    WrongResponse = 5,
+    Rejected = 6
 }
 
 public enum FetchMessageResult
@@ -20,7 +21,8 @@ public enum FetchMessageResult
     InvalidResponse = 3,
     MessageNotExists = 4,
     TimedOut = 5,
-    WrongResponse = 6
+    WrongResponse = 6,
+    Rejected = 7
 }
 
 public enum AddMessageResult
@@ -32,7 +34,8 @@ public enum AddMessageResult
     TimedOut = 3,
     InvalidResponse = 4,
     WrongResponse = 5,
-    ReplyTargetNotExists = 6
+    ReplyTargetNotExists = 6,
+    Rejected = 7
 }
 
 public enum EditMessageResult
@@ -54,5 +57,6 @@ public enum DeleteMessageResult
     TimedOut = 4,
     InvalidResponse = 5,
     WrongResponse = 6,
-    InsufficientPermissions = 7
+    InsufficientPermissions = 7,
+    Rejected = 8
 }

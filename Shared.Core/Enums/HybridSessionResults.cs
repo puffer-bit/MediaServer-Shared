@@ -10,7 +10,8 @@ public enum HybridSessionJoinResult
     InsufficientPermissions = 4,
     SFUError = 5,
     SFUNotActive = 6,
-    UnknownSessionType = 7
+    UnknownSessionType = 7,
+    Rejected = 8
 }
 
 public enum HybridSessionConnectTransportResult
@@ -21,7 +22,8 @@ public enum HybridSessionConnectTransportResult
     TransportNotExists = 2,
     InvalidDtlsParameters = 3,
     SFUError = 4,
-    SFUNotActive = 5
+    SFUNotActive = 5,
+    Rejected = 6
 }
 
 public enum HybridSessionLeaveResult
@@ -41,7 +43,8 @@ public enum PeerListRequestResult
     InternalError = -1,
     NoError = 0,
     SessionNotExists = 1,
-    SessionIsNotHybrid = 2
+    SessionIsNotHybrid = 2,
+    Rejected = 3
 }
 
 public enum StartVoiceShareResult
@@ -54,7 +57,8 @@ public enum StartVoiceShareResult
     SessionNotExists = 4,
     PeerNotExists = 5,
     SFUNotActive = 6,
-    TimedOut = 7
+    TimedOut = 7,
+    Rejected = 8
 }
 
 public enum StopVoiceShareResult
@@ -66,7 +70,8 @@ public enum StopVoiceShareResult
     PeerNotExists = 3,
     SFUError = 4,
     SFUNotActive = 5,
-    TimedOut = 6
+    TimedOut = 6,
+    Rejected = 7
 }
 
 public enum StartVideoShareResult
@@ -79,7 +84,8 @@ public enum StartVideoShareResult
     SessionNotExists = 4,
     PeerNotExists = 5,
     SFUNotActive = 6,
-    TimedOut = 7
+    TimedOut = 7,
+    Rejected = 8
 }
 
 public enum StopVideoShareResult
@@ -89,7 +95,8 @@ public enum StopVideoShareResult
     VideoShareNotActive = 1,
     InsufficientPermissions = 2,
     PeerNotExists = 3,
-    TimedOut = 4
+    TimedOut = 4,
+    Rejected = 5
 }
 
 public enum UpdateVideoShareResult
@@ -120,7 +127,8 @@ public enum SetMicrophoneMuteResult
     VoiceNotStarted = 4,
     SFUError = 5,
     SFUNotActive = 6,
-    TimedOut = 7
+    TimedOut = 7,
+    Rejected = 8
 }
 
 public enum MuteMicrophoneResult

@@ -7,7 +7,8 @@ public enum CreateSessionResult
     NameAlreadyUsed = 1,
     WrongCapacity = 2,
     UnexpectedParameters = 3,
-    TimedOut = 4
+    TimedOut = 4,
+    Rejected = 5
 }
 
 public enum DeleteSessionResult
@@ -16,7 +17,8 @@ public enum DeleteSessionResult
     NoError = 0,
     SessionContainsUsers = 1,
     SessionNotExists = 2,
-    TimedOut = 3
+    TimedOut = 3,
+    Rejected = 4
 }
 
 public enum JoinSessionResult
@@ -39,7 +41,8 @@ public enum LeaveSessionResult
     TimedOut = 2,
     PeerNotExists = 3,
     UnknownSessionType = 4,
-    SFUNotActive = 5
+    SFUNotActive = 5,
+    Rejected = 6
 }
 
 public enum LeaveFromSessionResult
@@ -93,5 +96,6 @@ public enum SessionRequestResult
     NoError = 0,
     SessionNotExists = 1,
     TimedOut = 2,
-    WrongResponse = 3
+    WrongResponse = 3,
+    Rejected = 4
 }

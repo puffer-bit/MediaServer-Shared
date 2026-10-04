@@ -1,21 +1,20 @@
-﻿using Shared.Enums.User;
+using Shared.Enums.User;
 
-namespace Shared.Models.DataTransferObjects
+namespace Shared.Models.DataTransferObjects;
+
+public class UserDTO
 {
-    public class UserDTO
-    {
-        public int Id { get; set; }
-        public string CoordinatorInstanceId { get; set; } = string.Empty;
-        public string Username { get; set; } = string.Empty;
-        public string? Ip { get; set; }
-        public string? RegionName { get; set; }
-        public string? RegionCode { get; set; }
-        public string? DisplayName { get; set; }
-        public string? Prefix { get; set; }
-        public string? AvatarUrl { get; set; }
-        public UserState State { get; set; }
-        public UserStatus Status { get; set; }
-        public DateTime FirstConnectionTime { get; set; }
-        public DateTime LastConnectionTime { get; set; }
-    }
+    public int Id { get; set; }
+    public string CoordinatorInstanceId { get; set; } = string.Empty;
+    public string Username { get; set; } = string.Empty;
+    public string? Ip { get; set; }
+    public string? RegionName { get; set; }
+    public string? RegionCode { get; set; }
+    public string? DisplayName { get; set; }
+    public string? Prefix { get; set; }
+    public string? AvatarUrl { get; set; }
+    public UserState State { get; set; }
+    public UserStatus Status { get; set; }
+    public DateTime FirstConnectionTime { get; set; }
+    public DateTime LastConnectionTime { get; set; }
 }

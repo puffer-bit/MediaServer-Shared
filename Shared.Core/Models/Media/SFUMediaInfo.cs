@@ -1,5 +1,5 @@
 namespace Shared.Models.Media;
-    
+
 public record SFUMediaInfo
 {
     public int ClockRate { get; init; }

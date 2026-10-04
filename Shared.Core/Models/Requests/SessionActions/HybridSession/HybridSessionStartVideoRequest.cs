@@ -9,7 +9,7 @@ public record HybridSessionStartVideoRequest(
     int SessionId) : HybridSessionRequest
 {
     public override HybridSessionActionType ActionType => HybridSessionActionType.StartVideoShare;
-    
-    public HybridSessionStartVideoResponse ToResponse(StartVideoShareResult result, Outbound? outbound = null) 
+
+    public HybridSessionStartVideoResponse ToResponse(StartVideoShareResult result, Outbound? outbound = null)
         => new (RequestId, result, outbound);
 }

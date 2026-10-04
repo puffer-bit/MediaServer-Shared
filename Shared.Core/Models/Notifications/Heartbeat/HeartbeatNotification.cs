@@ -6,6 +6,6 @@ public abstract record HeartbeatNotification(HeartbeatStateChangedType Notificat
 
 public record HeartbeatServerClosingNotification(string CoordinatorId, string? Message = null)
     : HeartbeatNotification(HeartbeatStateChangedType.ServerClosing);
-    
+
 public record HeartbeatServerRestartingNotification(string CoordinatorId, string? Message = null)
     : HeartbeatNotification(HeartbeatStateChangedType.ServerRestarting);

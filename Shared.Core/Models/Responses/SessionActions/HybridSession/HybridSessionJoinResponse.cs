@@ -6,7 +6,7 @@ namespace Shared.Models.Responses.SessionActions.HybridSession;
 public record HybridSessionJoinResponse(
     Guid RequestId,
     HybridSessionJoinResult Result,
-    TransportData? TransportData) 
+    TransportData? TransportData)
     : HybridSessionResponse(RequestId)
 {
     public override HybridSessionActionType ActionType { get; init; } = HybridSessionActionType.Join;

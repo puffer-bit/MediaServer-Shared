@@ -23,4 +23,3 @@ public record ChatSessionReconfiguredNotification(ChatSessionDTO Session)
 
 public record ChatSessionDeletedNotification(int SessionId)
     : SessionsUpdatedNotification(SessionsStateChangedType.ChatSessionDeleted);
-    

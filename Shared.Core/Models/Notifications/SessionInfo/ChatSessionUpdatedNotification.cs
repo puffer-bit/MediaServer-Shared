@@ -17,4 +17,3 @@ public record ChatSessionMessageDeletedNotification(int ChatId, int MessageId)
 
 public record ChatSessionUserTypingNotification(int ChatId, int UserId)
     : ChatSessionUpdatedNotification(ChatSessionStateChangedType.UserTyping);
-

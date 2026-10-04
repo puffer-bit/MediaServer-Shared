@@ -15,11 +15,11 @@ public class ChatMessageDTO
 
     public required ChatTextContentDTO TextContent { get; set; }
     public required ChatReplyContentDTO ReplyContent { get; init; }
-    
+
     public required List<ChatImageContentDTO> Images { get; init; }
     public required List<ChatVideoContentDTO> Video { get; init; }
     public required List<ChatFileContentDTO> Files { get; init; }
-    
+
     public required List<ChatReactionDTO> Reactions { get; init; }
     public required List<string> UsersIds { get; init; }
 

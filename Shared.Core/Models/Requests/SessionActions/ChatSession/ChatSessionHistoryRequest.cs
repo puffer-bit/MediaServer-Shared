@@ -11,10 +11,10 @@ public record ChatSessionHistoryRequest(
 ) : ChatSessionRequest
 {
     public override ChatSessionActionType ActionType { get; init; } = ChatSessionActionType.ChatHistory;
-    
+
     public ChatSessionHistoryResponse ToResponse(FetchMessagesResult result, List<ChatMessageDTO>? messages)
         => new(RequestId, result, messages);
-    
+
     public ChatSessionHistoryResponse ToResponse((FetchMessagesResult result, List<ChatMessageDTO>? messages) tuple)
         => new(RequestId, tuple.result, tuple.messages);
 }

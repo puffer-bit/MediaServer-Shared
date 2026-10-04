@@ -1,10 +1,9 @@
-namespace Shared.Enums
+namespace Shared.Enums;
+
+public enum MessageType
 {
-    public enum MessageType
-    {
-        Undefined = 0,
-        Request = 1,
-        Response = 2,
-        Notification = 3,
-    }
+    Undefined = 0,
+    Request = 1,
+    Response = 2,
+    Notification = 3,
 }

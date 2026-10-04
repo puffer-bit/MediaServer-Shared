@@ -7,8 +7,8 @@ namespace Shared.Models.Requests.Coordinator;
 public record CoordinatorInfoRequest() : CoordinatorRequest
 {
     public override CoordinatorActionType ActionType { get; init; } = CoordinatorActionType.InfoRequest;
-        
+
     public CoordinatorInfoResponse ToResponse(
-        CoordinatorSessionDTO coordinatorSessionDto) => 
+        CoordinatorSessionDTO coordinatorSessionDto) =>
         new (RequestId, coordinatorSessionDto);
 }

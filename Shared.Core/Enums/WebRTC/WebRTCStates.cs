@@ -10,7 +10,7 @@ public enum WebRTCICEConnectionState
     Disconnected = 5,
     Closed = 6
 }
-    
+
 public enum WebRTCConnectionState
 {
     New = 0,
@@ -21,4 +21,3 @@ public enum WebRTCConnectionState
     Closed = 5,
     Fatal = 6
 }
-

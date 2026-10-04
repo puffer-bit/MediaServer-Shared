@@ -10,8 +10,7 @@ public record ApproveUserRequest(
 ) : GenericSessionRequest
 {
     public override SessionActionType ActionType { get; init; } = SessionActionType.ApproveRequest;
-    
+
     public ApproveUserResponse ToResponse(ApproveUserSessionResult result)
         => new(RequestId, SessionId, UserTargetId, SessionType, result);
 }
-

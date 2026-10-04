@@ -8,10 +8,10 @@ public class ChatVideoContentDTO
     public string? Description { get; set; }
     public required long Size { get; init; }
     public required string MimeType { get; init; }
-    
+
     public required int Width { get; init; }
     public required int Height { get; init; }
     public required TimeSpan Duration { get; init; }
-    
+
     public ChatContentType Type => ChatContentType.Video;
 }

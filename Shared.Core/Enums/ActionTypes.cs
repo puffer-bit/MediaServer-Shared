@@ -65,7 +65,7 @@ public enum HybridSessionActionType
     ToggleSoundMute = 43,
     SetAfkStatus = 50,
     ChangeRoom = 51,
-    
+
     PeerListRequest = 52,
 }
 

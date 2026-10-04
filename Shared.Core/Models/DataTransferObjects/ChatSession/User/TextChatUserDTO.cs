@@ -12,7 +12,7 @@ public class TextChatUserDTO
     {
         UserId = userId;
     }
-    
+
     public void MakeAdmin()
     {
         IsAdmin = true;

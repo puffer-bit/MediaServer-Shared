@@ -4,7 +4,7 @@ using Shared.Models.Media;
 
 namespace Shared.Models.Notifications.SessionInfo;
 
-public abstract record HybridSessionUpdatedNotification(HybridSessionStateChangedType Type) 
+public abstract record HybridSessionUpdatedNotification(HybridSessionStateChangedType Type)
     : Notification;
 
 public record HybridSessionSFUNodeChangedNotification(int SessionId)

@@ -8,7 +8,7 @@ public record HybridSessionPeerListRequest(
     int SessionId) : HybridSessionRequest
 {
     public override HybridSessionActionType ActionType => HybridSessionActionType.PeerListRequest;
-    
-    public HybridSessionPeerListResponse ToResponse(PeerListRequestResult result, Dictionary<int, PeerDTO>? peers = null) 
+
+    public HybridSessionPeerListResponse ToResponse(PeerListRequestResult result, Dictionary<int, PeerDTO>? peers = null)
         => new (RequestId, result, peers);
 }

@@ -10,7 +10,7 @@ public record ChatSessionMessageRequest(
 ) : ChatSessionRequest
 {
     public override ChatSessionActionType ActionType { get; init; } = ChatSessionActionType.MessageRequest;
-    
+
     public ChatSessionMessageResponse ToResponse(FetchMessageResult result, ChatMessageDTO? message)
         => new(RequestId, message, result);
 }

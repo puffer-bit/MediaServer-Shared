@@ -8,7 +8,7 @@ public record CoordinatorUserInfoRequest(
     IList<int> UserIds) : CoordinatorRequest
 {
     public override CoordinatorActionType ActionType { get; init; } = CoordinatorActionType.UserInfoRequest;
-    
+
     public CoordinatorUserInfoResponse ToResponse(IDictionary<int, UserDTO> userList, UsersRequestResult result)
         => new(RequestId, userList, result);
 }

@@ -1,5 +1,5 @@
 namespace Shared.Models.Media;
-    
+
 public record Outbound
 {
     public required string Id { get; init; }

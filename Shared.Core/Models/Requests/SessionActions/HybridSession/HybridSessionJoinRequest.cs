@@ -1,11 +1,13 @@
+using System.ComponentModel.DataAnnotations;
 using Shared.Enums;
 using Shared.Models.Responses.SessionActions.HybridSession;
 using Shared.Models.Media.Transport;
+using Shared.Validation;
 
 namespace Shared.Models.Requests.SessionActions.HybridSession;
 
 public record HybridSessionJoinRequest(
-    int SessionId
+    [property: EntityId] int SessionId
 ) : HybridSessionRequest
 {
     public override HybridSessionActionType ActionType => HybridSessionActionType.Join;
@@ -14,6 +16,7 @@ public record HybridSessionJoinRequest(
     /// Identifies the DTLS context of the client. The SFU reuses an existing transport while
     /// this value stays the same and recreates it once the client has rebuilt its own side.
     /// </summary>
+    [StringLength(Limits.ClientEpochMaxLength), GuidString]
     public string? ClientEpoch { get; init; }
 
     public HybridSessionJoinResponse ToResponse(HybridSessionJoinResult result, TransportData? transportData = null)

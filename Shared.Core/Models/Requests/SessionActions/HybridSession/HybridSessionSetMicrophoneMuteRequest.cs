@@ -1,10 +1,12 @@
+using System.ComponentModel.DataAnnotations;
 using Shared.Enums;
 using Shared.Models.Responses.SessionActions.HybridSession;
+using Shared.Validation;
 
 namespace Shared.Models.Requests.SessionActions.HybridSession;
 
 public record HybridSessionSetMicrophoneMuteRequest(
-    int SessionId,
+    [property: EntityId] int SessionId,
     bool IsMuted) : HybridSessionRequest
 {
     public override HybridSessionActionType ActionType => HybridSessionActionType.ToggleMicrophoneMute;

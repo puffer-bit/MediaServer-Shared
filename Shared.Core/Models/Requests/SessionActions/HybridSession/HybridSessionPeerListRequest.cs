@@ -1,11 +1,13 @@
+using System.ComponentModel.DataAnnotations;
 using Shared.Enums;
 using Shared.Models.DataTransferObjects;
 using Shared.Models.Responses.SessionActions.HybridSession;
+using Shared.Validation;
 
 namespace Shared.Models.Requests.SessionActions.HybridSession;
 
 public record HybridSessionPeerListRequest(
-    int SessionId) : HybridSessionRequest
+    [property: EntityId] int SessionId) : HybridSessionRequest
 {
     public override HybridSessionActionType ActionType => HybridSessionActionType.PeerListRequest;
 

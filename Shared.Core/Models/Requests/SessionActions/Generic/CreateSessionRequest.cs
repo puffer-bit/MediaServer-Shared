@@ -1,12 +1,14 @@
+using System.ComponentModel.DataAnnotations;
 using Shared.Enums;
 using Shared.Models.DataTransferObjects;
 using Shared.Models.Requests.SessionActions.Generic.Models;
 using Shared.Models.Responses.SessionActions.Generic;
+using Shared.Validation;
 
 namespace Shared.Models.Requests.SessionActions.Generic;
 
 public record CreateSessionRequest(
-    CreateSessionModel CreateSessionModel
+    [property: Required] CreateSessionModel CreateSessionModel
 ) : GenericSessionRequest
 {
     public override SessionActionType ActionType { get; init; } = SessionActionType.CreateRequest;

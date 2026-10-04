@@ -1,13 +1,15 @@
+using System.ComponentModel.DataAnnotations;
 using Shared.Enums;
 using Shared.Models.DataTransferObjects.ChatSession.Messages;
 using Shared.Models.Responses.SessionActions.ChatSession;
+using Shared.Validation;
 
 namespace Shared.Models.Requests.SessionActions.ChatSession;
 
 public record ChatSessionHistoryRequest(
-    int ChatId,
-    int Take,
-    int? Skip
+    [property: EntityId] int ChatId,
+    [property: Range(1, Limits.ChatHistoryMaxTake)] int Take,
+    [property: Range(0, int.MaxValue)] int? Skip
 ) : ChatSessionRequest
 {
     public override ChatSessionActionType ActionType { get; init; } = ChatSessionActionType.ChatHistory;

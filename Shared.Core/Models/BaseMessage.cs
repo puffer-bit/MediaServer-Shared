@@ -9,6 +9,7 @@ using Shared.Models.Requests.SessionActions.ChatSession;
 using Shared.Models.Requests.SessionActions.Generic;
 using Shared.Models.Requests.SessionActions.HybridSession;
 using Shared.Models.Requests.WebRTC;
+using Shared.Models.Responses;
 using Shared.Models.Responses.Auth;
 using Shared.Models.Responses.Coordinator;
 using Shared.Models.Responses.Heartbeat;
@@ -155,6 +156,8 @@ namespace Shared.Models;
 [JsonDerivedType(typeof(HybridSessionSetMicrophoneMuteResponse), typeDiscriminator: nameof(HybridSessionSetMicrophoneMuteResponse))]
 
 [JsonDerivedType(typeof(WebRtcConnectResponse), typeDiscriminator: nameof(WebRtcConnectResponse))]
+
+[JsonDerivedType(typeof(RequestRejectedResponse), typeDiscriminator: nameof(RequestRejectedResponse))]
 public abstract record BaseMessage
 {
     /// <summary>

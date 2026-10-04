@@ -1,14 +1,16 @@
+using System.ComponentModel.DataAnnotations;
 using Shared.Enums;
 using Shared.Enums.WebRTC;
+using Shared.Validation;
 
 namespace Shared.Models.Requests.SessionActions.Generic.Models.SessionData;
 
 public record HybridSessionCreateData(
-    WebRTCEngine EngineType,
-    WebRTCVideoCodecs VideoCodecs = WebRTCVideoCodecs.H264,
-    WebRTCAudioCodecs AudioCodecs = WebRTCAudioCodecs.Opus,
-    VideoResolutions Resolution = VideoResolutions.FHD,
-    int? VideoBitrate = 2500,
+    [property: DefinedEnum] WebRTCEngine EngineType,
+    [property: DefinedEnum] WebRTCVideoCodecs VideoCodecs = WebRTCVideoCodecs.H264,
+    [property: DefinedEnum] WebRTCAudioCodecs AudioCodecs = WebRTCAudioCodecs.Opus,
+    [property: DefinedEnum] VideoResolutions Resolution = VideoResolutions.FHD,
+    [property: Range(Limits.VideoBitrateMinKbps, Limits.VideoBitrateMaxKbps)] int? VideoBitrate = 2500,
     bool IsAudioTransferEnabled = false,
     bool IsDataChannelEnabled = false,
     bool IsSimulcastEnabled = false,

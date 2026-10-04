@@ -31,7 +31,8 @@ public enum AddMessageResult
     ChatNotExists = 2,
     TimedOut = 3,
     InvalidResponse = 4,
-    WrongResponse = 5
+    WrongResponse = 5,
+    ReplyTargetNotExists = 6
 }
 
 public enum EditMessageResult
@@ -39,7 +40,8 @@ public enum EditMessageResult
     InternalError = -1,
     NoError = 0,
     MessageNotExists = 1,
-    ChatNotExists = 2
+    ChatNotExists = 2,
+    InsufficientPermissions = 3
 }
 
 public enum DeleteMessageResult
@@ -51,5 +53,6 @@ public enum DeleteMessageResult
     ChatNotExists = 3,
     TimedOut = 4,
     InvalidResponse = 5,
-    WrongResponse = 6
+    WrongResponse = 6,
+    InsufficientPermissions = 7
 }

@@ -1,11 +1,13 @@
+using System.ComponentModel.DataAnnotations;
 using Shared.Enums;
 using Shared.Models.Responses.SessionActions.Generic;
+using Shared.Validation;
 
 namespace Shared.Models.Requests.SessionActions.Generic;
 
 public record LeaveSessionRequest(
-    int SessionId,
-    SessionType SessionType
+    [property: EntityId] int SessionId,
+    [property: DefinedEnum] SessionType SessionType
 ) : GenericSessionRequest
 {
     public override SessionActionType ActionType { get; init; } = SessionActionType.LeaveRequest;

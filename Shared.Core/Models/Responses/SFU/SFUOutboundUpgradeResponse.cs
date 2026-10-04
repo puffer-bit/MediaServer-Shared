@@ -1,6 +1,6 @@
 ﻿using Shared.Enums;
 
-namespace Shared.Models.Responses.SFUNegotiation
+namespace Shared.Models.Responses.SFU
 {
     public record SFUOutboundUpgradeResponse(
         Guid RequestId, 

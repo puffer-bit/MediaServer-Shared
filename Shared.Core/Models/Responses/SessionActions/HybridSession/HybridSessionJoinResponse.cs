@@ -1,5 +1,5 @@
 using Shared.Enums;
-using Shared.Models.Responses.SFUNegotiation;
+using Shared.Models.Responses.SFU.Connection;
 
 namespace Shared.Models.Responses.SessionActions.HybridSession;
 

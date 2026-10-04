@@ -1,4 +1,4 @@
-namespace Shared.Models.Responses.SFUNegotiation;
+namespace Shared.Models.Responses.SFU.Connection;
 
 public record ICEParameters
 {

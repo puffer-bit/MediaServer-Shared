@@ -1,6 +1,5 @@
 ﻿using System.Text.Json.Serialization;
 using Shared.Models.Notifications.CoordinatorInfo;
-using Shared.Models.Notifications.CoordinatorInfo.Users;
 using Shared.Models.Notifications.Heartbeat;
 using Shared.Models.Notifications.SessionInfo;
 using Shared.Models.Requests.Auth;
@@ -9,14 +8,14 @@ using Shared.Models.Requests.Heartbeat;
 using Shared.Models.Requests.SessionActions.ChatSession;
 using Shared.Models.Requests.SessionActions.Generic;
 using Shared.Models.Requests.SessionActions.HybridSession;
-using Shared.Models.Requests.WebRTCNegotiation;
+using Shared.Models.Requests.WebRTC;
 using Shared.Models.Responses.Auth;
 using Shared.Models.Responses.Coordinator;
 using Shared.Models.Responses.Heartbeat;
 using Shared.Models.Responses.SessionActions.ChatSession;
 using Shared.Models.Responses.SessionActions.Generic;
 using Shared.Models.Responses.SessionActions.HybridSession;
-using Shared.Models.Responses.WebRTCNegotiation;
+using Shared.Models.Responses.WebRTC;
 
 namespace Shared.Models
 {

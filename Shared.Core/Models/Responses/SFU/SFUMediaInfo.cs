@@ -1,4 +1,4 @@
-namespace Shared.Models.Responses.SFUNegotiation;
+namespace Shared.Models.Responses.SFU;
     
 public record SFUMediaInfo
 {

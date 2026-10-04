@@ -1,6 +1,6 @@
 ﻿using Shared.Enums;
 using Shared.Models.Responses.SessionActions.Generic;
-using Shared.Models.Responses.SFUNegotiation;
+using Shared.Models.Responses.SFU.Connection;
 
 namespace Shared.Models.Requests.SessionActions.Generic
 {

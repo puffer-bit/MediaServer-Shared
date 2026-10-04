@@ -1,6 +1,6 @@
 using Shared.Enums;
 using Shared.Models.DataTransferObjects;
-using Shared.Models.Responses.SFUNegotiation;
+using Shared.Models.Responses.SFU;
 
 namespace Shared.Models.Notifications.SessionInfo;
 

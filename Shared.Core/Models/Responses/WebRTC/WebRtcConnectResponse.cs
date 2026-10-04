@@ -1,6 +1,6 @@
 using Shared.Enums;
 
-namespace Shared.Models.Responses.WebRTCNegotiation;
+namespace Shared.Models.Responses.WebRTC;
 
 public record WebRtcConnectResponse(
     Guid RequestId,

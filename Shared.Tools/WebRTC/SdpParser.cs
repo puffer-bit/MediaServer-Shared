@@ -1,7 +1,7 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-using Shared.Models.Responses.SFUNegotiation;
+﻿using System.Text;
+using Shared.Models.Responses.SFU.Connection;
+
+namespace Shared.Tools.WebRTC;
 
 [Obsolete("Produces an SDP that mediasoup cannot use: static payload types, no rtcp-mux and a " +
           "single m-section per media kind instead of one per producer or consumer. " +
@@ -13,8 +13,8 @@ public static class SdpParser
         var ice = transportData.ICEData;
         
         var fingerprint = transportData.DTLSData.Fingerprints
-            .FirstOrDefault(f => f.Algorithm.Equals("sha-256", StringComparison.OrdinalIgnoreCase)) 
-            ?? transportData.DTLSData.Fingerprints.First();
+                              .FirstOrDefault(f => f.Algorithm.Equals("sha-256", StringComparison.OrdinalIgnoreCase)) 
+                          ?? transportData.DTLSData.Fingerprints.First();
         
         string candidateStr = $"a=candidate:1 1 UDP 2130706431 {transportData.Host} {transportData.Port} typ host";
 

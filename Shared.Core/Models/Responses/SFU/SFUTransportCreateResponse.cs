@@ -1,6 +1,7 @@
 ﻿using Shared.Enums;
+using Shared.Models.Responses.SFU.Connection;
 
-namespace Shared.Models.Responses.SFUNegotiation
+namespace Shared.Models.Responses.SFU
 {
     public record SFUTransportCreateResponse(
         Guid RequestId, 

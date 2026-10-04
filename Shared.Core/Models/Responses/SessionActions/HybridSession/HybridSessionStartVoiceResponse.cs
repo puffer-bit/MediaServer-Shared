@@ -1,9 +1,7 @@
 using Shared.Enums;
-using Shared.Models.DataTransferObjects;
-using Shared.Models.Responses.SessionActions.HybridSession;
-using Shared.Models.Responses.SFUNegotiation;
+using Shared.Models.Responses.SFU;
 
-namespace Shared.Models.Requests.SessionActions.HybridSession;
+namespace Shared.Models.Responses.SessionActions.HybridSession;
 
 public record HybridSessionStartVoiceResponse(
     Guid RequestId,

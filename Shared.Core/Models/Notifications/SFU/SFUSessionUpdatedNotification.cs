@@ -1,4 +1,4 @@
-using Shared.Models.Responses.SFUNegotiation;
+using Shared.Models.Responses.SFU;
 
 namespace Shared.Models.Notifications.SFU;
 

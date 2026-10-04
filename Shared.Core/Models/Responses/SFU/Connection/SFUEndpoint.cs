@@ -1,6 +1,4 @@
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace Server.Shared.SFUService;
+namespace Shared.Models.Responses.SFU.Connection;
 
 public class SFUEndpoint
 {

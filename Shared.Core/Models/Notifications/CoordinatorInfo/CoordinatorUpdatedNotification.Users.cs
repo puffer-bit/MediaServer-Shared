@@ -1,7 +1,7 @@
 using Shared.Enums;
 using Shared.Models.DataTransferObjects;
 
-namespace Shared.Models.Notifications.CoordinatorInfo.Users;
+namespace Shared.Models.Notifications.CoordinatorInfo;
 
 public record CoordinatorUserListUpdatedNotification(IList<UserDTO> Users)
     : CoordinatorUpdatedNotification(CoordinatorStateChangedType.UsersListUpdated);

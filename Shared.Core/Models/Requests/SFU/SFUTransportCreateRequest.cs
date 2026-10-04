@@ -1,7 +1,8 @@
 ﻿using Shared.Enums;
-using Shared.Models.Responses.SFUNegotiation;
+using Shared.Models.Responses.SFU;
+using Shared.Models.Responses.SFU.Connection;
 
-namespace Shared.Models.Requests.WebRTCNegotiation
+namespace Shared.Models.Requests.SFU
 {
     public record SFUTransportCreateRequest(
         int SessionId) : SFURequest

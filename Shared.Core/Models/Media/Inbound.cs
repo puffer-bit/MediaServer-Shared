@@ -1,4 +1,4 @@
-namespace Shared.Models.Responses.SFU;
+namespace Shared.Models.Media;
 
 public record Inbound
 {

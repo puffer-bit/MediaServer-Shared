@@ -1,4 +1,4 @@
-namespace Shared.Models.Responses.SFU.Connection;
+namespace Shared.Models.Media.Transport;
 
 public record DTLSParameters
 {

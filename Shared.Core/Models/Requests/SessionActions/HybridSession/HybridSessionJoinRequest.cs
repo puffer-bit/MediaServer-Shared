@@ -1,6 +1,6 @@
 ﻿using Shared.Enums;
 using Shared.Models.Responses.SessionActions.HybridSession;
-using Shared.Models.Responses.SFU.Connection;
+using Shared.Models.Media.Transport;
 
 namespace Shared.Models.Requests.SessionActions.HybridSession
 {

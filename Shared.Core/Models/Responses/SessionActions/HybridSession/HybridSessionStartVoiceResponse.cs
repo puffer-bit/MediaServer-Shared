@@ -1,5 +1,5 @@
 using Shared.Enums;
-using Shared.Models.Responses.SFU;
+using Shared.Models.Media;
 
 namespace Shared.Models.Responses.SessionActions.HybridSession;
 

@@ -1,7 +1,7 @@
 using Shared.Enums;
 using Shared.Models.DataTransferObjects;
 using Shared.Models.Responses.SessionActions.HybridSession;
-using Shared.Models.Responses.SFU;
+using Shared.Models.Media;
 
 namespace Shared.Models.Requests.SessionActions.HybridSession;
 

@@ -3,8 +3,15 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text.Json;
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
+using System.Text.Json.Serialization.Metadata;
+using Shared.Enums;
 using Shared.Models;
+using Shared.Models.DataTransferObjects.ChatSession;
+using Shared.Models.DataTransferObjects.ChatSession.User;
+using Shared.Models.Notifications.SessionInfo;
+using Shared.Serialization;
 using Xunit;
 
 namespace Shared.Tests;
@@ -15,7 +22,15 @@ namespace Shared.Tests;
 /// </summary>
 public class BaseMessageRegistrationTests
 {
-    private static readonly JsonSerializerOptions JsonOptions = new() { PropertyNameCaseInsensitive = true };
+    // The wire format before the source-generated context; both must produce the same JSON
+    private static readonly JsonSerializerOptions ReflectionOptions = new()
+    {
+        PropertyNameCaseInsensitive = true,
+        MaxDepth = 16,
+        TypeInfoResolver = new DefaultJsonTypeInfoResolver()
+    };
+
+    private static readonly JsonTypeInfo<BaseMessage> BaseMessageInfo = ProtocolJsonContext.Default.BaseMessage;
 
     private static readonly JsonDerivedTypeAttribute[] Registrations =
         typeof(BaseMessage).GetCustomAttributes<JsonDerivedTypeAttribute>().ToArray();
@@ -64,11 +79,42 @@ public class BaseMessageRegistrationTests
         // The constructor is skipped on purpose: the test is about the type map, not about values.
         var message = (BaseMessage)RuntimeHelpers.GetUninitializedObject(type);
 
-        var json = JsonSerializer.Serialize(message, JsonOptions);
-        var restored = JsonSerializer.Deserialize<BaseMessage>(json, JsonOptions);
+        var json = JsonSerializer.Serialize(message, BaseMessageInfo);
+        var restored = JsonSerializer.Deserialize(json, BaseMessageInfo);
 
         Assert.NotNull(restored);
         Assert.Equal(type, restored.GetType());
-        Assert.Equal(json, JsonSerializer.Serialize(restored, JsonOptions));
+        Assert.Equal(json, JsonSerializer.Serialize(restored, BaseMessageInfo));
+    }
+
+    [Theory]
+    [MemberData(nameof(ConcreteMessageTypes))]
+    public void SourceGeneratedJson_MatchesReflectionJson(Type type)
+    {
+        var message = (BaseMessage)RuntimeHelpers.GetUninitializedObject(type);
+
+        Assert.Equal(
+            JsonSerializer.Serialize(message, ReflectionOptions),
+            JsonSerializer.Serialize(message, BaseMessageInfo));
+    }
+
+    [Fact]
+    public void ChatUserAdminFlag_SurvivesRoundTrip()
+    {
+        var session = new ChatSessionDTO
+        {
+            Id = 1,
+            CoordinatorInstanceId = "c",
+            Name = "Chat",
+            Capacity = 10,
+            SessionType = SessionType.Chat,
+            CreatorUserId = 7,
+            Users = new Dictionary<int, TextChatUserDTO> { [7] = new() { UserId = 7, IsAdmin = true } }
+        };
+
+        var json = JsonSerializer.Serialize<BaseMessage>(new ChatSessionCreatedNotification(session), BaseMessageInfo);
+        var restored = Assert.IsType<ChatSessionCreatedNotification>(JsonSerializer.Deserialize(json, BaseMessageInfo));
+
+        Assert.True(restored.Session.Users[7].IsAdmin);
     }
 }

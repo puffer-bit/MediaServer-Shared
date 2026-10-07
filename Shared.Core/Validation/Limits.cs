@@ -6,7 +6,7 @@ namespace Shared.Validation;
 /// </summary>
 public static class Limits
 {
-    public const int UserIdentityMaxLength = 50;
+    public const int UserIdentityMaxLength = 37;
     public const int PasswordMaxLength = 128;
     public const int UserIdsMaxCount = 100;
 

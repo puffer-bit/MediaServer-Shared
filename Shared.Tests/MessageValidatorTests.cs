@@ -135,7 +135,7 @@ public class MessageValidatorTests
             var propertyType = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
             var propertyPath = $"{path}.{property.Name}";
             var bounded = property.GetCustomAttributes<ValidationAttribute>()
-                .Any(a => a is StringLengthAttribute or MaxLengthAttribute or LengthAttribute or OneOfAttribute);
+                .Any(a => a is StringLengthAttribute or ItemCountAttribute or OneOfAttribute);
 
             if (propertyType == typeof(string))
             {

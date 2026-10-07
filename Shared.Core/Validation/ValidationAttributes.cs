@@ -93,3 +93,26 @@ public sealed class OneOfAttribute(params string[] allowed) : ValidationAttribut
 
     public override string FormatErrorMessage(string name) => $"{name} must be one of: {string.Join(", ", allowed)}.";
 }
+
+/// <summary>
+/// A collection with a bounded number of items. Replaces <see cref="LengthAttribute"/> and
+/// <see cref="MaxLengthAttribute"/>, which fall back to reflection on a <c>Count</c> property and
+/// are therefore not trim-safe; protocol collections always implement <see cref="System.Collections.ICollection"/>.
+/// </summary>
+[AttributeUsage(AttributeTargets.Property | AttributeTargets.Parameter)]
+public sealed class ItemCountAttribute(int minimum, int maximum) : ValidationAttribute
+{
+    public ItemCountAttribute(int maximum) : this(0, maximum)
+    {
+    }
+
+    public int Minimum { get; } = minimum;
+    public int Maximum { get; } = maximum;
+
+    public override bool IsValid(object? value) =>
+        value is not System.Collections.ICollection collection
+        || (collection.Count >= Minimum && collection.Count <= Maximum);
+
+    public override string FormatErrorMessage(string name) =>
+        $"{name} must contain from {Minimum} to {Maximum} items.";
+}

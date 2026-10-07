@@ -19,11 +19,11 @@ public class NewChatMessageModel : IValidatableObject
     [EntityId]
     public int? ReplyToMessageId { get; init; }
 
-    [Required, MaxLength(Limits.ChatAttachmentsMaxCount)]
+    [Required, ItemCount(Limits.ChatAttachmentsMaxCount)]
     public List<ChatImageContentDTO> Images { get; init; } = new();
-    [Required, MaxLength(Limits.ChatAttachmentsMaxCount)]
+    [Required, ItemCount(Limits.ChatAttachmentsMaxCount)]
     public List<ChatVideoContentDTO> Video { get; init; } = new();
-    [Required, MaxLength(Limits.ChatAttachmentsMaxCount)]
+    [Required, ItemCount(Limits.ChatAttachmentsMaxCount)]
     public List<ChatFileContentDTO> Files { get; init; } = new();
 
     public bool IsDelayed { get; set; }

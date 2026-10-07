@@ -6,6 +6,6 @@ public record DTLSParameters
 {
     [Required, OneOf("auto", "client", "server")]
     public required string Role { get; init; }
-    [Required, Length(1, Limits.DtlsFingerprintsMaxCount)]
+    [Required, ItemCount(1, Limits.DtlsFingerprintsMaxCount)]
     public required List<DTLSFingerprint> Fingerprints { get; init; }
 }

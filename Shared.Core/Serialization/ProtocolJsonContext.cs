@@ -8,6 +8,7 @@ namespace Shared.Serialization;
 /// reached through the <see cref="JsonDerivedTypeAttribute"/> registrations, so nothing here needs
 /// reflection at run time and it works under NativeAOT.
 /// </summary>
+// Messages nest a few levels at most; deeper input is malformed or hostile
 [JsonSourceGenerationOptions(PropertyNameCaseInsensitive = true, MaxDepth = 16)]
 [JsonSerializable(typeof(BaseMessage))]
 public sealed partial class ProtocolJsonContext : JsonSerializerContext;

@@ -1,22 +1,21 @@
-using Shared.Enums;
 using Shared.Models.DataTransferObjects;
 
 namespace Shared.Models.Notifications.CoordinatorInfo;
 
 public record CoordinatorUserListUpdatedNotification(IList<UserDTO> Users)
-    : CoordinatorUpdatedNotification(CoordinatorStateChangedType.UsersListUpdated);
+    : CoordinatorUpdatedNotification;
 
 public record CoordinatorUserConnectedNotification(UserDTO User)
-    : CoordinatorUpdatedNotification(CoordinatorStateChangedType.UserConnected);
+    : CoordinatorUpdatedNotification;
 
 public record CoordinatorUserUpdatedNotification(UserDTO User)
-    : CoordinatorUpdatedNotification(CoordinatorStateChangedType.UserUpdated);
+    : CoordinatorUpdatedNotification;
 
 public record CoordinatorUserDisconnectedNotification(int UserId, string? Reason = null)
-    : CoordinatorUpdatedNotification(CoordinatorStateChangedType.UserDisconnected);
+    : CoordinatorUpdatedNotification;
 
 public record CoordinatorUserKickedNotification(int UserId, string? Reason = null)
-    : CoordinatorUpdatedNotification(CoordinatorStateChangedType.UserKicked);
+    : CoordinatorUpdatedNotification;
 
 public record CoordinatorUserBannedNotification(int UserId, string? Reason = null)
-    : CoordinatorUpdatedNotification(CoordinatorStateChangedType.UserBanned);
+    : CoordinatorUpdatedNotification;

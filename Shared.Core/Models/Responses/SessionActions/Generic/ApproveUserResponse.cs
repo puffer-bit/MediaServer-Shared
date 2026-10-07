@@ -7,7 +7,4 @@ public record ApproveUserResponse(
     int SessionId,
     int UserTargetId,
     SessionType SessionType,
-    ApproveUserSessionResult Result) : GenericSessionResponse(RequestId)
-{
-    public override SessionActionType ActionType => SessionActionType.ApproveRequest;
-}
+    ApproveUserSessionResult Result) : GenericSessionResponse(RequestId);

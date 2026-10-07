@@ -9,8 +9,6 @@ namespace Shared.Models.Requests.SessionActions.HybridSession;
 public record HybridSessionConnectTransportRequest(
     [property: EntityId] int SessionId) : HybridSessionRequest
 {
-    public override HybridSessionActionType ActionType => HybridSessionActionType.ConnectTransport;
-
     [Required]
     public required DTLSParameters DtlsParameters { get; init; }
 

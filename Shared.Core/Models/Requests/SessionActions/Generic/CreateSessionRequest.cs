@@ -11,7 +11,6 @@ public record CreateSessionRequest(
     [property: Required] CreateSessionModel CreateSessionModel
 ) : GenericSessionRequest
 {
-    public override SessionActionType ActionType { get; init; } = SessionActionType.CreateRequest;
     public CreateSessionResponse ToResponse(CreateSessionResult result, SessionDTO? sessionDTO = null)
         => new(RequestId, sessionDTO, result);
 }

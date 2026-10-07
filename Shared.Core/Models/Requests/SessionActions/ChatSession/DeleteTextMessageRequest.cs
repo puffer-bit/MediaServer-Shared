@@ -10,8 +10,6 @@ public record DeleteTextMessageRequest(
     [property: EntityId] int MessageId
 ) : ChatSessionRequest
 {
-    public override ChatSessionActionType ActionType { get; init; } = ChatSessionActionType.DeleteMessage;
-
     public DeleteTextMessageResponse ToResponse(DeleteMessageResult result)
         => new(RequestId, result);
 }

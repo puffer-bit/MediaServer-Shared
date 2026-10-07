@@ -12,8 +12,6 @@ public record EditTextMessageRequest(
     [property: Required, NotBlank, StringLength(Limits.ChatTextMaxLength), NoControlCharacters(allowLineBreaks: true)] string Text
 ) : ChatSessionRequest
 {
-    public override ChatSessionActionType ActionType { get; init; } = ChatSessionActionType.EditMessage;
-
     public EditMessageResponse ToResponse(EditMessageResult result)
         => new(RequestId, result);
 }

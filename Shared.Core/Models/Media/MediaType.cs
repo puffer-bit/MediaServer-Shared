@@ -4,5 +4,5 @@ public enum MediaType
 {
     Audio = 0,
     Video = 1,
-    Tunnel,
+    Tunnel = 2
 }

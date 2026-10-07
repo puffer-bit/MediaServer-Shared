@@ -5,7 +5,4 @@ namespace Shared.Models.Responses.SessionActions.HybridSession;
 public record HybridSessionSetMicrophoneMuteResponse(
     Guid RequestId,
     SetMicrophoneMuteResult Result,
-    bool IsMuted) : HybridSessionResponse(RequestId)
-{
-    public override HybridSessionActionType ActionType { get; init; } = HybridSessionActionType.ToggleMicrophoneMute;
-}
+    bool IsMuted) : HybridSessionResponse(RequestId);

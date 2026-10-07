@@ -6,7 +6,4 @@ namespace Shared.Models.Responses.SessionActions.Generic;
 public record CreateSessionResponse(
     Guid RequestId,
     SessionDTO? Session,
-    CreateSessionResult Result ) : GenericSessionResponse(RequestId)
-{
-    public override SessionActionType ActionType => SessionActionType.CreateRequest;
-}
+    CreateSessionResult Result ) : GenericSessionResponse(RequestId);

@@ -9,8 +9,6 @@ public record DeleteSessionRequest(
     [property: EntityId] int SessionId
 ) : GenericSessionRequest
 {
-    public override SessionActionType ActionType { get; init; } = SessionActionType.DeleteRequest;
-
     public DeleteSessionResponse ToResponse(DeleteSessionResult result)
         => new(RequestId, result);
 }

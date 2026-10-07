@@ -4,114 +4,113 @@ using Shared.Models.Media;
 
 namespace Shared.Models.Notifications.SessionInfo;
 
-public abstract record HybridSessionUpdatedNotification(HybridSessionStateChangedType Type)
-    : Notification;
+public abstract record HybridSessionUpdatedNotification : Notification;
 
 public record HybridSessionSFUNodeChangedNotification(int SessionId)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.SFUNodeChanged);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionSFUNodeDisconnectedNotification(int SessionId)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.SFUNodeDisconnected);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionSFUNodeConnectedNotification(int SessionId)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.SFUNodeConnected);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerStateChangedNotification(int SessionId, int UserId, HybridSessionPeerState State)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerStateChanged);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerJoinedNotification(int SessionId, PeerDTO Peer)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerJoined);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerLeftNotification(int SessionId, int UserId)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerLeft);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerKickedNotification(int SessionId, int UserId, int? InitiatorUserId = null, string? Reason = null)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerKicked);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerIdleKickedNotification(int SessionId, int UserId)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerKickedIdle);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerBannedNotification(int SessionId, int UserId, int? InitiatorUserId = null, string? Reason = null)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerBanned);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerApprovedNotification(int SessionId, int UserId, int InitiatorUserId)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerApproved);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerRejectedNotification(int SessionId, int UserId, int? InitiatorUserId = null, string? Reason = null)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerRejected);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerMovedOutNotification(int SessionId, int UserId, int? InitiatorUserId = null)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerMovedOut);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerMovedInNotification(int SessionId, int UserId, int? InitiatorUserId = null)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerMovedIn);
+    : HybridSessionUpdatedNotification;
 
 
 public record HybridSessionPeerStartedScreenShareNotification(int SessionId, int UserId, Inbound Inbound)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerStartedScreenShare);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerUpdatedScreenShareNotification(int SessionId, int UserId, Inbound Inbound)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerUpdatedScreenShare);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerStoppedScreenShareNotification(int SessionId, int UserId, int? InitiatorUserId = null)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerStoppedScreenShare);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerMutedScreenShareSoundNotification(int SessionId, int UserId, int? InitiatorUserId = null)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerMutedScreenShareSound);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerPausedScreenShareNotification(int SessionId, int UserId, int? InitiatorUserId = null, string? Reason = null)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerPausedScreenShare);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerUnmutedScreenShareSoundNotification(int SessionId, int UserId)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerUnmutedScreenShareSound);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerResumedScreenShareNotification(int SessionId, int UserId)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerResumedScreenShare);
+    : HybridSessionUpdatedNotification;
 
 
 public record HybridSessionPeerStartedVideoShareNotification(int SessionId, int UserId, Inbound Inbound)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerStartedVideoShare);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerUpdatedVideoShareNotification(int SessionId, int UserId, Inbound Inbound)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerUpdatedVideoShare);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerStoppedVideoShareNotification(int SessionId, int UserId, int? InitiatorUserId = null)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerStoppedVideoShare);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerPausedVideoShareNotification(int SessionId, int UserId, int? InitiatorUserId = null, string? Reason = null)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerPausedVideoShare);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerResumedVideoShareNotification(int SessionId, int UserId, int? InitiatorUserId = null, string? Reason = null)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerResumedVideoShare);
+    : HybridSessionUpdatedNotification;
 
 
 public record HybridSessionPeerStartedVoiceShareNotification(int SessionId, int UserId, Inbound Inbound)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerStartedVoiceShare);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerUpdatedVoiceShareNotification(int SessionId, int UserId, Inbound Inbound)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerUpdatedVoiceShare);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerStoppedVoiceShareNotification(int SessionId, int UserId, int? InitiatorUserId = null)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerStoppedVoiceShare);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerMuteMicrophoneNotification(int SessionId, int UserId, int? InitiatorUserId = null)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerMuteMicrophone);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerUnmuteMicrophoneNotification(int SessionId, int UserId, int? InitiatorUserId = null)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerUnmuteMicrophone);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerMuteSoundNotification(int SessionId, int UserId, int? InitiatorUserId = null)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerMuteSound);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerUnmuteSoundNotification(int SessionId, int UserId, int? InitiatorUserId = null)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerUnmuteSound);
+    : HybridSessionUpdatedNotification;
 
 
 public record HybridSessionPeerAfkNotification(int SessionId, int UserId, string? Reason = null)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerAfk);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerNotAfkNotification(int SessionId, int UserId)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerNotAfk);
+    : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerPokedNotification(int SessionId, int UserId, int InitiatorUserId, string? Message = null)
-    : HybridSessionUpdatedNotification(HybridSessionStateChangedType.PeerPoked);
+    : HybridSessionUpdatedNotification;

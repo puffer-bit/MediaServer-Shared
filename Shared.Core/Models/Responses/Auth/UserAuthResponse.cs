@@ -1,4 +1,3 @@
-using Shared.Enums;
 using Shared.Enums.Auth;
 using Shared.Models.DataTransferObjects;
 
@@ -9,7 +8,4 @@ public record UserAuthResponse(
     UserDTO? UserDTO,
     string? UserIdentity,
     AuthResult AuthResult,
-    string? ServerMessage) : AuthResponse(RequestId)
-{
-    public override AuthActionType ActionType { get; init; } = AuthActionType.Login;
-}
+    string? ServerMessage) : AuthResponse(RequestId);

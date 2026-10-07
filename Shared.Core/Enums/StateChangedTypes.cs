@@ -1,16 +1,5 @@
 namespace Shared.Enums;
 
-public enum CoordinatorStateChangedType
-{
-    UsersListUpdated = 1,
-    CoordinatorReconfigured = 8,
-    UserConnected = 9,
-    UserDisconnected = 10,
-    UserKicked = 11,
-    UserBanned,
-    UserUpdated
-}
-
 public enum SessionsStateChangedType
 {
     HybridSessionCreated = 7,
@@ -69,10 +58,4 @@ public enum ChatSessionStateChangedType
     MessageAdded = 2,
     MessageEdited,
     MessageDeleted
-}
-
-public enum HeartbeatStateChangedType
-{
-    ServerClosing,
-    ServerRestarting
 }

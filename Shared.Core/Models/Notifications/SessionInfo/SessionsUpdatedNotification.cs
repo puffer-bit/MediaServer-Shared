@@ -1,25 +1,24 @@
-using Shared.Enums;
 using Shared.Models.DataTransferObjects;
 using Shared.Models.DataTransferObjects.ChatSession;
 
 namespace Shared.Models.Notifications.SessionInfo;
 
-public abstract record SessionsUpdatedNotification(SessionsStateChangedType NotificationType) : Notification;
+public abstract record SessionsUpdatedNotification : Notification;
 
 public record HybridSessionCreatedNotification(HybridSessionDTO Session)
-    : SessionsUpdatedNotification(SessionsStateChangedType.HybridSessionCreated);
+    : SessionsUpdatedNotification;
 
 public record HybridSessionReconfiguredNotification(HybridSessionDTO Session)
-    : SessionsUpdatedNotification(SessionsStateChangedType.HybridSessionReconfigured);
+    : SessionsUpdatedNotification;
 
 public record HybridSessionDeletedNotification(int SessionId)
-    : SessionsUpdatedNotification(SessionsStateChangedType.HybridSessionDeleted);
+    : SessionsUpdatedNotification;
 
 public record ChatSessionCreatedNotification(ChatSessionDTO Session)
-    : SessionsUpdatedNotification(SessionsStateChangedType.ChatSessionCreated);
+    : SessionsUpdatedNotification;
 
 public record ChatSessionReconfiguredNotification(ChatSessionDTO Session)
-    : SessionsUpdatedNotification(SessionsStateChangedType.ChatSessionReconfigured);
+    : SessionsUpdatedNotification;
 
 public record ChatSessionDeletedNotification(int SessionId)
-    : SessionsUpdatedNotification(SessionsStateChangedType.ChatSessionDeleted);
+    : SessionsUpdatedNotification;

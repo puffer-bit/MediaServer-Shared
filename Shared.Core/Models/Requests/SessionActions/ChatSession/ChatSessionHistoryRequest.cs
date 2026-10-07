@@ -12,8 +12,6 @@ public record ChatSessionHistoryRequest(
     [property: Range(0, int.MaxValue)] int? Skip
 ) : ChatSessionRequest
 {
-    public override ChatSessionActionType ActionType { get; init; } = ChatSessionActionType.ChatHistory;
-
     public ChatSessionHistoryResponse ToResponse(FetchMessagesResult result, List<ChatMessageDTO>? messages)
         => new(RequestId, result, messages);
 

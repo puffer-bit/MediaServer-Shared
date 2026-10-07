@@ -9,8 +9,6 @@ namespace Shared.Models.Requests.Coordinator;
 public record CoordinatorUserInfoRequest(
     [property: Required, ItemCount(1, Limits.UserIdsMaxCount)] IList<int> UserIds) : CoordinatorRequest
 {
-    public override CoordinatorActionType ActionType { get; init; } = CoordinatorActionType.UserInfoRequest;
-
     public CoordinatorUserInfoResponse ToResponse(IDictionary<int, UserDTO> userList, UsersRequestResult result)
         => new(RequestId, userList, result);
 }

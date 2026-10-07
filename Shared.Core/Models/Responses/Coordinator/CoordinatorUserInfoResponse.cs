@@ -6,7 +6,4 @@ namespace Shared.Models.Responses.Coordinator;
 public record CoordinatorUserInfoResponse(
     Guid RequestId,
     IDictionary<int, UserDTO> UserList,
-    UsersRequestResult Result) : CoordinatorResponse(RequestId)
-{
-    public override CoordinatorActionType ActionType { get; init; } = CoordinatorActionType.InfoRequest;
-}
+    UsersRequestResult Result) : CoordinatorResponse(RequestId);

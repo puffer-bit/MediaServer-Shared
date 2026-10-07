@@ -11,8 +11,6 @@ public record SendTextMessageRequest(
     [property: Required] NewChatMessageModel MessageModel
 ) : ChatSessionRequest
 {
-    public override ChatSessionActionType ActionType { get; init; } = ChatSessionActionType.SendMessage;
-
     public SendTextMessageResponse ToResponse(AddMessageResult result)
         => new(RequestId, result);
 }

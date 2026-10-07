@@ -1,19 +1,18 @@
-using Shared.Enums;
 using Shared.Models.DataTransferObjects;
 using Shared.Models.DataTransferObjects.ChatSession.Messages;
 
 namespace Shared.Models.Notifications.SessionInfo;
 
-public abstract record ChatSessionUpdatedNotification(ChatSessionStateChangedType NotificationType): Notification;
+public abstract record ChatSessionUpdatedNotification : Notification;
 
 public record ChatSessionMessageAddedNotification(int ChatId, ChatMessageDTO Message)
-    : ChatSessionUpdatedNotification(ChatSessionStateChangedType.MessageAdded);
+    : ChatSessionUpdatedNotification;
 
 public record ChatSessionMessageEditedNotification(int ChatId, ChatMessageDTO Message)
-    : ChatSessionUpdatedNotification(ChatSessionStateChangedType.MessageEdited);
+    : ChatSessionUpdatedNotification;
 
 public record ChatSessionMessageDeletedNotification(int ChatId, int MessageId)
-    : ChatSessionUpdatedNotification(ChatSessionStateChangedType.MessageDeleted);
+    : ChatSessionUpdatedNotification;
 
 public record ChatSessionUserTypingNotification(int ChatId, int UserId)
-    : ChatSessionUpdatedNotification(ChatSessionStateChangedType.UserTyping);
+    : ChatSessionUpdatedNotification;

@@ -12,8 +12,6 @@ public record KickFromSessionRequest(
     [property: StringLength(Limits.ReasonMaxLength), NoControlCharacters] string? Reason
 ) : GenericSessionRequest
 {
-    public override SessionActionType ActionType { get; init; } = SessionActionType.KickRequest;
-
     public KickFromSessionResponse ToResponse(LeaveSessionResult result)
         => new(RequestId, SessionId, UserTargetId, SessionType, result);
 }

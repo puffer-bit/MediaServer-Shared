@@ -9,8 +9,6 @@ public record HybridSessionSetMicrophoneMuteRequest(
     [property: EntityId] int SessionId,
     bool IsMuted) : HybridSessionRequest
 {
-    public override HybridSessionActionType ActionType => HybridSessionActionType.ToggleMicrophoneMute;
-
     public HybridSessionSetMicrophoneMuteResponse ToResponse(SetMicrophoneMuteResult result)
         => new (RequestId, result, IsMuted);
 }

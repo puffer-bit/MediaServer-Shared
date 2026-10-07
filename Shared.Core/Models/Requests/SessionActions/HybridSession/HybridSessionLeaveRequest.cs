@@ -9,8 +9,6 @@ public record HybridSessionLeaveRequest(
     [property: EntityId] int SessionId
 ) : HybridSessionRequest
 {
-    public override HybridSessionActionType ActionType => HybridSessionActionType.Leave;
-
     public HybridSessionLeaveResponse ToResponse(HybridSessionLeaveResult result)
         => new(RequestId, result);
 }

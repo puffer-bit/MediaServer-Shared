@@ -7,7 +7,4 @@ public record BanInSessionResponse(
     int SessionId,
     int UserTargetId,
     SessionType SessionType,
-    BanFromSessionResult Result ) : GenericSessionResponse(RequestId)
-{
-    public override SessionActionType ActionType => SessionActionType.BanRequest;
-}
+    BanFromSessionResult Result ) : GenericSessionResponse(RequestId);

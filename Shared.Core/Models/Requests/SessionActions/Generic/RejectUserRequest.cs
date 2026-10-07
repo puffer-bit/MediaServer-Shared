@@ -12,8 +12,6 @@ public record RejectUserRequest(
     [property: StringLength(Limits.ReasonMaxLength), NoControlCharacters] string? Reason
 ) : GenericSessionRequest
 {
-    public override SessionActionType ActionType { get; init; } = SessionActionType.RejectRequest;
-
     public RejectUserResponse ToResponse(RejectUserSessionResult result)
         => new(RequestId, SessionId, UserTargetId, SessionType, result);
 }

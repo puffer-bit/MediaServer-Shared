@@ -9,8 +9,6 @@ namespace Shared.Models.Requests.SessionActions.HybridSession;
 public record HybridSessionStopVoiceRequest(
     [property: EntityId] int SessionId) : HybridSessionRequest
 {
-    public override HybridSessionActionType ActionType => HybridSessionActionType.StopVoiceShare;
-
     public HybridSessionStopVoiceResponse ToResponse(StopVoiceShareResult result)
         => new (RequestId, result);
 }

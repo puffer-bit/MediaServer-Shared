@@ -9,8 +9,6 @@ namespace Shared.Models.Requests.SessionActions.HybridSession;
 public record HybridSessionStopVideoRequest(
     [property: EntityId] int SessionId) : HybridSessionRequest
 {
-    public override HybridSessionActionType ActionType => HybridSessionActionType.StopVideoShare;
-
     public HybridSessionStopVideoResponse ToResponse(StopVideoShareResult result)
         => new (RequestId, result);
 }

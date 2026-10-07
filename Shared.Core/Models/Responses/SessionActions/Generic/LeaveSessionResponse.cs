@@ -6,7 +6,4 @@ public record LeaveSessionResponse(
     Guid RequestId,
     int SessionId,
     SessionType SessionType,
-    LeaveSessionResult Result ) : GenericSessionResponse(RequestId)
-{
-    public override SessionActionType ActionType => SessionActionType.LeaveRequest;
-}
+    LeaveSessionResult Result ) : GenericSessionResponse(RequestId);

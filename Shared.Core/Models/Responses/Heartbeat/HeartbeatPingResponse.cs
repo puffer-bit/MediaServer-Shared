@@ -1,10 +1,5 @@
-using Shared.Enums;
-
 namespace Shared.Models.Responses.Heartbeat;
 
 public record HeartbeatPingResponse(
     Guid RequestId,
-    long Timestamp) : HeartbeatResponse(RequestId)
-{
-    public override HeartbeatActionType ActionType { get; init; } = HeartbeatActionType.Ping;
-}
+    long Timestamp) : HeartbeatResponse(RequestId);

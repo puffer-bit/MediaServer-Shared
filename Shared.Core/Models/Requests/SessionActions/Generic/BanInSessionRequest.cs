@@ -12,8 +12,6 @@ public record BanInSessionRequest(
     [property: StringLength(Limits.ReasonMaxLength), NoControlCharacters] string? Reason
 ) : GenericSessionRequest
 {
-    public override SessionActionType ActionType { get; init; } = SessionActionType.BanRequest;
-
     public BanInSessionResponse ToResponse(BanFromSessionResult result)
         => new(RequestId, SessionId, UserTargetId, SessionType, result);
 }

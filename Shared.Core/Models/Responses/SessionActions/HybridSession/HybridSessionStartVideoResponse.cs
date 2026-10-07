@@ -6,7 +6,4 @@ namespace Shared.Models.Responses.SessionActions.HybridSession;
 public record HybridSessionStartVideoResponse(
     Guid RequestId,
     StartVideoShareResult Result,
-    Outbound? Outbound) : HybridSessionResponse(RequestId)
-{
-    public override HybridSessionActionType ActionType { get; init; } = HybridSessionActionType.StartVideoShare;
-}
+    Outbound? Outbound) : HybridSessionResponse(RequestId);

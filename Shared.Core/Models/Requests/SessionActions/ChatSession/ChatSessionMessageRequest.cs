@@ -11,8 +11,6 @@ public record ChatSessionMessageRequest(
     [property: EntityId] int MessageId
 ) : ChatSessionRequest
 {
-    public override ChatSessionActionType ActionType { get; init; } = ChatSessionActionType.MessageRequest;
-
     public ChatSessionMessageResponse ToResponse(FetchMessageResult result, ChatMessageDTO? message)
         => new(RequestId, message, result);
 }

@@ -10,8 +10,6 @@ public record LeaveSessionRequest(
     [property: DefinedEnum] SessionType SessionType
 ) : GenericSessionRequest
 {
-    public override SessionActionType ActionType { get; init; } = SessionActionType.LeaveRequest;
-
     public LeaveSessionResponse ToResponse(LeaveSessionResult result)
         => new(RequestId, SessionId, SessionType, result);
 }

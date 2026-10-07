@@ -1,6 +1,3 @@
 namespace Shared.Models.Notifications;
 
-public abstract record Notification() : BaseMessage
-{
-
-}
+public abstract record Notification : BaseMessage;

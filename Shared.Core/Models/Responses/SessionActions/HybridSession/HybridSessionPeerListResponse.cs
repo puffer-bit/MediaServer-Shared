@@ -6,7 +6,4 @@ namespace Shared.Models.Responses.SessionActions.HybridSession;
 public record HybridSessionPeerListResponse(
     Guid RequestId,
     PeerListRequestResult Result,
-    Dictionary<int, PeerDTO>? Peers) : HybridSessionResponse(RequestId)
-{
-    public override HybridSessionActionType ActionType { get; init; } = HybridSessionActionType.PeerListRequest;
-}
+    Dictionary<int, PeerDTO>? Peers) : HybridSessionResponse(RequestId);

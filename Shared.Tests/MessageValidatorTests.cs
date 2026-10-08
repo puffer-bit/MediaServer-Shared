@@ -74,6 +74,7 @@ public class MessageValidatorTests
         [
             new UserAuthRequest("secret", "alice"),
             new CoordinatorUserInfoRequest([1, 2, 3]),
+            new CoordinatorChangeUsernameRequest("alice"),
             new CreateSessionRequest(new CreateSessionModel("Room", 10, new HybridSessionCreateData(WebRTCEngine.Mediasoup))),
             new CreateSessionRequest(new CreateSessionModel("Chat", 50, new ChatSessionCreateData("About\nus", "https://example.com/icon.png"))),
             new KickFromSessionRequest(1, 2, SessionType.Hybrid, "spam"),
@@ -94,6 +95,9 @@ public class MessageValidatorTests
         { new UserAuthRequest("secret", new string('a', Limits.UserIdentityMaxLength + 1)), "UserIdentity" },
         { new CoordinatorUserInfoRequest(Enumerable.Range(1, Limits.UserIdsMaxCount + 1).ToList()), "UserIds" },
         { new CoordinatorUserInfoRequest([]), "UserIds" },
+        { new CoordinatorChangeUsernameRequest(new string('u', Limits.UsernameMaxLength + 1)), "Username" },
+        { new CoordinatorChangeUsernameRequest("   "), "Username" },
+        { new CoordinatorChangeUsernameRequest("bad\u0007name"), "Username" },
         { new CreateSessionRequest(new CreateSessionModel(new string('n', Limits.SessionNameMaxLength + 1), 10, new ChatSessionCreateData())), "Name" },
         { new CreateSessionRequest(new CreateSessionModel("   ", 10, new ChatSessionCreateData())), "Name" },
         { new CreateSessionRequest(new CreateSessionModel("bad\u0007name", 10, new ChatSessionCreateData())), "Name" },

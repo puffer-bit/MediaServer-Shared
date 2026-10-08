@@ -9,6 +9,7 @@ public static class Limits
     public const int UserIdentityMaxLength = 37;
     public const int PasswordMaxLength = 128;
     public const int UserIdsMaxCount = 100;
+    public const int UsernameMaxLength = 32;
 
     public const int SessionNameMaxLength = 50;
     public const int SessionCapacityMin = 1;

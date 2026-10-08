@@ -89,6 +89,7 @@ namespace Shared.Models;
 
 [JsonDerivedType(typeof(CoordinatorInfoRequest), typeDiscriminator: nameof(CoordinatorInfoRequest))]
 [JsonDerivedType(typeof(CoordinatorUserInfoRequest), typeDiscriminator: nameof(CoordinatorUserInfoRequest))]
+[JsonDerivedType(typeof(CoordinatorChangeUsernameRequest), typeDiscriminator: nameof(CoordinatorChangeUsernameRequest))]
 
 [JsonDerivedType(typeof(HeartbeatPingRequest), typeDiscriminator: nameof(HeartbeatPingRequest))]
 
@@ -126,6 +127,7 @@ namespace Shared.Models;
 
 [JsonDerivedType(typeof(CoordinatorInfoResponse), typeDiscriminator: nameof(CoordinatorInfoResponse))]
 [JsonDerivedType(typeof(CoordinatorUserInfoResponse), typeDiscriminator: nameof(CoordinatorUserInfoResponse))]
+[JsonDerivedType(typeof(CoordinatorChangeUsernameResponse), typeDiscriminator: nameof(CoordinatorChangeUsernameResponse))]
 
 [JsonDerivedType(typeof(HeartbeatPingResponse), typeDiscriminator: nameof(HeartbeatPingResponse))]
 

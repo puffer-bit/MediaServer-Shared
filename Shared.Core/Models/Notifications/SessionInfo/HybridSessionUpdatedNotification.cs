@@ -46,7 +46,7 @@ public record HybridSessionPeerMovedInNotification(int SessionId, int UserId, in
     : HybridSessionUpdatedNotification;
 
 
-public record HybridSessionPeerStartedScreenShareNotification(int SessionId, int UserId, Inbound Inbound)
+public record HybridSessionPeerStartedScreenShareNotification(int SessionId, int UserId, Inbound? Inbound = null)
     : HybridSessionUpdatedNotification;
 
 public record HybridSessionPeerUpdatedScreenShareNotification(int SessionId, int UserId, Inbound Inbound)

@@ -99,6 +99,33 @@ public enum StopVideoShareResult
     Rejected = 5
 }
 
+public enum StartScreenShareResult
+{
+    InternalError = -1,
+    NoError = 0,
+    UnsupportedMedia = 1,
+    InsufficientPermissions = 2,
+    SFUError = 3,
+    SessionNotExists = 4,
+    PeerNotExists = 5,
+    SFUNotActive = 6,
+    TimedOut = 7,
+    Rejected = 8
+}
+
+public enum StopScreenShareResult
+{
+    InternalError = -1,
+    NoError = 0,
+    ScreenShareNotActive = 1,
+    InsufficientPermissions = 2,
+    PeerNotExists = 3,
+    SFUError = 4,
+    SFUNotActive = 5,
+    TimedOut = 6,
+    Rejected = 7
+}
+
 public enum UpdateVideoShareResult
 {
     InternalError = -1,

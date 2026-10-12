@@ -28,6 +28,7 @@ public static class Limits
     public static readonly TimeSpan ChatMessageMaxLifetime = TimeSpan.FromDays(365);
 
     public const int ClientEpochMaxLength = 36;
+    public const int ResumedInboundsMaxCount = 256;
     public const int DtlsFingerprintsMaxCount = 5;
     public const int DtlsAlgorithmMaxLength = 16;
 

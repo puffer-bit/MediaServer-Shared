@@ -126,6 +126,32 @@ public enum StopScreenShareResult
     Rejected = 7
 }
 
+public enum ResumeInboundsResult
+{
+    InternalError = -1,
+    NoError = 0,
+    SessionNotExists = 1,
+    PeerNotExists = 2,
+    SFUError = 3,
+    SFUNotActive = 4,
+    TimedOut = 5,
+    Rejected = 6
+}
+
+public enum SetScreenShareWatchResult
+{
+    InternalError = -1,
+    NoError = 0,
+    ScreenShareNotActive = 1,
+    InsufficientPermissions = 2,
+    SFUError = 3,
+    SessionNotExists = 4,
+    PeerNotExists = 5,
+    SFUNotActive = 6,
+    TimedOut = 7,
+    Rejected = 8
+}
+
 public enum UpdateVideoShareResult
 {
     InternalError = -1,

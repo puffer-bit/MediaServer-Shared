@@ -26,11 +26,10 @@ namespace Shared.Tests;
 
 public class MessageValidatorTests
 {
-    // Media attachments are not implemented yet: whether they become links or object storage
-    // keys is undecided, so their fields get limits once that is settled
+    // Only images can be attached so far, and a request with a video or a file is rejected as
+    // a whole, so their fields get limits once they can be uploaded
     private static readonly HashSet<Type> PendingMediaTypes =
     [
-        typeof(ChatImageContentDTO),
         typeof(ChatVideoContentDTO),
         typeof(ChatFileContentDTO)
     ];
@@ -88,6 +87,8 @@ public class MessageValidatorTests
             new ChatSessionChangesRequest(1, 0, 50),
             new EditTextMessageRequest(1, 2, "fixed\ttypo"),
             new SendTextMessageRequest(1, new NewChatMessageModel { ChatId = 1, TextContent = new ChatTextContentDTO { Text = "hi" }, ReplyToMessageId = 5 }),
+            new SendTextMessageRequest(1, new NewChatMessageModel { ChatId = 1, Images = [Image("a", "b")] }),
+            new MediaTokenRequest(),
             new HybridSessionJoinRequest(1) { ClientEpoch = Guid.NewGuid().ToString("N") },
             ConnectTransport(new DTLSFingerprint { Algorithm = "sha-256", Fingerprint = "AB:CD:EF:01" })
         ];
@@ -95,6 +96,17 @@ public class MessageValidatorTests
         foreach (var request in requests)
             Assert.True(MessageValidator.TryValidate(request, out var errors), $"{request.GetType().Name}: {string.Join("; ", errors)}");
     }
+
+    // The ids are padded to the length of an upload id, so a test names them by their first digits
+    private static NewChatImageModel Image(string upload, string preview, string uploadId = null, int width = 640,
+        string fileName = "photo.jpg") => new()
+    {
+        UploadId = uploadId ?? upload.PadRight(Limits.MediaUploadIdLength * 2, '0'),
+        PreviewUploadId = preview.PadRight(Limits.MediaUploadIdLength * 2, '0'),
+        FileName = fileName,
+        Width = width,
+        Height = 480
+    };
 
     public static TheoryData<object, string> InvalidRequests() => new()
     {
@@ -127,6 +139,13 @@ public class MessageValidatorTests
         { new EditTextMessageRequest(1, 2, new string('t', Limits.ChatTextMaxLength + 1)), "Text" },
         { new SendTextMessageRequest(1, new NewChatMessageModel { ChatId = 1 }), "text or an attachment" },
         { new SendTextMessageRequest(1, new NewChatMessageModel { ChatId = 1, TextContent = new ChatTextContentDTO { Text = "" } }), "Text" },
+        { new SendTextMessageRequest(1, new NewChatMessageModel { ChatId = 1, Images = [Image("a", "a")] }), "attached once" },
+        { new SendTextMessageRequest(1, new NewChatMessageModel { ChatId = 1, Images = [Image("a", "b"), Image("c", "B")] }), "attached once" },
+        { new SendTextMessageRequest(1, new NewChatMessageModel { ChatId = 1, Images = [Image("a", "b", uploadId: "not-hex")] }), "UploadId" },
+        { new SendTextMessageRequest(1, new NewChatMessageModel { ChatId = 1, Images = [Image("a", "b", width: 0)] }), "Width" },
+        { new SendTextMessageRequest(1, new NewChatMessageModel { ChatId = 1, Images = [Image("a", "b", fileName: " ")] }), "FileName" },
+        { new SendTextMessageRequest(1, new NewChatMessageModel { ChatId = 1, Images = Enumerable.Range(0, Limits.ChatAttachmentsMaxCount + 1).Select(i => Image($"a{i:x}", $"b{i:x}")).ToList() }), "Images" },
+        { new SendTextMessageRequest(1, new NewChatMessageModel { ChatId = 1, Files = [new ChatFileContentDTO { Id = 1, FileName = "a.txt", Size = 1, MimeType = "text/plain" }] }), "not supported" },
         { new SendTextMessageRequest(1, new NewChatMessageModel { ChatId = 1, TextContent = new ChatTextContentDTO { Text = "x" }, IsDelayed = true }), "DelayedSentTime" },
         { new SendTextMessageRequest(1, new NewChatMessageModel { ChatId = 1, TextContent = new ChatTextContentDTO { Text = "x" }, IsDisposable = true, DisposeTime = DateTime.UtcNow.AddYears(5) }), "DisposeTime" },
         { new HybridSessionJoinRequest(1) { ClientEpoch = "not-a-guid" }, "ClientEpoch" },

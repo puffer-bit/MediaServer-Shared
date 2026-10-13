@@ -24,6 +24,18 @@ public static class Limits
     public const int ChatTextMaxLength = 4000;
     public const int ChatHistoryMaxTake = 100;
     public const int ChatAttachmentsMaxCount = 10;
+    public const int ChatAttachmentDescriptionMaxLength = 500;
+    public const int ChatImageMaxSide = 16384;
+    public const int ChatImagePreviewMaxSize = 1024 * 1024;
+    public const int FileNameMaxLength = 255;
+    public const int MimeTypeMaxLength = 100;
+
+    // Bytes of the random id an upload is known by, written in hex
+    public const int MediaUploadIdLength = 16;
+
+    /// <summary>The image formats a message may carry.</summary>
+    public static readonly IReadOnlyList<string> ChatImageMimeTypes =
+        ["image/jpeg", "image/png", "image/webp", "image/gif"];
     public static readonly TimeSpan ChatMessageMaxDelay = TimeSpan.FromDays(30);
     public static readonly TimeSpan ChatMessageMaxLifetime = TimeSpan.FromDays(365);
 

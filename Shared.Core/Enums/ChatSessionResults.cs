@@ -35,7 +35,10 @@ public enum AddMessageResult
     InvalidResponse = 4,
     WrongResponse = 5,
     ReplyTargetNotExists = 6,
-    Rejected = 7
+    Rejected = 7,
+    AttachmentsNotAllowed = 8,
+    AttachmentNotReady = 9,
+    AttachmentInvalid = 10
 }
 
 public enum EditMessageResult

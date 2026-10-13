@@ -92,6 +92,7 @@ namespace Shared.Models;
 [JsonDerivedType(typeof(CoordinatorChangeUsernameRequest), typeDiscriminator: nameof(CoordinatorChangeUsernameRequest))]
 [JsonDerivedType(typeof(RegisterPushTokenRequest), typeDiscriminator: nameof(RegisterPushTokenRequest))]
 [JsonDerivedType(typeof(UnregisterPushTokenRequest), typeDiscriminator: nameof(UnregisterPushTokenRequest))]
+[JsonDerivedType(typeof(MediaTokenRequest), typeDiscriminator: nameof(MediaTokenRequest))]
 
 [JsonDerivedType(typeof(HeartbeatPingRequest), typeDiscriminator: nameof(HeartbeatPingRequest))]
 
@@ -138,6 +139,7 @@ namespace Shared.Models;
 [JsonDerivedType(typeof(CoordinatorChangeUsernameResponse), typeDiscriminator: nameof(CoordinatorChangeUsernameResponse))]
 [JsonDerivedType(typeof(RegisterPushTokenResponse), typeDiscriminator: nameof(RegisterPushTokenResponse))]
 [JsonDerivedType(typeof(UnregisterPushTokenResponse), typeDiscriminator: nameof(UnregisterPushTokenResponse))]
+[JsonDerivedType(typeof(MediaTokenResponse), typeDiscriminator: nameof(MediaTokenResponse))]
 
 [JsonDerivedType(typeof(HeartbeatPingResponse), typeDiscriminator: nameof(HeartbeatPingResponse))]
 

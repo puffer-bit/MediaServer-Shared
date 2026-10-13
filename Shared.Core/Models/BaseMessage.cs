@@ -95,6 +95,8 @@ namespace Shared.Models;
 
 [JsonDerivedType(typeof(ChatSessionHistoryRequest), typeDiscriminator: nameof(ChatSessionHistoryRequest))]
 [JsonDerivedType(typeof(ChatSessionMessageRequest), typeDiscriminator: nameof(ChatSessionMessageRequest))]
+[JsonDerivedType(typeof(ChatSessionHistoryPageRequest), typeDiscriminator: nameof(ChatSessionHistoryPageRequest))]
+[JsonDerivedType(typeof(ChatSessionChangesRequest), typeDiscriminator: nameof(ChatSessionChangesRequest))]
 [JsonDerivedType(typeof(DeleteTextMessageRequest), typeDiscriminator: nameof(DeleteTextMessageRequest))]
 [JsonDerivedType(typeof(EditTextMessageRequest), typeDiscriminator: nameof(EditTextMessageRequest))]
 [JsonDerivedType(typeof(SendTextMessageRequest), typeDiscriminator: nameof(SendTextMessageRequest))]
@@ -137,6 +139,8 @@ namespace Shared.Models;
 
 [JsonDerivedType(typeof(ChatSessionHistoryResponse), typeDiscriminator: nameof(ChatSessionHistoryResponse))]
 [JsonDerivedType(typeof(ChatSessionMessageResponse), typeDiscriminator: nameof(ChatSessionMessageResponse))]
+[JsonDerivedType(typeof(ChatSessionHistoryPageResponse), typeDiscriminator: nameof(ChatSessionHistoryPageResponse))]
+[JsonDerivedType(typeof(ChatSessionChangesResponse), typeDiscriminator: nameof(ChatSessionChangesResponse))]
 [JsonDerivedType(typeof(DeleteTextMessageResponse), typeDiscriminator: nameof(DeleteTextMessageResponse))]
 [JsonDerivedType(typeof(EditMessageResponse), typeDiscriminator: nameof(EditMessageResponse))]
 [JsonDerivedType(typeof(SendTextMessageResponse), typeDiscriminator: nameof(SendTextMessageResponse))]

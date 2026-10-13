@@ -11,7 +11,7 @@ public record ChatSessionMessageAddedNotification(int ChatId, ChatMessageDTO Mes
 public record ChatSessionMessageEditedNotification(int ChatId, ChatMessageDTO Message)
     : ChatSessionUpdatedNotification;
 
-public record ChatSessionMessageDeletedNotification(int ChatId, int MessageId)
+public record ChatSessionMessageDeletedNotification(int ChatId, int MessageId, long Revision)
     : ChatSessionUpdatedNotification;
 
 public record ChatSessionUserTypingNotification(int ChatId, int UserId)

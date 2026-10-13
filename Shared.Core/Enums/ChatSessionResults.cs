@@ -44,7 +44,9 @@ public enum EditMessageResult
     NoError = 0,
     MessageNotExists = 1,
     ChatNotExists = 2,
-    InsufficientPermissions = 3
+    InsufficientPermissions = 3,
+    TimedOut = 4,
+    Rejected = 5
 }
 
 public enum DeleteMessageResult

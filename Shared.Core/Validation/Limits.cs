@@ -36,4 +36,11 @@ public static class Limits
     public const int DtlsFingerprintMaxLength = 64 * 3 - 1;
 
     public const int SdpMaxLength = 64 * 1024;
+
+    public const int PushTokenMaxLength = 512;
+
+    // Bytes: an AES-256 key and the random id the device knows it by
+    public const int PushKeyLength = 32;
+    public const int PushKeyIdLength = 16;
+    public const int PushKeyBase64Length = (PushKeyLength + 2) / 3 * 4;
 }

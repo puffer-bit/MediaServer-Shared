@@ -84,6 +84,36 @@ public sealed partial class DtlsFingerprintAttribute : ValidationAttribute
     public override string FormatErrorMessage(string name) => $"{name} is not a fingerprint.";
 }
 
+/// <summary>Exactly <paramref name="length"/> bytes written as hex digits.</summary>
+[AttributeUsage(AttributeTargets.Property | AttributeTargets.Parameter)]
+public sealed class HexBytesAttribute(int length) : ValidationAttribute
+{
+    public override bool IsValid(object? value) =>
+        value is not string text || (text.Length == length * 2 && text.All(char.IsAsciiHexDigit));
+
+    public override string FormatErrorMessage(string name) => $"{name} must be {length} bytes in hex.";
+}
+
+/// <summary>Exactly <paramref name="length"/> bytes written in base64.</summary>
+[AttributeUsage(AttributeTargets.Property | AttributeTargets.Parameter)]
+public sealed class Base64BytesAttribute(int length) : ValidationAttribute
+{
+    public override bool IsValid(object? value)
+    {
+        if (value is not string text)
+            return true;
+
+        // Longer text cannot hold the expected bytes; checked first so that hostile input is not decoded
+        if (text.Length > (length + 2) / 3 * 4)
+            return false;
+
+        Span<byte> bytes = stackalloc byte[text.Length];
+        return Convert.TryFromBase64String(text, bytes, out var written) && written == length;
+    }
+
+    public override string FormatErrorMessage(string name) => $"{name} must be {length} bytes in base64.";
+}
+
 /// <summary>The value is one of a fixed set of strings, compared without case.</summary>
 [AttributeUsage(AttributeTargets.Property | AttributeTargets.Parameter)]
 public sealed class OneOfAttribute(params string[] allowed) : ValidationAttribute

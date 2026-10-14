@@ -27,6 +27,7 @@ public static class Limits
     public const int ChatAttachmentDescriptionMaxLength = 500;
     public const int ChatImageMaxSide = 16384;
     public const int ChatImagePreviewMaxSize = 1024 * 1024;
+    public const int AvatarMaxSize = 1024 * 1024;
     public const int FileNameMaxLength = 255;
     public const int MimeTypeMaxLength = 100;
 

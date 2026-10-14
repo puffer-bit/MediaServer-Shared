@@ -184,6 +184,17 @@ public enum SetMicrophoneMuteResult
     Rejected = 8
 }
 
+public enum SetSoundMuteResult
+{
+    InternalError = -1,
+    NoError = 0,
+    InsufficientPermissions = 1,
+    SessionNotExists = 2,
+    PeerNotExists = 3,
+    TimedOut = 4,
+    Rejected = 5
+}
+
 public enum MuteMicrophoneResult
 {
     InternalError = -1,

@@ -89,6 +89,7 @@ namespace Shared.Models;
 
 [JsonDerivedType(typeof(CoordinatorInfoRequest), typeDiscriminator: nameof(CoordinatorInfoRequest))]
 [JsonDerivedType(typeof(CoordinatorUserInfoRequest), typeDiscriminator: nameof(CoordinatorUserInfoRequest))]
+[JsonDerivedType(typeof(CoordinatorUserSearchRequest), typeDiscriminator: nameof(CoordinatorUserSearchRequest))]
 [JsonDerivedType(typeof(CoordinatorChangeUsernameRequest), typeDiscriminator: nameof(CoordinatorChangeUsernameRequest))]
 [JsonDerivedType(typeof(CoordinatorSetAvatarRequest), typeDiscriminator: nameof(CoordinatorSetAvatarRequest))]
 [JsonDerivedType(typeof(RegisterPushTokenRequest), typeDiscriminator: nameof(RegisterPushTokenRequest))]
@@ -138,6 +139,7 @@ namespace Shared.Models;
 
 [JsonDerivedType(typeof(CoordinatorInfoResponse), typeDiscriminator: nameof(CoordinatorInfoResponse))]
 [JsonDerivedType(typeof(CoordinatorUserInfoResponse), typeDiscriminator: nameof(CoordinatorUserInfoResponse))]
+[JsonDerivedType(typeof(CoordinatorUserSearchResponse), typeDiscriminator: nameof(CoordinatorUserSearchResponse))]
 [JsonDerivedType(typeof(CoordinatorChangeUsernameResponse), typeDiscriminator: nameof(CoordinatorChangeUsernameResponse))]
 [JsonDerivedType(typeof(CoordinatorSetAvatarResponse), typeDiscriminator: nameof(CoordinatorSetAvatarResponse))]
 [JsonDerivedType(typeof(RegisterPushTokenResponse), typeDiscriminator: nameof(RegisterPushTokenResponse))]

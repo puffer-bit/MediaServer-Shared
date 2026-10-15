@@ -24,6 +24,11 @@ public class ChatMessageDTO
     public required List<ChatReactionDTO> Reactions { get; init; }
     public required List<string> UsersIds { get; init; }
 
+    // Read by the server from the mention tokens of the text
+    public List<int> MentionedUserIds { get; set; } = [];
+    public bool MentionsEveryone { get; set; }
+    public bool MentionsHere { get; set; }
+
     public bool IsDelayed { get; set; }
     public bool IsEdited { get; set; }
     public bool IsReposted { get; set; }

@@ -1,5 +1,6 @@
 using System.Text.Json.Serialization;
 using Shared.Models;
+using Shared.Models.Push;
 
 namespace Shared.Serialization;
 
@@ -11,4 +12,5 @@ namespace Shared.Serialization;
 // Messages nest a few levels at most; deeper input is malformed or hostile
 [JsonSourceGenerationOptions(PropertyNameCaseInsensitive = true, MaxDepth = 16)]
 [JsonSerializable(typeof(BaseMessage))]
+[JsonSerializable(typeof(PushReplyRequest))]
 public sealed partial class ProtocolJsonContext : JsonSerializerContext;

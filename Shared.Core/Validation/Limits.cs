@@ -10,6 +10,7 @@ public static class Limits
     public const int PasswordMaxLength = 128;
     public const int UserIdsMaxCount = 100;
     public const int UsernameMaxLength = 32;
+    public const int UserSearchMaxCount = 20;
 
     public const int SessionNameMaxLength = 50;
     public const int SessionCapacityMin = 1;
@@ -56,4 +57,7 @@ public static class Limits
     public const int PushKeyLength = 32;
     public const int PushKeyIdLength = 16;
     public const int PushKeyBase64Length = (PushKeyLength + 2) / 3 * 4;
+
+    // Bytes of the token a device answers notifications with
+    public const int PushReplyTokenLength = 32;
 }

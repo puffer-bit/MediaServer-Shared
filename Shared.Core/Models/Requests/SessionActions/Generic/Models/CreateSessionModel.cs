@@ -8,5 +8,6 @@ namespace Shared.Models.Requests.SessionActions.Generic.Models;
 public record CreateSessionModel(
     [property: Required, NotBlank, StringLength(Limits.SessionNameMaxLength), NoControlCharacters] string Name,
     [property: Range(Limits.SessionCapacityMin, Limits.SessionCapacityMax)] int Capacity,
-    [property: Required] CreateSessionData SessionData
+    [property: Required] CreateSessionData SessionData,
+    [property: EntityId] int? CategoryId = null
 );

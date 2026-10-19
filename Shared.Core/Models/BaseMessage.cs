@@ -47,6 +47,7 @@ namespace Shared.Models;
 [JsonDerivedType(typeof(ChatSessionCreatedNotification), typeDiscriminator: nameof(ChatSessionCreatedNotification))]
 [JsonDerivedType(typeof(ChatSessionReconfiguredNotification), typeDiscriminator: nameof(ChatSessionReconfiguredNotification))]
 [JsonDerivedType(typeof(ChatSessionDeletedNotification), typeDiscriminator: nameof(ChatSessionDeletedNotification))]
+[JsonDerivedType(typeof(SessionLayoutChangedNotification), typeDiscriminator: nameof(SessionLayoutChangedNotification))]
 
 [JsonDerivedType(typeof(HybridSessionPeerStateChangedNotification), typeDiscriminator: nameof(HybridSessionPeerStateChangedNotification))]
 [JsonDerivedType(typeof(HybridSessionPeerApprovedNotification), typeDiscriminator: nameof(HybridSessionPeerApprovedNotification))]
@@ -120,6 +121,11 @@ namespace Shared.Models;
 [JsonDerivedType(typeof(LeaveSessionRequest), typeDiscriminator: nameof(LeaveSessionRequest))]
 [JsonDerivedType(typeof(RejectUserRequest), typeDiscriminator: nameof(RejectUserRequest))]
 [JsonDerivedType(typeof(SessionInfoRequest), typeDiscriminator: nameof(SessionInfoRequest))]
+[JsonDerivedType(typeof(CreateSessionCategoryRequest), typeDiscriminator: nameof(CreateSessionCategoryRequest))]
+[JsonDerivedType(typeof(RenameSessionCategoryRequest), typeDiscriminator: nameof(RenameSessionCategoryRequest))]
+[JsonDerivedType(typeof(DeleteSessionCategoryRequest), typeDiscriminator: nameof(DeleteSessionCategoryRequest))]
+[JsonDerivedType(typeof(MoveSessionRequest), typeDiscriminator: nameof(MoveSessionRequest))]
+[JsonDerivedType(typeof(MoveSessionCategoryRequest), typeDiscriminator: nameof(MoveSessionCategoryRequest))]
 
 [JsonDerivedType(typeof(HybridSessionJoinRequest), typeDiscriminator: nameof(HybridSessionJoinRequest))]
 [JsonDerivedType(typeof(HybridSessionConnectTransportRequest), typeDiscriminator: nameof(HybridSessionConnectTransportRequest))]
@@ -174,6 +180,7 @@ namespace Shared.Models;
 [JsonDerivedType(typeof(LeaveSessionResponse), typeDiscriminator: nameof(LeaveSessionResponse))]
 [JsonDerivedType(typeof(RejectUserResponse), typeDiscriminator: nameof(RejectUserResponse))]
 [JsonDerivedType(typeof(SessionInfoResponse), typeDiscriminator: nameof(SessionInfoResponse))]
+[JsonDerivedType(typeof(SessionLayoutResponse), typeDiscriminator: nameof(SessionLayoutResponse))]
 
 [JsonDerivedType(typeof(HybridSessionJoinResponse), typeDiscriminator: nameof(HybridSessionJoinResponse))]
 [JsonDerivedType(typeof(HybridSessionConnectTransportResponse), typeDiscriminator: nameof(HybridSessionConnectTransportResponse))]

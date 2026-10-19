@@ -42,7 +42,8 @@ public enum LeaveSessionResult
     PeerNotExists = 3,
     UnknownSessionType = 4,
     SFUNotActive = 5,
-    Rejected = 6
+    Rejected = 6,
+    CannotKickSelf = 7
 }
 
 public enum LeaveFromSessionResult
@@ -98,4 +99,15 @@ public enum SessionRequestResult
     TimedOut = 2,
     WrongResponse = 3,
     Rejected = 4
+}
+
+public enum SessionLayoutResult
+{
+    InternalError = -1,
+    NoError = 0,
+    SessionNotExists = 1,
+    CategoryNotExists = 2,
+    TooManyCategories = 3,
+    TimedOut = 4,
+    Rejected = 5
 }

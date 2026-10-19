@@ -19,6 +19,9 @@ public static class Limits
     public const int SessionCapacityMin = 1;
     public const int SessionCapacityMax = 100;
     public const int SessionDescriptionMaxLength = 500;
+    public const int SessionCategoryNameMaxLength = 50;
+    public const int SessionCategoriesMaxCount = 50;
+    public const int SessionLayoutIndexMax = 1000;
     public const int UrlMaxLength = 2048;
     public const int VideoBitrateMinKbps = 100;
     public const int VideoBitrateMaxKbps = 20_000;

@@ -13,4 +13,5 @@ namespace Shared.Serialization;
 [JsonSourceGenerationOptions(PropertyNameCaseInsensitive = true, MaxDepth = 16)]
 [JsonSerializable(typeof(BaseMessage))]
 [JsonSerializable(typeof(PushReplyRequest))]
+[JsonSerializable(typeof(PushMarkReadRequest))]
 public sealed partial class ProtocolJsonContext : JsonSerializerContext;

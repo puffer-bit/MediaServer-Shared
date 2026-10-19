@@ -7,8 +7,9 @@ using Shared.Validation;
 namespace Shared.Models.Requests.Auth;
 
 public record UserAuthRequest(
-    [property: StringLength(Limits.PasswordMaxLength)] string? Password,
-    [property: StringLength(Limits.UserIdentityMaxLength), NoControlCharacters] string? UserIdentity) : AuthRequest
+    [property: StringLength(Limits.PasswordMaxLength)] string? ServerPassword,
+    [property: StringLength(Limits.UserIdentityMaxLength), NoControlCharacters] string? UserIdentity,
+    bool IsFIDO2AuthRequested = false) : AuthRequest
 {
     public UserAuthResponse ToResponse(AuthResult authResult, string? userIdentity = null, UserDTO? userDTO = null,
         string? serverMessage = null)

@@ -1,4 +1,5 @@
 using Shared.Models.DataTransferObjects;
+using Shared.Models.DataTransferObjects.ChatSession;
 using Shared.Models.DataTransferObjects.ChatSession.Messages;
 
 namespace Shared.Models.Notifications.SessionInfo;
@@ -15,4 +16,11 @@ public record ChatSessionMessageDeletedNotification(int ChatId, int MessageId, l
     : ChatSessionUpdatedNotification;
 
 public record ChatSessionUserTypingNotification(int ChatId, int UserId)
+    : ChatSessionUpdatedNotification;
+
+/// <summary>
+/// Sent to every connection of the user whose read position moved, so all devices show the same
+/// unread counts.
+/// </summary>
+public record ChatReadStateChangedNotification(ChatReadStateDTO State)
     : ChatSessionUpdatedNotification;

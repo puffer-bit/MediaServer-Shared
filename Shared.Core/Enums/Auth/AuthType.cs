@@ -4,6 +4,13 @@ public enum AuthResult
 {
     Success,
     AuthFailed,
-    TwoFactorAuthFailed,
-    Banned
+    Banned,
+    SecondStageRequeried
+}
+
+public enum SecondStageAuthType
+{
+    FIDO2,
+    TwoFactor,
+    Password
 }

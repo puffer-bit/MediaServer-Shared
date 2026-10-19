@@ -16,8 +16,19 @@ public static class PushEndpoints
     /// that does not exist and 429 for too many replies.
     /// </summary>
     public const string Reply = "/push/reply";
+
+    /// <summary>
+    /// <c>POST</c> with a <see cref="PushMarkReadRequest"/> body moves the read position of the user
+    /// in a chat, as the "Mark as read" button of a notification does. Answers 204 when it was
+    /// stored, and the same error codes as <see cref="Reply"/>.
+    /// </summary>
+    public const string MarkRead = "/push/read";
 }
 
 public sealed record PushReplyRequest(
     [property: EntityId] int ChatId,
     [property: Required, NotBlank, StringLength(Limits.ChatTextMaxLength), NoControlCharacters(allowLineBreaks: true)] string Text);
+
+public sealed record PushMarkReadRequest(
+    [property: EntityId] int ChatId,
+    [property: EntityId] int MessageId);

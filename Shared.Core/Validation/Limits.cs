@@ -8,6 +8,9 @@ public static class Limits
 {
     public const int UserIdentityMaxLength = 37;
     public const int PasswordMaxLength = 128;
+    public const int TwoFactorMaxLength = 6;
+    public const int Fido2FieldMaxLength = 4096;
+    public const int Fido2UserHandleMaxLength = 128;
     public const int UserIdsMaxCount = 100;
     public const int UsernameMaxLength = 32;
     public const int UserSearchMaxCount = 20;

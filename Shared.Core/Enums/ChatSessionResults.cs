@@ -65,3 +65,12 @@ public enum DeleteMessageResult
     InsufficientPermissions = 7,
     Rejected = 8
 }
+
+public enum ChatReadResult
+{
+    InternalError = -1,
+    NoError = 0,
+    ChatNotExists = 1,
+    TimedOut = 2,
+    Rejected = 3
+}

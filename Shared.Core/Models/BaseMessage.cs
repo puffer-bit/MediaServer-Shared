@@ -39,6 +39,7 @@ namespace Shared.Models;
 [JsonDerivedType(typeof(ChatSessionMessageEditedNotification), typeDiscriminator: nameof(ChatSessionMessageEditedNotification))]
 [JsonDerivedType(typeof(ChatSessionMessageDeletedNotification), typeDiscriminator: nameof(ChatSessionMessageDeletedNotification))]
 [JsonDerivedType(typeof(ChatSessionUserTypingNotification), typeDiscriminator: nameof(ChatSessionUserTypingNotification))]
+[JsonDerivedType(typeof(ChatReadStateChangedNotification), typeDiscriminator: nameof(ChatReadStateChangedNotification))]
 
 [JsonDerivedType(typeof(HybridSessionCreatedNotification), typeDiscriminator: nameof(HybridSessionCreatedNotification))]
 [JsonDerivedType(typeof(HybridSessionReconfiguredNotification), typeDiscriminator: nameof(HybridSessionReconfiguredNotification))]
@@ -86,6 +87,8 @@ namespace Shared.Models;
 // Requests
 
 [JsonDerivedType(typeof(UserAuthRequest), typeDiscriminator: nameof(UserAuthRequest))]
+[JsonDerivedType(typeof(TwoFactorUserAuthRequest), typeDiscriminator: nameof(TwoFactorUserAuthRequest))]
+[JsonDerivedType(typeof(FIDO2UserAuthRequest), typeDiscriminator: nameof(FIDO2UserAuthRequest))]
 
 [JsonDerivedType(typeof(CoordinatorInfoRequest), typeDiscriminator: nameof(CoordinatorInfoRequest))]
 [JsonDerivedType(typeof(CoordinatorUserInfoRequest), typeDiscriminator: nameof(CoordinatorUserInfoRequest))]
@@ -102,6 +105,8 @@ namespace Shared.Models;
 [JsonDerivedType(typeof(ChatSessionMessageRequest), typeDiscriminator: nameof(ChatSessionMessageRequest))]
 [JsonDerivedType(typeof(ChatSessionHistoryPageRequest), typeDiscriminator: nameof(ChatSessionHistoryPageRequest))]
 [JsonDerivedType(typeof(ChatSessionChangesRequest), typeDiscriminator: nameof(ChatSessionChangesRequest))]
+[JsonDerivedType(typeof(ChatReadStatesRequest), typeDiscriminator: nameof(ChatReadStatesRequest))]
+[JsonDerivedType(typeof(ChatMarkReadRequest), typeDiscriminator: nameof(ChatMarkReadRequest))]
 [JsonDerivedType(typeof(DeleteTextMessageRequest), typeDiscriminator: nameof(DeleteTextMessageRequest))]
 [JsonDerivedType(typeof(EditTextMessageRequest), typeDiscriminator: nameof(EditTextMessageRequest))]
 [JsonDerivedType(typeof(SendTextMessageRequest), typeDiscriminator: nameof(SendTextMessageRequest))]
@@ -136,6 +141,8 @@ namespace Shared.Models;
 // Responses
 
 [JsonDerivedType(typeof(UserAuthResponse), typeDiscriminator: nameof(UserAuthResponse))]
+[JsonDerivedType(typeof(TwoFactorUserAuthResponse), typeDiscriminator: nameof(TwoFactorUserAuthResponse))]
+[JsonDerivedType(typeof(FIDO2UserAuthResponse), typeDiscriminator: nameof(FIDO2UserAuthResponse))]
 
 [JsonDerivedType(typeof(CoordinatorInfoResponse), typeDiscriminator: nameof(CoordinatorInfoResponse))]
 [JsonDerivedType(typeof(CoordinatorUserInfoResponse), typeDiscriminator: nameof(CoordinatorUserInfoResponse))]
@@ -152,6 +159,8 @@ namespace Shared.Models;
 [JsonDerivedType(typeof(ChatSessionMessageResponse), typeDiscriminator: nameof(ChatSessionMessageResponse))]
 [JsonDerivedType(typeof(ChatSessionHistoryPageResponse), typeDiscriminator: nameof(ChatSessionHistoryPageResponse))]
 [JsonDerivedType(typeof(ChatSessionChangesResponse), typeDiscriminator: nameof(ChatSessionChangesResponse))]
+[JsonDerivedType(typeof(ChatReadStatesResponse), typeDiscriminator: nameof(ChatReadStatesResponse))]
+[JsonDerivedType(typeof(ChatMarkReadResponse), typeDiscriminator: nameof(ChatMarkReadResponse))]
 [JsonDerivedType(typeof(DeleteTextMessageResponse), typeDiscriminator: nameof(DeleteTextMessageResponse))]
 [JsonDerivedType(typeof(EditMessageResponse), typeDiscriminator: nameof(EditMessageResponse))]
 [JsonDerivedType(typeof(SendTextMessageResponse), typeDiscriminator: nameof(SendTextMessageResponse))]

@@ -8,4 +8,5 @@ public record UserAuthResponse(
     UserDTO? UserDTO,
     string? UserIdentity,
     AuthResult AuthResult,
-    string? ServerMessage) : AuthResponse(RequestId);
+    string? ServerMessage = null,
+    FIDO2LoginOptionsDTO? FIDO2LoginOptionsDTO = null) : AuthResponse(RequestId);

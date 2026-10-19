@@ -22,3 +22,7 @@ public record ChatSessionReconfiguredNotification(ChatSessionDTO Session)
 
 public record ChatSessionDeletedNotification(int SessionId)
     : SessionsUpdatedNotification;
+
+/// <summary>The order of the sessions or their categories changed; carries the whole new layout.</summary>
+public record SessionLayoutChangedNotification(SessionLayoutDTO Layout)
+    : SessionsUpdatedNotification;

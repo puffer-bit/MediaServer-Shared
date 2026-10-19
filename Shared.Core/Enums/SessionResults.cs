@@ -99,3 +99,14 @@ public enum SessionRequestResult
     WrongResponse = 3,
     Rejected = 4
 }
+
+public enum SessionLayoutResult
+{
+    InternalError = -1,
+    NoError = 0,
+    SessionNotExists = 1,
+    CategoryNotExists = 2,
+    TooManyCategories = 3,
+    TimedOut = 4,
+    Rejected = 5
+}

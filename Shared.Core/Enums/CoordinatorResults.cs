@@ -5,7 +5,8 @@ public enum UsersRequestResult
     InternalError = -1,
     NoError = 0,
     UserNotFound = 1,
-    TimedOut = 2
+    TimedOut = 2,
+    Rejected = 3
 }
 
 public enum HandleMessageResult

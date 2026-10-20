@@ -9,13 +9,16 @@ public enum UserState
     System
 }
 
+/// <summary>
+/// What a user tells others about being there. The user picks <see cref="Online"/>, <see cref="Away"/>,
+/// <see cref="DoNotDisturb"/> or <see cref="Invisible"/>; the others see <see cref="Offline"/> while the user is
+/// not connected or is invisible.
+/// </summary>
 public enum UserStatus
 {
-    Invisible = 3,
-    Away = 4,
-    DoNotDisturb = 5,
-    Online = 6,
-    Sleeping = 7,
-    Afk = 8,
-    Unknown
+    Offline = 0,
+    Online = 1,
+    Away = 2,
+    DoNotDisturb = 3,
+    Invisible = 4
 }

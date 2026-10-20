@@ -15,6 +15,10 @@ public static class Limits
     public const int UsernameMaxLength = 32;
     public const int UserSearchMaxCount = 20;
 
+    public const int RoleNameMaxLength = 32;
+    public const int RolesMaxCount = 100;
+    public const int RoleColorMax = 0xFFFFFF;
+
     public const int SessionNameMaxLength = 50;
     public const int SessionCapacityMin = 1;
     public const int SessionCapacityMax = 100;

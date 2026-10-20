@@ -19,3 +19,11 @@ public record CoordinatorUserKickedNotification(int UserId, string? Reason = nul
 
 public record CoordinatorUserBannedNotification(int UserId, string? Reason = null)
     : CoordinatorUpdatedNotification;
+
+/// <summary>The user was deleted; a client drops them from its lists.</summary>
+public record CoordinatorUserDeletedNotification(int UserId)
+    : CoordinatorUpdatedNotification;
+
+/// <summary>How many users are connected now; sent whenever one connects or disconnects.</summary>
+public record CoordinatorOnlineUsersChangedNotification(int ConnectedUsersCount)
+    : CoordinatorUpdatedNotification;

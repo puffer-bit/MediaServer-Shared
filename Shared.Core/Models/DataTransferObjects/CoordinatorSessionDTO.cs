@@ -24,6 +24,9 @@ public class CoordinatorSessionDTO
 
     public string ServerVersion { get; set; } = string.Empty;
 
+    /// <summary>The OS and architecture the server runs on, such as "Linux x64".</summary>
+    public string ServerPlatform { get; set; } = string.Empty;
+
     public DateTime CreateTime { get; set; }
     public DateTime FirstLaunchTime { get; set; }
     public DateTime CurrentLaunchTime { get; set; }

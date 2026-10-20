@@ -49,7 +49,8 @@ public enum HybridSessionStateChangedType
     PeerStateChanged,
     SFUNodeChanged,
     SFUNodeDisconnected,
-    SFUNodeConnected
+    SFUNodeConnected,
+    StateChanged
 }
 
 public enum ChatSessionStateChangedType

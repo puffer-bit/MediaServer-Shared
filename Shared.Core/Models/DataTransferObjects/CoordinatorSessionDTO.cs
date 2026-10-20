@@ -31,4 +31,19 @@ public class CoordinatorSessionDTO
     public int MaxUsers { get; set; }
 
     public bool IsMOTDEnabled { get; set; }
+    public string? MotdText { get; set; }
+
+    /// <summary>Users must enter the server password to sign in.</summary>
+    public bool IsPasswordProtected { get; set; }
+
+    public int HeartbeatIntervalSeconds { get; set; }
+    public int HeartbeatTimeoutSeconds { get; set; }
+
+    public long MaxFileSizeBytes { get; set; }
+
+    /// <summary>0 when the media storage is not limited.</summary>
+    public long StorageQuotaBytes { get; set; }
+
+    /// <summary>The revision of the stored settings these values come from.</summary>
+    public long SettingsRevision { get; set; }
 }

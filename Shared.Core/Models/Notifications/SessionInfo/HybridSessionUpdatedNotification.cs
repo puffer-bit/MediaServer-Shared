@@ -6,6 +6,9 @@ namespace Shared.Models.Notifications.SessionInfo;
 
 public abstract record HybridSessionUpdatedNotification : Notification;
 
+public record HybridSessionStateChangedNotification(int SessionId, HybridSessionNodeState State)
+    : HybridSessionUpdatedNotification;
+
 public record HybridSessionSFUNodeChangedNotification(int SessionId)
     : HybridSessionUpdatedNotification;
 

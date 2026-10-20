@@ -66,4 +66,12 @@ public static class Limits
 
     // Bytes of the token a device answers notifications with
     public const int PushReplyTokenLength = 32;
+
+    public const int CoordinatorNameMaxLength = 100;
+    public const int MotdTextMaxLength = 2000;
+    // The longest IPv6 address written out, with an IPv4 tail
+    public const int IpAddressMaxLength = 45;
+    public const int IpListMaxCount = 1000;
+    public const int IceCredentialMaxLength = 256;
+    public const int SfuNodesMaxCount = 100;
 }

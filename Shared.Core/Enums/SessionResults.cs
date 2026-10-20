@@ -111,3 +111,14 @@ public enum SessionLayoutResult
     TimedOut = 4,
     Rejected = 5
 }
+
+public enum ChangeSessionSettingsResult
+{
+    InternalError = -1,
+    NoError = 0,
+    SessionNotExists = 1,
+    NameAlreadyUsed = 2,
+    WrongCapacity = 3,
+    TimedOut = 4,
+    Rejected = 5
+}

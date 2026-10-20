@@ -1,3 +1,4 @@
+using Shared.Enums;
 using System.ComponentModel.DataAnnotations;
 using Shared.Validation;
 
@@ -108,7 +109,10 @@ public class IceServerSettingsDTO
     public string? Password { get; set; }
 }
 
-/// <summary>A node of the SFU pool of the server that a coordinator can be given. Credentials are left out.</summary>
+/// <summary>
+/// A node of the SFU pool of the server that a coordinator can be given. Credentials are left out.
+/// The connection fields are what the server knew when it answered; null for a disabled node.
+/// </summary>
 public class SfuNodeDTO
 {
     public int Id { get; set; }
@@ -116,4 +120,14 @@ public class SfuNodeDTO
     public string Host { get; set; } = string.Empty;
     public int Port { get; set; }
     public bool IsEnabled { get; set; }
+
+    public SfuNodeConnectionState? ConnectionState { get; set; }
+
+    /// <summary>Round trip of the server's last answered ping to the node; null while the node does not answer.</summary>
+    public double? PingMs { get; set; }
+
+    public DateTimeOffset? LastPingAtUtc { get; set; }
+
+    /// <summary>Why the node is not connected, if known.</summary>
+    public string? ConnectionError { get; set; }
 }
